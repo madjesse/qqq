@@ -1,0 +1,3997 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* デフォルト：1200px以上用（PC用）の記述 ============================================================================================================================================*/ 
+
+/* 共通---------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+	width: 100%;
+	line-height: 1.6;
+	font-size: 16px;
+	font-family: "Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+p {
+	text-align: justify;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.cf::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.txt {
+	text-align: justify;
+	line-height: 1.6;
+}
+.inner {
+	width: 1200px;
+	margin: 0 auto;
+}
+.medium-inner {
+	width: 960px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.small-inner {
+	width: 870px;
+	margin: 0 auto;
+}
+.short-inner {
+	width: 800px;
+	margin: 0 auto;
+}
+.outer {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.inline-wrap {  /*見出し関連--------------*/
+	text-align: center;
+}
+.heading::before {  /*見出し関連-----------------*/
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 20px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.heading {  /*見出し関連------------------*/
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1.4;
+	font-size: 24px;
+}
+.en-heading {  /*見出し関連-------------------*/
+	text-align: center;
+	line-height: 2.4;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+.attention br {
+	display: none;
+}
+
+/*header------------------------------------------------------------------------------------------------------------------------------*/
+#header {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+/*nav---------------------------------------------------------------------------------------------------------------------------------*/
+.nav-area {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 124px;
+}
+
+.logo { 
+	width: 28.333333%;
+}
+
+#nav {
+	width: 46.379917%;
+	margin-left: 8%;
+}
+#header .inner #nav .gnav {
+	display: flex;
+}
+#nav .gnav li {
+	margin-right: 30px;
+}
+#nav .gnav li:nth-of-type(5) {
+	margin-right: 0;
+}
+#nav .gnav li a {
+	font-weight: bold;
+	font-size: 16px;
+}
+#nav .gnav li a::before {
+	content: "";
+	display: inline-block;
+	vertical-align: 11%;
+	width: 8px;
+	height: 6px;
+	margin-right: 8px;
+	background-image: url(images/gnav.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*s-nav-------------------------------------------------------------------------------------------------------------------------------*/
+#header .snav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.snav li a {
+	position: relative;
+}
+.snav .i-tel {
+	padding: 10px 10px 0 35px;
+	background-color: #FAEFDE;
+}
+.snav .i-tel a {
+	line-height: 1.2;
+	font-weight: bold;
+	font-size: 18px;
+	color: #008844;
+}
+.snav .i-tel a::before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: -20px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(images/snav-tel01.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.tel-name {
+	vertical-align: 8%;
+	font-weight: 500;
+	font-size: 14px;
+	color: #000;
+}
+.snav .k-tel {
+	padding: 0 10px 0 35px;
+	background-color: #FAEFDE;
+}
+.snav .k-tel a {
+	line-height: 1.2;
+	font-weight: bold;
+	font-size: 18px;
+	color: #E28600;
+}
+.snav .k-tel a::before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: -20px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(images/snav-tel02.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.snav .tel-txt {
+	padding: 0 10px 5px 35px;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #FAEFDE;
+}
+.snav .nav-mail {
+	padding: 10px 10px 10px 35px;
+	background-color: #008844;
+}
+.snav .nav-mail a {
+	font-size: 16px;
+	color: #fff;
+}
+.snav .nav-mail a::before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 8px);
+	left: -20px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(images/snav-mail01.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.snav .nav-mail a::after {
+	content: "";
+	position: absolute;
+	top: calc(50% - 3px);
+	right: 0;
+	display: inline-block;
+	width: 8px;
+	height: 6px;
+	background-image: url(images/snav-mail02.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*index.html----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*key-slider--------------------------------------------------------------------------------------------------------------------------*/
+.key-slider {
+	width: 100%;
+	margin-bottom: 65px;
+}
+.key-slider img {
+	width: 100%;
+}
+/*secService-----------------------------------------------------------------------------------------------------------------------------*/
+#secService {
+	margin-bottom: 140px;
+}
+/*service.htmlと共通部分 始まり----------------------------------------------------------------------------------------------------------------*/
+.self-area {
+	margin-top: 80px;
+	margin-bottom: 70px;
+}
+.sub-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.sub-heading::before, .sub-heading::after {
+	content: "";
+	display: block;
+	flex-grow: 1;
+	height: 2px;
+}
+.self-heading::before, .self-heading::after {
+	background-color: #E28600;
+}
+.sub-heading::before {
+	margin-right: 10px;
+}
+.sub-heading::after {
+	margin-left: 10px;
+}
+.self-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.self-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 31.666667%;
+	height: 235px;
+	margin-bottom: 30px;
+	background-color: #E28600;
+}
+.self-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+.self-box .self-inner .self-img {
+	width: 66px;
+	height: 66px;
+	margin-bottom: 20px;
+}
+.self-box .self-inner h3 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+}
+.self-box .self-inner h3::after {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 2px;
+	margin: 15px auto;
+	background-color: #fff;
+}
+.self-box .self-inner .self-txt {
+	text-align: center;
+	font-weight: 500;
+	font-size: 14px;
+	color: #fff;
+}
+.small-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+.orange-box {
+	width: 31.666667%;
+	height: 140px;
+	margin-bottom: 30px;
+	background-color: #E28600;
+}
+.small-box .self-img {
+	width: 66px;
+	height: 66px;
+	margin-bottom: 10px;
+}
+.small-box h3 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+}
+.corporation-wrap .green-box:nth-of-type(6) {
+	margin-bottom: 0;
+}
+.corporation-wrap .green-box:nth-of-type(7) {
+	margin-bottom: 0;
+}
+.corporation-heading::before, .corporation-heading::after {
+	background-color: #008844;
+}
+.corporation-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.green-box {
+	width: 31.666667%;
+	height: 140px;
+	margin-bottom: 30px;
+	background-color: #008844;
+}
+.corporation-img {
+	width: 66px;
+	height: 66px;
+	margin-bottom: 10px;
+}
+.center-ml {
+	margin-left: 17.1%;
+}
+.center-mr {
+	margin-right: 17.1%;
+}
+/*service.htmlと共通部分　終わり----------------------------------------------------------------------------------------------------------------*/
+
+/*secOffice---------------------------------------------------------------------------------------------------------------------------*/
+#secOffice {
+	position: relative;
+	background-image: url(images/top-company.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#secOffice::before {
+	content: "";
+	display: block;
+	padding-top: 46.428571%;
+}
+#secOffice .long-title{
+	position: absolute;
+	top: -36.5px;
+	left: calc(50% - 25%);
+	width: 50%;
+}
+#secOffice .long-title .office-heading::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 0;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+
+#secOffice .long-title .office-heading {
+	position: relative;
+	width: auto;
+	height: auto;
+	padding: 22px 20px 20px 20px;
+	text-align: center;
+	line-height: 1.4;
+	font-weight: 500;
+	font-size: 2vw;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+/*レスポンシブ時に反映させる文字　始まり-----------------------------------------------------------------------------------------------------------*/
+#secOffice .long-title .office-heading br {
+	display: none;
+}
+
+#secOffice .name01 {
+	display: none;
+}
+
+#secOffice .name02 {
+	display: none;
+}
+/*レスポンシブ時に反映させる文字 終わり-----------------------------------------------------------------------------------------------------------*/
+
+#secOffice .office-btn {
+	position: absolute;
+	bottom: -27px;
+	left: calc(50% - 87px);
+	padding: 15px 30px;
+	border: 1px solid #fff;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #E28600;
+}
+
+/*secNews-----------------------------------------------------------------------------------------------------------------------------*/
+#secNews {
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+.news-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 128px;
+	padding-bottom: 128px;
+}
+#secNews .news-area {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 63px 68px;
+	border-right: 2px solid #E28600;
+	border-left: 2px solid #008844;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+#secNews .news-area::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#secNews .news-area::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.news-area .news-left h1 {
+	line-height: 1;
+	font-weight: bold;
+	font-size: 24px;
+}
+.news-area .news-left p {
+	font-weight: bold;
+	font-size: 14px;
+}
+.news-area .news-right {
+	width: 81.4%;
+}
+.news-area .news-right ul li {
+	display: flex;
+	padding: 20px 0;
+	border-top: 1px dashed #898989;
+	box-sizing: border-box;
+}
+.news-area .news-right ul li:nth-of-type(3) {
+	padding-bottom: 0;
+	margin-bottom: 50px;
+}
+.news-area .news-right ul li .date {
+	margin-right: 50px;
+	font-weight: 500;
+	font-size: 16px;
+}
+.news-area .news-right ul li .news-title a {
+	display: inline;
+	font-weight: bold;
+	text-indent: -1em;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.news-area .news-right ul li .news-title::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 6px;
+	margin-right: 10px;
+	background-image: url(images/gnav.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: translateY(-50%);
+}
+.news-area .news-btn {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 15px 30px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #E28600;
+}
+
+/*secContact--------------------------------------------------------------------------------------------------------------------------*/
+#secContact {
+	display: flex;
+	flex-wrap: wrap;
+}
+#secContact .legal-cost {
+	width: 50%;
+	height: 240px;
+	background-color: #E28600;
+}
+#secContact .legal-cost a, #secContact .contact-link a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+#secContact h1, #secContact h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+	color: #fff;
+}
+#secContact h1::after, #secContact h2::after {
+	content: "";
+	display: block;
+	width: 345px;
+	height: 2px;
+	margin: 20px auto 25px auto;
+	background-color: #fff;
+}
+#secContact p {
+	text-align: center;
+	color: #fff;
+}
+#secContact .contact-link {
+	width: 50%;
+	height: 240px;
+	background-color: #008844;
+}
+#secContact .map {
+	margin-bottom: 0;
+}
+
+/*secAccess（about.htmlとcontact.htmlの共通）-------------------------------------------------------------------------------------------*/
+.map {
+	margin-bottom: 60px;
+}
+
+#secAccess {
+	margin-bottom: 70px;
+}
+.access-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#secAccess .inner .access-left {
+	width: 50%;
+}
+.access-en-heading {
+	margin-bottom: 35px;
+	text-align: left;
+}
+#secAccess .access-left .txt {
+	margin-bottom: 15px;
+	letter-spacing: 1.2px;
+	line-height: 1.5;
+	font-size: 16px;
+}
+#secAccess .access-left .txt span {
+	font-size: 14px;
+}
+#secAccess .access-left .btn-wrap li {
+	margin-bottom: 8px;
+	font-size: 0;/*inline-blockの左右の余白を無くす記述*/
+}
+.green-btn {
+	display: inline-block;
+	padding: 8px 12px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #008844;
+}
+.orange-btn {
+	display: inline-block;
+	padding: 8px 12px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #E28600;
+}
+#secAccess .access-left .btn-wrap .green-btn span, #secAccess .access-left .btn-wrap .orange-btn span {
+	font-weight: 500;
+}
+#secAccess .access-left .btn-wrap .white-btn {
+	display: inline-block;
+	padding: 8px 12px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.btn-wrap li:nth-of-type(3) {
+	display: inline-block;
+}
+#secAccess .access-right {
+	width: 50%;
+	height: 250px;
+	padding: 2.734375% 3.125%;
+	border: 1px solid #FAEFDE;
+	border-radius: 20px;
+	background-color: #FAEFDE;
+	box-sizing: border-box;
+}
+#secAccess .access-right .access-means {
+	margin-bottom: 30px;
+}
+#secAccess .access-right .access-means li {
+	letter-spacing: 1.2px;
+	font-size: 14px;
+}
+#secAccess .access-right .txt {
+	letter-spacing: 1.2px;
+	font-size: 14px;
+}
+.access-img {
+	display: flex;
+	width: 100%;
+	margin-top: 45px;
+}
+.access-img p {
+	width: 50%;
+}
+.access-img p:nth-of-type(1) {
+	border-right: 1px solid #fff;
+}
+
+
+/*about.html==============================================================================================================================================================================================*/
+
+/*キービジュアル(contact.htmlと共通)-----------------------------------------------------------------------------------------------------*/
+.key {
+	position: relative;
+	width: 100%;
+	margin-bottom: 80px;
+}
+.key::before {
+	content: "";
+	display: block;
+	width: 0;
+	padding-top: 40.392857%; /*624÷1400*/
+}
+.key .key-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 66.857143%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.key .key-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33.142857%;
+	height: 100%;
+	background-image: url(images/bg.png);
+	background-repeat: repeat;
+	background-size: 36px 49px;
+	box-sizing: border-box;
+}
+.key-right .inbox {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 65.310493%;
+	padding: 8.56531% 9%;
+	border-right: 2px solid #008844;
+	border-left: 2px solid #E28600;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.key-right .inbox::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.key-right .inbox::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.key-right .inbox h2 {
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 32px;
+}
+.key-right .inbox p {
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+}
+.key-right .inbox .key-nav li {
+	margin-bottom: 1px;
+}
+.orange-navbtn {
+	padding: 4.282655% 12.847966%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #E28600;
+}
+.green-navbtn {
+	padding: 4.282655% 12.847966%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #008844;
+}
+/*secPhilosophy-----------------------------------------------------------------------------------------------------------------------*/
+#secPhilosophy {
+	margin-bottom: 110px;
+}
+#secPhilosophy .medium-inner {
+	position: relative;
+	padding: 6.142857% 0;
+}
+#secPhilosophy .en-heading {
+	margin-bottom: 65px;
+}
+#secPhilosophy .medium-inner::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 19.739583%;
+	height: 100%;
+	border-top: 2px solid #E28600;
+	border-left: 2px solid #E28600;
+	border-bottom: 2px solid #E28600;
+}
+#secPhilosophy .medium-inner::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "";
+	display: block;
+	width: 19.739583%;
+	height: 100%;
+	border-top: 2px solid #008844;
+	border-right: 2px solid #008844;
+	border-bottom: 2px solid #008844;
+}
+#secPhilosophy .medium-inner .philosophy-img {
+	width: 13.541667%;
+	margin: 0 auto 45px auto;
+}
+#secPhilosophy .medium-inner h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+.border-top::before {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 3px;
+	margin: 20px auto 50px auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#secPhilosophy .medium-inner .border-top p {
+	margin-bottom: 40px;
+	text-align: center;
+	line-height: 2.0;
+	font-weight: 500;
+	font-size: 14px;
+}
+#secPhilosophy .medium-inner p:nth-of-type(3) {
+	margin-bottom: 0;
+}
+/*secOutline--------------------------------------------------------------------------------------------------------------------------*/
+#secOutline {
+	padding: 6.428571% 0 7.142857% 0;
+	margin-bottom: 90px;
+	background-image: url(images/outline.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#secOutline .inline-wrap .heading  {
+	color: #fff;
+}
+#secOutline .en-heading {
+	margin-bottom: 60px;
+	color: #fff;
+}
+#secOutline .outline-box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 61.428571%;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.90);
+}
+#secOutline .outline-box dt {
+	width: 20.581395%;
+	padding: 15px 0 15px 20px;
+	border-left: 2px solid #E28600;
+	border-bottom: 2px solid #E28600;
+	font-weight: bold;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+#secOutline .outline-box dt:nth-of-type(1) {
+	border-top: 2px solid #E28600;
+}
+#secOutline .outline-box dd {
+	width: 79.418605%;
+	padding: 15px 0;
+	border-right: 2px solid #008844;
+	border-bottom: 2px solid #008844;
+	font-weight: 500;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+#secOutline .outline-box dd:nth-of-type(1) {
+	border-top: 2px solid #008844;
+}
+.outline-box .font-green {
+	display: inline;
+	color: #008844;
+}
+.outline-box .font-orange {
+	display: inline;
+	color: #E28600;
+}
+.outline-box dd .work-item {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 35px;
+}
+.outline-box dd .work-item li {
+	margin-right: 25px;
+}
+
+#secOutline .outline-box dd br {
+		display: none;
+}
+
+/*secProfile--------------------------------------------------------------------------------------------------------------------------*/
+#secProfile {
+	margin-bottom: 125px;
+}
+#secProfile .en-heading {
+	margin-bottom: 50px;
+}
+#secProfile .profile-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#secProfile .profile-wrap .profile-left {
+	width: 49.285714%;
+}
+#secProfile .profile-wrap .profile-left .img {
+	margin-bottom: 50px;
+}
+#secProfile .profile-wrap .profile-left .txt {
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 20px;
+}
+#secProfile .profile-wrap .profile-left h2 {
+	margin-bottom: 35px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 36px;
+}
+#secProfile .profile-wrap .profile-left .profile-inbox {
+	position: relative;
+	border-right: 2px solid #008844;
+	box-sizing: border-box;
+}
+#secProfile .profile-wrap .profile-left .profile-inbox::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -3.768116%;
+	width: 2px;
+	height: 100%;
+	border-left: 2px solid #E28600;
+}
+.profile-inbox .profile-inner {
+	width: 68.115942%;
+	margin: 0 auto;
+}
+.profile-left .profile-inbox .profile-inner .profile-txt {
+	padding: 30px 0;
+	margin-bottom: 30px;
+	border-top: 2px solid #008844;
+	border-bottom: 2px solid #008844;
+	font-weight: 500;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+.profile-inbox .profile-inner .career dt {
+	font-weight: bold;
+	font-size: 16px;
+}
+.profile-inbox .profile-inner .career dd {
+	margin-bottom: 35px;
+	font-weight: 500;
+	font-size: 15px;
+}
+#secProfile .profile-wrap .profile-left .profile-inbox .profile-inner .circle-box {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+	border: 1px solid #E5F0EA;
+	border-radius: 20px;
+	background-color: #E5F0EA;
+	box-sizing: border-box;
+}
+.circle-box dt {
+	width: 30%;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.circle-box dd {
+	width: 70%;
+	font-weight: 500;
+}
+#secProfile .profile-wrap .profile-right {
+	width: 49.285714%;
+}
+#secProfile .profile-wrap .profile-right {
+	width: 49.285714%;
+}
+#secProfile .profile-wrap .profile-right .img {
+	margin-bottom: 50px;
+}
+#secProfile .profile-wrap .profile-right .txt {
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 20px;
+}
+#secProfile .profile-wrap .profile-right h2 {
+	margin-bottom: 35px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 36px;
+}
+.profile-right .profile-inbox .profile-inner .profile-txt {
+	padding: 30px 0;
+	margin-bottom: 30px;
+	border-top: 2px solid #E28600;
+	border-bottom: 2px solid #E28600;
+	font-weight: 500;
+	font-size: 15px;
+	box-sizing: border-box;
+}
+#secProfile .profile-wrap .profile-right .profile-inbox .profile-inner .circle-box {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+	border: 1px solid #FAEFDE;
+	border-radius: 20px;
+	background-color: #FAEFDE;
+	box-sizing: border-box;
+}
+/*secEncounter------------------------------------------------------------------------------------------------------------------------*/
+#secEncounter {
+	position: relative;
+	margin-bottom: 80px;
+}
+
+#secEncounter h1::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 0;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#secEncounter h1 {
+	position: relative;
+	top: 34px;
+	left: calc(50% - 21.035714%);
+	width: 42.071429%;
+	padding: 22px 20px 20px 20px;
+	text-align: center;
+	line-height: 1.4;
+	font-weight: 500;
+	font-size: 2vw;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+#secEncounter h1 br {
+	display: none;
+}
+
+#secEncounter .img {
+	margin-bottom: 85px;
+}
+#secEncounter .txt {
+	width: 62.142857%;
+	padding: 0 6.071429%;
+	border-left: 2px solid #008844;
+	border-right: 2px solid #E28600;
+	margin: 0 auto;
+	box-sizing: border-box;
+	line-height: 1.875;
+	font-weight: 500;
+}
+
+/*service.html============================================================================================================================================================================================*/
+
+/*service-----------------------------------------------------------------------------------------------------------------------------*/
+#service {
+	padding-top: 80px;
+	padding-bottom: 90px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+
+/*サイトトップの見出し(info.htmlと共通)---------------------------------------------------------------------------------------------------*/
+.title-box {
+	position: relative;
+	width: 32.0833333%;
+	padding: 3.33333333% 0;
+	border-left: 2px solid #E28600;
+	border-right: 2px solid #008844;
+	margin: 0 auto;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.title-box::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.title-box::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.title-box .sub-title {
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 32px;
+}
+
+
+/*secPersonalとsecCorpolationの共通 始まり----------------------------------------------------------------------------------------------*/
+.service-common {
+	padding-top: 90px;
+	padding-bottom: 100px;
+}
+.service-common .small-inner .inline-wrap .heading::before {
+	background: #fff;
+}
+.service-common .small-inner .inline-wrap .heading, .service-common .small-inner .en-heading {
+	color: #fff;
+}
+.service-common .small-inner .en-heading {
+	margin-bottom: 65px;
+}
+.service-common .small-inner .service-item li {
+	display: flex;
+	margin-bottom: 10px;
+	padding: 7.471264% 9.770115% 8.045977% 10.344828%;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.service-common .small-inner .service-item li .img {
+	width: 66px;
+	height: 66px;
+	margin-right: 1.724138%
+}
+.service-common .small-inner .service-item li .content {
+	width: 88.645%
+}
+.service-item li .content .service-title {
+	margin-top: 5px;
+	font-weight: bold;
+	line-height: 1.4;
+	font-size: 24px;
+}
+.service-item li .content .lead {
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+.service-item li .content .detail {
+	margin-bottom: 20px;
+	line-height: 1.8;
+	font-weight: 500;
+}
+.service-item li .content .detail::before {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 1px;
+	margin-bottom: 25px;
+	background-color: #000;
+}
+.service-item li .content .txt-link {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 15px;
+	text-decoration: underline;
+}
+.service-item li .content .txt-link:nth-of-type(2) {
+	margin-left: 25px;
+}
+/*secPersonalとsecCorpolationの共通 終わり----------------------------------------------------------------------------------------------*/
+
+/*secPersonal-------------------------------------------------------------------------------------------------------------------------*/
+
+#secPersonal {
+	background-color: #E28600;
+}
+#secPersonal .small-inner .service-item li:nth-of-type(9) {
+	margin-bottom: 0;
+}
+#secPersonal .small-inner .service-item li .content .txt-link {
+	color: #E28600;
+}
+
+/*secCorporation----------------------------------------------------------------------------------------------------------------------*/
+#secCorporation {
+	background-color: #008844;
+}
+#secCorporation .small-inner .service-item li:nth-of-type(7) {
+	margin-bottom: 0;
+}
+#secCorporation .small-inner .service-item li .content .detail {
+	margin-bottom: 0;
+}
+#secCorporation .small-inner .service-item li:nth-of-type(1) > .content .detail {
+	margin-bottom: 20px;
+}
+#secCorporation .small-inner .service-item li .content .txt-link {
+	color: #008844;
+}
+/*contact.html============================================================================================================================================================================================*/
+
+/*キービジュアル------------------------------------------------------------------------------------------------------------------------*/
+.contact-key::before {
+	padding-top: 37%; /*564÷1400*/
+}
+
+/*secMailform-------------------------------------------------------------------------------------------------------------------------*/
+#secMailform {
+	margin-bottom: 125px;
+}
+#secMailform .short-inner .en-heading {
+	margin-bottom: 60px;
+}
+#secMailform .short-inner .txt {
+	margin-bottom: 30px;
+	line-height: 1.4;
+	font-weight: 500;
+	font-size: 15px;
+}
+#secMailform .short-inner .container ul li {
+	border-top: 1px solid #CBCCCC;
+}
+#secMailform .short-inner .container ul li dl {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#secMailform .short-inner .container ul li>dl>dt {
+	position: relative;
+	width: 30%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	line-height: 1.65;
+	font-weight: bold;
+	font-size: 18px;
+}
+#secMailform .short-inner .container ul li>dl>dd {
+	position: relative;
+	width: 67%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 3%;
+	font-weight: 500;
+	font-size: 18px;
+}
+#secMailform .short-inner .container form .any, #secMailform .short-inner .container form .need {
+	position: absolute;
+	top: 24.5px;
+	right: 0;
+	display: block;
+	width: 35px;
+	height: 20px;
+	padding-top: 3px;
+	text-align: center;
+	font-weight: 500;
+	line-height: 1.0;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: #008844;
+	box-sizing: border-box;
+}
+#secMailform .short-inner .container form .need {
+	background-color: #E28600;
+}
+:placeholder-shown {
+color:#C8C9CA;
+}
+::placeholder {
+color:#C8C9CA;
+}
+::-webkit-input-placeholder {
+color:#C8C9CA;
+}
+:-moz-placeholder {
+color:#C8C9CA;
+}
+::-moz-placeholder {
+color:#C8C9CA;
+}
+:-ms-input-placeholder {
+color:#C8C9CA;
+}
+::-ms-input-placeholder {
+color:#C8C9CA;
+}
+input[type="text"], textarea, select, .submit input {
+	box-sizing: border-box;
+	width: 100%!important;
+	height: 35px;
+	padding: 0 0.5em;
+	font-weight: 500;
+	font-size: 18px;
+	border: solid 1px #C8C9CA;
+	font-family: "游ゴシック体", "Yu Gothic", YuGothic, Meiryo, "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+#secMailform .short-inner .container form textarea {
+	height: 182px;
+}
+#secMailform .short-inner .container form .radio input {
+	display: none;
+}
+#secMailform .short-inner .container .radio label {
+	cursor: pointer;
+}
+#secMailform .short-inner .container .radio label span {
+	position: relative;
+	display: inline-block;
+	padding-left: 27px;
+}
+#secMailform .short-inner .container form .radio label span:before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: solid 1px #C8C9CA;
+	border-radius: 100%;
+	-webkit-transition: ease .2s;
+	transition: ease .2s;
+}
+#secMailform .short-inner .container form .radio label span:after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	left: 5px;
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	background-color: #ffffff;
+	border-radius: 100%;
+}
+#secMailform .short-inner .container form .radio label + label {
+	margin-left: 30px;
+}
+#secMailform .short-inner .container form .radio :checked + span:before {
+	background-color: #000;
+}
+
+@media all and (-ms-high-contrast:none) {
+input[type="text"], textarea, select {
+	font-family: Meiryo, "メイリオ", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", Osaka, sans-serif;
+}
+}
+ #secMailform .short-inner .container form .box dl::-webkit-scrollbar {
+width:10px;
+}
+#secMailform .short-inner .container form .box dl::-webkit-scrollbar-track {
+background:#E2E2E2;
+}
+#secMailform .short-inner .container form .box dl::-webkit-scrollbar-thumb {
+ background:#4F4F4F;
+ border: solid 4px #E2E2E2;
+ border-radius: 0;
+}
+#secMailform .short-inner .container form .box dl {
+	padding: 15px;
+	overflow-y: scroll;
+	height: 220px;
+	border: solid 1px #C8C9CA;
+	box-sizing: border-box;
+}
+#secMailform .short-inner .container form .box dl dt, #secMailform .short-inner .container form .box dl dd {
+	font-size: 12px;
+	line-height: 2.0;
+}
+#secMailform .short-inner .container form .submit {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+#secMailform .short-inner .container form .submit input {
+	display: block;
+	width: 100%;
+	height: auto!important;
+	padding: 35px 20px;
+	font-size: 18px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	color: #ffffff;
+	background-color: #E28600;
+}
+/*secTel------------------------------------------------------------------------------------------------------------------------------*/
+#secTel {
+	padding-top: 85px;
+	padding-bottom: 75px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+#secTel .en-heading {
+	margin-bottom: 65px;
+}
+
+.square {
+	position: relative;
+	width: 55%;
+	padding: 70px 80px;
+	margin: 0 auto;
+	border-right: 2px solid #E28600;
+	border-left: 2px solid #008844;
+	background-color: #fff;
+}
+.square::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+.square::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#secTel .square .container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+#secTel .square .container .tel {
+	width: 50%;
+}
+#secTel .square .container .tel .txt {
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 18px;
+}
+#secTel .square .container .tel-left .txt {
+	background-color: #FAEFDE;
+}
+#secTel .square .container .tel-right .txt {
+	background-color: #DEEFE7;
+}
+#secTel .square .container .tel a {
+	padding: 5.921053% 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	color: #fff;
+}
+#secTel .square .container .tel-left {
+	background-color: #E28600;
+}
+#secTel .square .container .tel-right {
+	background-color: #008844;
+}
+#secTel .square .attention {
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 15px;
+}
+#secTel .square .heading {
+	display: block;
+	text-align: center;
+	font-size: 28px;
+}
+#secTel .square .heading::before {
+	display: block;
+	width: 142px;
+}
+/*cost.html===============================================================================================================================================================================================*/
+
+/*cost--------------------------------------------------------------------------------------------------------------------------------*/
+#cost {
+	padding-top: 80px;
+	padding-bottom: 90px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+#cost .title-box {
+	position: relative;
+	width: 69.642857%;
+	padding: 3.33333333% 2.857143%;
+	border-left: 2px solid #E28600;
+	border-right: 2px solid #008844;
+	margin: 0 auto;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+#cost .title-box .en-heading {
+	margin-bottom: 30px;
+}
+#cost .title-box .key-nav {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+#cost .title-box .key-nav li {
+	width: calc(100% / 4 - 1px);
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+#cost .title-box .key-nav li:nth-of-type(4),  #cost .title-box .key-nav li:nth-of-type(7) {
+	margin-right: 0;
+}
+#cost .title-box .key-nav li .orange-navbtn {
+	padding: 9.009009% 0;
+}
+#cost .title-box .key-nav li .green-navbtn {
+	padding: 9.009009% 0;
+}
+
+/*secAdvice---------------------------------------------------------------------------------------------------------------------------*/
+#secAdvice {
+	padding: 90px 0 80px 0;
+}
+#secAdvice .medium-inner .en-heading {
+	margin-bottom: 50px;
+}
+#secAdvice .medium-inner .square {
+	width: 100%;
+	padding: 60px 50px 50px 50px;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+}
+#secAdvice .medium-inner .square dl {
+	display: flex;
+	flex-wrap: wrap;
+}
+#secAdvice .medium-inner .square dl dt {
+	width: 23.255814%;
+	border-bottom: 2px solid #E28600;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+	line-height: 1;
+}
+#secAdvice .medium-inner .square dl dt .ad-tit {
+	line-height: 1;
+	font-weight: 500;
+	font-size: 22px;
+}
+#secAdvice .medium-inner .square dl dd {
+	width: 76.744186%;
+	border-bottom: 2px solid #008844;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+}
+#secAdvice .medium-inner .square dl dt:nth-of-type(3) {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+#secAdvice .medium-inner .square dl dd:nth-of-type(3) {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+#secAdvice .medium-inner .square dl dd .ad-txt {
+	margin-bottom: 15px;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 22px;
+}
+#secAdvice .medium-inner .square dl dd:nth-of-type(1) > .ad-txt {
+	margin-bottom: 0;
+}
+#secAdvice .medium-inner .square dl dd .ad-txt span {
+	font-weight: 500;
+	font-size: 17px;
+}
+#secAdvice .medium-inner .square dl dd .ad-small-txt {
+	line-height: 1;
+	font-weight: 500;
+	font-size: 16px;
+}
+#secAdvice .medium-inner .square dl dt:nth-of-type(1), #secAdvice .medium-inner .square dl dd:nth-of-type(1) {
+	padding-top: 0;
+}
+#secAdvice .medium-inner .txt {
+	margin-bottom: 40px;
+	text-align: center;
+	line-height: 1;
+	font-weight: 500;
+	font-size: 22px;
+}
+
+#secAdvice .medium-inner .txt br{
+		display: none;
+	}	
+
+#secAdvice .medium-inner .ad-result {
+	margin-bottom: 25px;
+	border-top: 2px solid #E28600;
+	border-bottom: 2px solid #E28600;
+}
+#secAdvice .medium-inner .ad-result ul {
+	margin-bottom: 30px;
+}
+#secAdvice .medium-inner .ad-result ul li {
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
+	border-bottom: 2px solid #CBCCCC;
+	box-sizing: border-box;
+}
+#secAdvice .medium-inner .ad-result ul li::before {
+	content: "";
+	display: block;
+	width: 66px;
+	height: 66px;
+	margin-right: 15px;
+}
+.ad-res-item01::before {
+	background-image: url(images/advice01.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ad-res-item02::before {
+	background-image: url(images/advice02.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ad-res-item03::before {
+	background-image: url(images/advice03.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ad-res-item04::before {
+	background-image: url(images/advice04.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.ad-res-item05::before {
+	background-image: url(images/advice05.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#secAdvice .medium-inner .ad-result ul li .ad-res-heading {
+	margin-bottom: 5px;
+	line-height: 1;
+	font-weight: bold;
+	font-size: 24px;
+}
+#secAdvice .medium-inner .ad-result ul li .ad-res-txt {
+	line-height: 1.3;
+	font-weight: 500;
+	font-size: 16px;
+}
+#secAdvice .medium-inner .ad-result .txt {
+	padding-bottom: 20px;
+	margin-bottom: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+#secAdvice .medium-inner .note {
+	font-weight: 500;
+	font-size: 16px;
+}
+#secAdvice .medium-inner .note a {
+	display: inline;
+	font-weight: bold;
+	color: #E28600;
+	text-decoration: underline;
+}
+
+/*料金表コンテンツ(secIncident01~secIncident06)-----------------------------------------------------------------------------------------*/
+#secIncident01 {
+	padding-top: 95px;
+	padding-bottom: 100px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+#secIncident01 .small-inner .en-heading {
+	margin-bottom: 60px;
+}
+#secIncident01 .small-inner .txt {
+	margin-bottom: 35px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+}
+.cost-table01 {
+	width: 100%;
+	margin-bottom: 30px;
+	border: solid 2px #dddddd;
+	background-color: #ffffff;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+.cost-table01 th, .cost-table01 td {
+	vertical-align: middle;
+	border: solid 2px #dddddd;
+	border-collapse: collapse;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.cost-table01 th {
+	padding: 15px 0;
+	color: #ffffff;
+	background-color: #E28600
+}
+.cost-table01 tr th:nth-of-type(1) {
+	width: 71%;
+}
+.cost-table01 tr th:nth-of-type(2), .cost-table01 tr th:nth-of-type(3) {
+	width: 14.5%;
+}
+.cost-table01 tr td {
+	padding: 25px 0 25px 30px;
+}
+.cost-table01 tr td:nth-of-type(1) {
+	background-color: #FAEFDE;
+}
+.caution {
+	line-height: 1.6;
+	font-weight: 500;
+	font-size: 15px;
+}
+#secIncident02 {
+	padding-top: 95px;
+	padding-bottom: 100px;
+}
+#secIncident02 .small-inner .en-heading {
+	margin-bottom: 55px;
+}
+/*secIncident02~secIncident06の共通部分 始まり------------------------------------------------------------------------------------------------*/
+.cost-table02 {
+	width: 100%;
+	margin-bottom: 30px;
+	border: solid 2px #dddddd;
+	background-color: #ffffff;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+.cost-table02 tr th {
+	vertical-align: middle;
+	padding-left: 30px;
+	border: solid 2px #dddddd;
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+	background-color: #E28600;
+	box-sizing: border-box;
+}
+.cost-table02 tr td {
+	padding: 25px 0 25px 30px;
+	vertical-align: middle;
+	border: solid 2px #dddddd;
+	border-collapse: collapse;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.cost-table02 tr td:nth-of-type(1) {
+	background-color: #FAEFDE;
+}
+/*secIncident02~secIncident06の共通部分　終わり------------------------------------------------------------------------------------------------*/
+
+#secIncident02 .small-inner .cost-table02 tr th {
+	width: 35%;
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13.5%
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 51.5%
+}
+#secIncident03 {
+	padding-top: 95px;
+	padding-bottom: 85px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+
+#secIncident03 .small-inner .inline-wrap .heading br {
+	display: none;
+}	
+
+#secIncident03 .small-inner .en-heading {
+	margin-bottom: 55px;
+}
+#secIncident03 .small-inner .cost-table02 tr th {
+	width: 10.8%;
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13%
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 76.2%
+}
+#secIncident04 {
+	padding-top: 95px;
+	padding-bottom: 100px;
+}
+#secIncident04 .small-inner .en-heading {
+	margin-bottom: 55px;
+}
+#secIncident04 .small-inner .cost-table02 tr th {
+	width: 16.5%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 20%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 63.5%
+}
+#secIncident05 {
+	padding-top: 95px;
+	padding-bottom: 75px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+#secIncident05 .small-inner .en-heading {
+	margin-bottom: 55px;
+}
+#secIncident05 .small-inner .cost-table02 tr th {
+	width: 22%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 12.5%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 65.5%
+}
+#secIncident06 {
+	padding-top: 95px;
+	padding-bottom: 45px;
+}
+#secIncident06 .small-inner .en-heading {
+	margin-bottom: 55px;
+}
+#secIncident06 .small-inner .cost-table02 tr th {
+	width: 20.7%;
+	background-color: #008844;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13%;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 67.7%
+}
+#secIncident06 .small-inner .cost-table02 tr td a {
+	display: inline;
+	color: #008844;
+	text-decoration: underline;
+}
+
+/*フッター上のテキスト-------------------------------------------------------------------------------------------------------------------*/
+#ad-main .inner {
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 45px;
+	box-sizing: border-box;
+}
+#ad-main .inner .ps {
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+#ad-main .inner .ps br{
+	display: none;
+}
+#ad-main .inner::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#ad-main .inner::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+/*info.htmlとpost.htmlの共通部分
+==========================================================================================================================================================================================================*/
+
+#info .info-wrap {
+	padding-top: 80px;
+	padding-bottom: 85px;
+	margin-bottom: 50px;
+	background-image: url(images/bg.png);
+	background-position: center center;
+	background-repeat: repeat;
+	background-size: 36px 49px;
+}
+#info .outer .post {
+	position: relative;
+	padding-top: 75px;
+	padding-bottom: 70px;
+}
+#info .outer .post::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin: 0 auto;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#info .outer .post .date {
+	margin-bottom: 15px;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	color: #008844;
+}
+#info .outer .post h1 a {
+	margin-bottom: 30px;
+	line-height: 1.3;
+	font-weight: bold;
+	font-size: 24px;
+	color: #E28600;
+}
+#info .outer .post .desc-txt {
+	margin-bottom: 25px;
+	line-height: 1.5;
+	font-weight: 500;
+	font-size: 16px;
+}
+#info .outer .post .img {
+	margin-bottom: 35px;
+}
+.post-btn {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+.post-btn li .prev, .post-btn li .next {
+	padding: 5px 10px;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: #E28600;
+}
+
+/*info.html===============================================================================================================================================================================================*/
+.post-page {
+	display: flex;
+	align-items: center;
+}
+.post-page a {
+	width: 28px;
+	height: 28px;
+	padding-top: 3px;
+	margin-right: 5px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+	background-color: #008844;
+	box-sizing: border-box;
+}
+.post-page a:nth-of-type(1) {
+	padding-top: 2px;
+	border: 1px solid #000;
+	color: #000;
+	background-color: #fff;
+}
+/*post.html===============================================================================================================================================================================================*/
+
+.post-all a {
+	padding: 5px 10px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+	background-color: #008844;
+}
+
+/*footer(ボーダーあり)================================================
+======================================================================================================================================*/
+#footer .foot-border {
+	position: relative;
+}
+#footer .inner::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #E28600 50%, #008844 50%);
+}
+#footer .inner .txt {
+	padding: 3.33333333% 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+/*footer(ボーダーなし)================================================
+======================================================================================================================================*/
+
+#footer .txt {
+	padding: 4.285714% 0 2.857143% 0;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+
+/*1280px以下の記述===========================================================================================================================================================================================*/
+
+@media screen and (max-width:1280px) {
+/*共通----------------------------------------------------------------------------------------------------------------*/
+.logo {
+	width: 25%;
+}
+#nav {
+	margin-left: 4.5%;
+}
+}
+
+
+/*1200px以下の記述===========================================================================================================================================================================================*/
+@media screen and (max-width:1199px) {
+	
+/*共通-----------------------------------------------------------------------------------------------------------------------*/
+.inner {
+	width: 1024px;
+	margin: 0 auto;
+}
+.logo {
+	width: 25%;
+}
+/*nav-----------------------------------------------------------------------------------------------------------------------*/
+.nav-area {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100px;
+}
+#nav {
+	width: 50%;
+	margin-left: 2.5%;
+}
+#nav .gnav li {
+	margin-right: 20px;
+}
+#nav .gnav li a {
+	font-size: 15.5px;
+}
+/*s-nav---------------------------------------------------------------------------------------------------------------------*/
+.snav .i-tel {
+	padding: 5px 0 0 30px;
+	background-color: #FAEFDE;
+}
+.snav .i-tel a {
+	font-size: 16px;
+}
+.snav .k-tel {
+	padding: 0 0 0 30px;
+}
+.snav .k-tel a {
+	font-size: 16px;
+}
+.snav .tel-txt {
+	padding: 0 5px 0 20px;
+}
+.snav .nav-mail {
+	padding: 5px 10px 5px 30px;
+}
+.snav .nav-mail a {
+	font-size: 16px;
+}
+.snav .nav-mail a::after {
+	right: -8px;
+}
+.key-slider {
+	margin-bottom: 50px;
+}
+	
+/*secService----------------------------------------------------------------------------------------------------------------*/
+#secService {
+	margin-bottom: 100px;
+}
+.heading::before {
+	margin: 0 auto 10px auto;
+}
+.self-box .self-inner h3 {
+	font-size: 17px;
+}
+.small-box h3 {
+	font-size: 17px;
+}
+/*secAccess-----------------------------------------------------------------------------------------------------------------*/
+	
+#secAccess {
+	margin-bottom: 70px;
+}
+	
+/*about.html================================================================================================================*/
+.key-right .inbox {
+	width: 70%;
+}
+	
+}
+
+/*1024px以下の記述===========================================================================================================================================================================================*/
+
+@media screen and (max-width:1024px) {
+/*共通-----------------------------------------------------------------------------------------------------------------------*/
+.inner {
+	width: 960px;
+	margin: 0 auto;
+}
+.logo {
+	width: 23%;
+}
+/*nav-----------------------------------------------------------------------------------------------------------------------*/
+.nav-area {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 90px;
+}
+#nav {
+	width: 50%;
+	margin-left: 3.5%;
+}
+#nav .gnav li a {
+	font-size: 14px;
+}
+/*s-nav---------------------------------------------------------------------------------------------------*/
+
+.snav .i-tel a::before {
+	top: calc(50% - 7px);
+	left: -20px;
+	width: 14px;
+	height: 14px;
+}
+.tel-name {
+	vertical-align: 6%;
+	font-size: 13px;
+}
+.snav .k-tel {
+	padding: 0 10px 0 35px;
+	background-color: #FAEFDE;
+}
+.snav .k-tel a::before {
+	top: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+}
+.snav .tel-txt {
+	padding: 0 10px 0 30px;
+	font-size: 12px;
+}
+.snav .nav-mail a::before {
+	top: calc(50% - 7px);
+	left: -20px;
+	width: 14px;
+	height: 14px;
+}
+.snav .nav-mail a::after {
+	top: calc(50% - 3.5px);
+	width: 7px;
+	height: 5px;
+}
+.snav .i-tel {
+	padding: 5px 0 0 30px;
+	background-color: #FAEFDE;
+}
+.snav .i-tel a {
+	font-size: 15px;
+}
+.snav .k-tel {
+	padding: 0 0 0 30px;
+}
+.snav .k-tel a {
+	font-size: 15px;
+}
+.snav .nav-mail {
+	padding: 3px 10px 3px 30px;
+}
+.snav .nav-mail a {
+	font-size: 15px;
+}
+.snav .nav-mail a::after {
+	right: -8px;
+}
+.key-slider {
+	margin-bottom: 50px;
+}
+/*service-------------------------------------------------------------*/
+#secService {
+	margin-bottom: 180px;
+}
+.self-area {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.self-box {
+	width: 49%;
+}
+.orange-box {
+	width: 49%;
+	height: 235px;
+	margin-bottom: 30px;
+}
+.orange-box:nth-of-type(9) {
+	margin: 0 auto;
+}
+.green-box {
+	width: 49%;
+	height: 235px;
+	margin-bottom: 30px;
+	background-color: #008844;
+}
+.corporation-wrap .green-box:nth-of-type(6) {
+	margin-bottom: 30px;
+}
+.green-box:nth-of-type(7) {
+	margin: 0 auto;
+}
+.center-ml {
+	margin-left: 0;
+}
+.center-mr {
+	margin-right: 0;
+}
+.heading::before {
+	margin: 0 auto 10px auto;
+}
+.self-box .self-inner h3 {
+	font-size: 20px;
+}
+.small-box h3 {
+	font-size: 20px;
+}
+
+/*secOfifice-----------------------------------------------*/
+
+#secOffice .long-title{
+	position: absolute;
+	top: -54px;
+	left: calc(50% - 164.25px);
+	width: 328.5px;
+}
+
+#secOffice .long-title .office-heading {
+	font-size: 24px;
+}
+#secOffice .long-title .office-heading br {
+	display: block;
+}
+
+	
+/*secNews-----------------------------------------------
+サイズ変更検討中*/
+	
+#secNews .news-area {
+	padding: 63px 68px;
+}
+/*access--------------------------------------------------------------*/
+	
+#secAccess {
+	margin-bottom: 70px;
+}
+#secAccess .inner .access-left {
+	width: 49%;
+}
+#secAccess .inner .access-right {
+	width: 49%;
+}
+/*about.html----------------------------------------------------------------------------------------------*/
+.key-right .inbox {
+	width: 80%;
+}
+
+#secEncounter h1 {
+	position: relative;
+	top: 34px;
+	left: calc(50% - 142px);
+	width: 284px;
+	padding: 16px 20px 14px 20px;
+	font-size: 24px;
+
+}
+
+#secEncounter h1 br {
+	display: block;
+}
+	
+}
+
+/*960px以下の記述---------------------------------------------------------------------*/
+@media screen and (max-width:959px) {
+/*index.html--------------------------------------------*/
+	
+.inner {
+	width: 94%;
+	margin: 0 auto;
+}
+.logo {
+	width: 40%;
+	min-width: 230px;
+}
+/*nav---------------------------------------------------------------*/
+	
+.nav-area {
+	display: block;
+	padding: 15px 0;
+	height: auto;
+}
+	
+#nav {
+	position: absolute;
+	top: 70px;
+	right: -265px;
+	width: 260px;
+	height: 100vh;
+	padding: 30px 10px;
+	margin: 0;
+	background-color: #fff;
+	z-index: 9999;
+	transition: .5s ease;
+	box-sizing: border-box;
+}		
+#nav.on {
+	right: 0;
+	transition: .5s ease;
+}
+
+
+#header .inner #nav .gnav {
+	display: block;
+}
+#nav .gnav li {
+	width: 105px;
+	margin: 0 auto 20px auto;
+}
+#nav .gnav li:nth-of-type(5) {
+	margin-right: auto;
+}
+#nav .gnav li a {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+#nav .gnav li a::before {
+	content: "";
+	display: inline-block;
+	vertical-align: 11%;
+	width: 8px;
+	height: 6px;
+	margin-right: 8px;
+	background-image: url(images/gnav.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*right-nav-----------------------------------------------------------*/
+#header .snav {
+	position: static;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}	
+	
+/*開閉ボタン*/
+#nav_toggle {
+	display: block;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: calc(50% - 12px);
+	right: 15px;
+	z-index: 100;
+}
+#nav_toggle div {
+	position: relative;
+}
+#nav_toggle span {
+	display: block;
+	height: 2px;
+	background: #000;
+	position: absolute;
+	width: 100%;
+	right: 0;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+#nav_toggle span:nth-child(1) {
+	top: 0px;
+}
+#nav_toggle span:nth-child(2) {
+	top: 12px;
+}
+#nav_toggle span:nth-child(3) {
+	top: 24px;
+}
+/*開閉ボタンopen時*/
+.open #nav_toggle span:nth-child(1) {
+	top: 12px;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+.open #nav_toggle span:nth-child(2) {
+	width: 0;
+	left: 50%;
+}
+.open #nav_toggle span:nth-child(3) {
+	top: 12px;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}	
+
+
+/*s-nav-----------------------------------------------------------*/
+.snav {
+		padding-left: 5px;
+	}	
+.snav li {
+		width: 201px;
+	}
+
+.tel-name {
+	vertical-align: 6%;
+	font-size: 13px;
+}
+
+.snav .tel-txt {
+	padding: 0 0 0 30px;
+	font-size: 12px;
+}
+
+.snav .i-tel {
+	padding: 5px 0 0 30px;
+	background-color: #FAEFDE;
+}
+.snav .i-tel a {
+	font-size: 15px;
+}
+	
+.snav .i-tel a::before {
+	top: calc(50% - 7px);
+	left: -20px;
+	width: 14px;
+	height: 14px;
+}
+	
+.snav .k-tel {
+	padding: 0 0 0 30px;
+}
+
+.snav .k-tel a {
+	font-size: 15px;
+}
+
+.snav .k-tel a::before {
+    top: calc(50% - 7px);
+	width: 14px;
+	height: 14px;
+}	
+	
+.snav .nav-mail {
+	padding: 3px 0 3px 30px;
+}
+.snav .nav-mail a {
+	font-size: 15px;
+}
+.snav .nav-mail a::before {
+	top: calc(50% - 7px);
+	left: -20px;
+	width: 14px;
+	height: 14px;
+}
+.snav .nav-mail a::after {
+	top: calc(50% - 4px);
+	right: 15px;
+	width: 7px;
+	height: 5px;
+}
+.key-slider {
+	margin-bottom: 50px;
+}
+#secOffice .office-btn {
+	bottom: -22px;
+	left: calc(50% - 82px);
+	padding: 10px 25px;
+}
+#secNews .news-area {
+	padding: 60px;
+}
+.news-area .news-right ul li {
+	flex-wrap: wrap;
+}
+.news-area .news-btn {
+	padding: 10px 25px;
+}
+#secAccess {
+	margin-bottom: 60px;
+}
+#secAccess .inner .access-left {
+	width: 100%;
+	margin: 0 auto 20px auto;
+}
+#secAccess .inner .access-right {
+	width: 100%;
+	margin: 0 auto;
+}
+/*about.html----------------------------------------------------------------------------------------------*/	
+.key {
+	position: static;
+	width: 100%;
+	margin-bottom: 50px;
+}
+.key::before {
+	padding-top: 0; /*624÷1400*/
+}
+.key .key-left {
+	position: static;
+	width: 100%;
+	height: auto;
+}
+.key .key-right {
+	position: static;
+	width: 100%;
+	padding: 5% 0;
+	height: auto;
+}
+.key-right .inbox {
+	display: block;
+	width: 76%;
+	padding: 3.33333333% 2.857143%;
+}
+.key-right .inbox h2 {
+	font-size: 28px;
+}
+.key-right .inbox p {
+	margin-bottom: 20px;
+}
+.key-right .inbox .key-nav {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.key-right .inbox .key-nav li {
+	width: calc(100% / 4 - 1px);
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+.orange-navbtn {
+	padding: 9.009009% 0;
+}
+.green-navbtn {
+	padding: 9.009009% 0;
+}
+/*philosophy----------------------------------------------------------*/
+#secPhilosophy {
+	margin-bottom: 70px;
+}
+#secPhilosophy .medium-inner {
+	width: 94%;
+	padding: 6.142857% 0;
+}
+#secPhilosophy .en-heading {
+	margin-bottom: 50px;
+}
+/*変更*/
+#secPhilosophy .medium-inner .philosophy-img {
+	width: 13.541667%;
+	margin: 0 auto 45px auto;
+}
+/*変更*/
+#secPhilosophy .medium-inner h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+/*outline-----------------------------------------------------------*/
+#secOutline {
+	margin-bottom: 60px;
+}
+#secOutline .en-heading {
+	margin-bottom: 30px;
+}
+#secOutline .outline-box {
+	width: 77%;
+}
+/*profile-----------------------------------------------------------*/
+#secProfile {
+	margin-bottom: 90px;
+}
+#secProfile .en-heading {
+	margin-bottom: 30px;
+}
+#secProfile .profile-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#secProfile .profile-wrap .profile-left {
+	width: 49.285714%;
+}
+#secProfile .profile-wrap .profile-left .img {
+	margin-bottom: 40px;
+}
+#secProfile .profile-wrap .profile-left h2 {
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+.profile-inbox .profile-inner {
+	width: 80%;
+}
+#secProfile .profile-wrap .profile-right .img {
+	margin-bottom: 40px;
+}
+#secProfile .profile-wrap .profile-right h2 {
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+/*encounter-------------------------------------------------------*/
+#secEncounter {
+	margin-bottom: 60px;
+}
+#secEncounter .img {
+	margin-bottom: 60px;
+}
+#secEncounter .txt {
+	width: 77%;
+}
+.map {
+	margin-bottom: 30px;
+}
+/*service.html--------------------------------------------------------------------------------------*/
+.small-inner {
+	width: 94%;
+}
+/*contact.html--------------------------------------------------------------------------------------------*/.contact-key .key-right .inbox {
+	display: block;
+	width: 60%;
+	padding: 3.33333333% 2.857143%;
+}
+.contact-key .key-right .inbox .key-nav li {
+	width: calc(100% / 3 - 1px);
+	margin-right: 1px;
+	margin-bottom: 0;
+}
+.short-inner {
+	width: 94%;
+}
+#secMailform {
+	margin-bottom: 60px;
+}
+#secMailform .short-inner .en-heading {
+	margin-bottom: 40px;
+}
+#secMailform .short-inner .container ul li>dl>dt {
+	width: 32%;
+}
+#secMailform .short-inner .container ul li>dl>dd {
+	width: 65%;
+}
+#secTel {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secTel .en-heading {
+	margin-bottom: 40px;
+}
+.square {
+	position: relative;
+	width: 75%;
+	padding: 40px 20px;
+}
+/*cost.html------------------------------------------------------------------------------------------*/
+
+#cost {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#cost .title-box .en-heading {
+	margin-bottom: 20px;
+}
+#cost .title-box .key-nav li {
+	width: calc(100% / 4 - 1px);
+}
+
+#secAdvice {
+	padding: 50px 0 60px 0;
+}
+
+.medium-inner {
+	width: 94%;
+}
+	
+#secAdvice .medium-inner .en-heading {
+	margin-bottom: 30px;
+}
+	
+#secAdvice .medium-inner .square {
+	padding: 50px 20px 50px 20px;
+}
+	
+
+#secAdvice .medium-inner .square dl dd .ad-small-txt {
+	line-height: 1.4;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+#secAdvice .medium-inner .ad-result {
+	margin-bottom: 25px;
+	border-top: 2px solid #E28600;
+	border-bottom: 2px solid #E28600;
+}
+#secAdvice .medium-inner .ad-result ul {
+	margin-bottom: 30px;
+}
+#secAdvice .medium-inner .ad-result ul li .item-box {
+		width: calc(100% - 81px);
+	}	
+	
+#secAdvice .medium-inner .note {
+	text-indent: -1em;
+	padding-left: 1em;
+	font-size: 15px;
+}
+#secIncident01 {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secIncident01 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+#secIncident01 .small-inner .txt {
+	margin-bottom: 30px;
+}
+
+#secIncident02 {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secIncident02 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+#secIncident03 {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secIncident03 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+
+#secIncident04 {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secIncident04 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+
+#secIncident05 {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#secIncident05 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+
+#secIncident06 {
+	padding-top: 50px;
+	padding-bottom: 45px;
+}
+#secIncident06 .small-inner .en-heading {
+	margin-bottom: 30px;
+}
+
+#ad-main .inner {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	
+}
+/*info.html-----------------------------------------------------------------------------------------*/
+
+#info .info-wrap {
+	padding-top: 50px;
+	padding-bottom: 60px;
+	margin-bottom: 0;
+}
+.outer
+	{
+		width: 94%;
+	}
+	
+#info .outer .post {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+	
+}
+
+/*768px以下の記述---------------------------------------------------------------------*/
+@media screen and (max-width:768px) {
+.inner {
+	width: 94%;
+	margin: 0 auto;
+}
+/*service-------------------------------------------------------------*/
+#secService {
+	margin-bottom: 120px;
+}
+.heading::before {
+	margin: 0 auto 10px auto;
+}
+.self-area {
+	margin-top: 45px;
+	margin-bottom: 60px;
+}
+.self-box {
+	width: 100%;
+	margin: 0 auto 20px auto;
+}
+.self-box .self-inner h3 {
+	font-size: 20px;
+}
+.small-box h3 {
+	font-size: 20px;
+}
+.orange-box {
+	width: 100%;
+	height: 140px;
+	margin: 0 auto 20px auto;
+}
+.green-box {
+	width: 100%;
+	height: 140px;
+	margin-bottom: 20px;
+}
+/*secOffice---------------------------------------------*/	
+
+#secOffice .long-title{
+	position: absolute;
+	top: -38px;
+	left: calc(50% - 135px);
+	width: 270px;
+}
+
+
+#secOffice .long-title .office-heading {
+	padding: 12px 15px 10px 15px;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+#secOffice .name01 {
+	display: none;
+}
+
+#secOffice .name02 {
+	display: none;
+}
+
+#secOffice .office-btn {
+	bottom: -21px;
+}
+/*secNews-----------------------------------------------*/
+.news-wrap {
+	padding-top: 90px;
+	padding-bottom: 70px;
+}
+#secNews .news-area {
+	padding: 50px 20px;
+}
+.news-area .news-left {
+	margin-bottom: 20px;
+}
+.news-area .news-right {
+	width: 100%;
+}
+/*secContact--------------------------------------------*/
+#secContact {
+	display: flex;
+	flex-wrap: wrap;
+}
+#secContact .legal-cost {
+	width: 100%;
+	height: 180px;
+	background-color: #E28600;
+}
+#secContact .contact-link {
+	width: 100%;
+	height: 180px;
+	background-color: #008844;
+}
+/*secAccess---------------------------------------------*/
+#secAccess {
+	margin-bottom: 50px;
+}
+/*about.html----------------------------------------------------------------------------------------------*/
+	
+#header .key {
+	margin-bottom: 40px;
+}
+#header .key .key-left {
+	position: static;
+	width: 100%;
+	height: auto;
+}
+#header .key .key-right {
+	position: static;
+	width: 100%;
+	padding: 5% 0;
+	height: auto;
+}
+.key-right .inbox {
+	display: block;
+	width: 94%;
+	padding: 20px 2.857143%;
+}
+.key-right .inbox h2 {
+	font-size: 24px;
+}
+.key-right .inbox .key-nav li {
+	width: calc(100% / 2 - 1px);
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+.orange-navbtn {
+	padding: 4% 0;
+}
+.green-navbtn {
+	padding: 4% 0;
+}
+/*philosophy----------------------------------------------------------*/
+#secPhilosophy {
+	margin-bottom: 50px;
+}
+#secPhilosophy .medium-inner {
+	width: 94%;
+	padding: 6.142857% 0;
+}
+#secPhilosophy .en-heading {
+	margin-bottom: 30px;
+}
+#secPhilosophy .medium-inner::before {
+	width: 15%;
+}
+#secPhilosophy .medium-inner::after {
+	width: 15%;
+}
+#secPhilosophy .medium-inner .philosophy-img {
+	width: 18%;
+	min-width: 110px;
+	margin: 0 auto 40px auto;
+}
+#secPhilosophy .medium-inner h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 19.5px;
+}
+#secPhilosophy .medium-inner .border-top p {
+	margin-bottom: 40px;
+	padding: 0 20px;
+	text-align: center;
+	line-height: 2.0;
+	font-weight: 500;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+/*outline-----------------------------------------------------------*/
+#secOutline {
+	margin-bottom: 60px;
+}
+#secOutline .en-heading {
+	margin-bottom: 30px;
+}
+#secOutline .outline-box {
+	width: 94%;
+}
+#secOutline .outline-box dt {
+	width: 26%;
+}
+#secOutline .outline-box dd {
+	width: 74%;
+}
+#secOutline .outline-box dd br {
+		display: block;
+}
+/*profile-----------------------------------------------------------*/
+#secProfile {
+	margin-bottom: 90px;
+}
+#secProfile .en-heading {
+	margin-bottom: 30px;
+}
+#secProfile .profile-wrap {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#secProfile .profile-wrap .profile-left {
+	width: 100%;
+	margin-bottom: 50px;
+}
+#secProfile .profile-wrap .profile-left .img {
+	margin-bottom: 40px;
+}
+#secProfile .profile-wrap .profile-left .txt {
+	font-size: 18px;
+}
+#secProfile .profile-wrap .profile-left h2 {
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+.profile-inbox .profile-inner {
+	width: 94%;
+}
+#secProfile .profile-wrap .profile-left .profile-inbox {
+	position: static;
+	border-right: none;
+	box-sizing: border-box;
+}
+#secProfile .profile-wrap .profile-left .profile-inbox::after {
+	content: "";
+	display: block;
+	position: static;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-left: none;
+}
+#secProfile .profile-wrap .profile-right {
+	width: 100%;
+}
+#secProfile .profile-wrap .profile-right .img {
+	margin-bottom: 40px;
+}
+#secProfile .profile-wrap .profile-right h2 {
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+#secProfile .profile-wrap .profile-right .txt {
+	font-size: 18px;
+}
+/*encounter-------------------------------------------------------*/
+#secEncounter {
+	margin-bottom: 60px;
+}
+#secEncounter h1 {
+	position: relative;
+	top: 25px;
+	left: calc(50% - 115px);
+	width: 240px;
+	padding: 10px 20px 8px 20px;
+	font-size: 20px;
+
+}	
+	
+	
+#secEncounter .img {
+	margin-bottom: 60px;
+}
+#secEncounter .txt {
+	width: 94%;
+	padding: 0 6.071429%;
+	border-left: 2px solid #008844;
+	border-right: 2px solid #E28600;
+	margin: 0 auto;
+	box-sizing: border-box;
+	line-height: 1.875;
+	font-weight: 500;
+}
+/*service.html--------------------------------------------------------------------------------*/
+#service {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+.title-box {
+	position: relative;
+	width: 45%;
+	padding: 20px 0 10px 0;
+}
+.title-box .sub-title {
+	font-size: 24px;
+}
+/*secPersonalとsecCorpolationの共通----------------------------------------------------------------*/
+.service-common {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+.service-common .small-inner .en-heading {
+	margin-bottom: 40px;
+}
+.service-common .small-inner .service-item li {
+	padding: 40px 20px;
+}
+.service-item li .content .service-title {
+	margin-top: 10px;
+	font-size: 20px;
+}
+.service-item li .content .txt-link {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 15px;
+	text-decoration: underline;
+}
+.service-item li .content .txt-link:nth-of-type(2) {
+	margin-left: 10px;
+}
+/*contact.html--------------------------------------------------------------------------------------*/
+
+.contact-key .key-right .inbox {
+	display: block;
+	width: 70%;
+	padding: 20px 2.857143%;
+}
+#secMailform .short-inner .container ul li dl {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+#secMailform .short-inner .container ul li>dl>dt {
+	position: static;
+	width: 100%;
+	padding-bottom: 0px;
+}
+#secMailform .short-inner .container ul li>dl>dd {
+	position: relative;
+	width: 100%;
+	padding-left: 0;
+}
+#secMailform .short-inner .container form .any, #secMailform .short-inner .container form .need {
+	position: static;
+	vertical-align: 1.5px;
+	display: inline-block;
+	margin-left: 10px;
+}
+#secTel {
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+.square {
+	width: 94%;
+	box-sizing: border-box;
+}
+#secTel .square .container .tel a {
+	font-size: 22px;
+}
+#secTel .square .container .tel .txt {
+	font-size: 16px;
+}
+#secTel .square .heading {
+	font-size: 22px;
+}
+
+/*cost.html------------------------------------------------------------------------------------------*/
+#cost {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+#cost .title-box {
+	position: relative;
+	width: 94%;
+	padding: 30px 2.857143%;
+}
+	
+#cost .title-box .key-nav li {
+	width: calc(100% / 3 - 1px);
+}	
+#cost .title-box .key-nav li:nth-of-type(4) {
+	margin-right: 1px;
+}
+	
+#cost .title-box .key-nav li .orange-navbtn {
+	padding: 4% 0;
+}
+#cost .title-box .key-nav li .green-navbtn {
+	padding: 4% 0;
+}	
+	
+#secAdvice .medium-inner .square {
+	padding: 50px 20px 50px 20px;
+}
+	
+#secAdvice .medium-inner .square dl dt {
+	width: 25%;
+}
+#secAdvice .medium-inner .square dl dt .ad-tit {
+	font-size: 20px;
+}
+#secAdvice .medium-inner .square dl dd {
+	width: 75%;
+}
+
+#secAdvice .medium-inner .square dl dd .ad-txt {
+	font-size: 20px;
+}
+	
+#secAdvice .medium-inner .square dl dd .ad-txt span {
+	font-size: 16px;
+}
+	
+#secAdvice .medium-inner .square dl dd .ad-small-txt {
+	font-size: 14px;
+}	
+	
+#secAdvice .medium-inner .txt {
+	line-height: 1.4;
+	font-size: 20px;
+}	
+#secAdvice .medium-inner .txt br{
+	display: block;
+}	
+#secAdvice .medium-inner .note {
+	font-size: 14px;
+}	
+#secAdvice .medium-inner .ad-result ul li .ad-res-heading {
+	font-size: 22px;
+}
+#secAdvice .medium-inner .ad-result ul li .ad-res-txt {
+	line-height: 1.4;
+	font-size: 14px;
+}
+			
+
+#secIncident01 .small-inner .txt {
+	text-align: left;
+	font-size: 16px;
+}
+	
+#secIncident01 .small-inner .txt br {
+	display: none;
+}		
+
+.cost-table01 tr th:nth-of-type(1) {
+	width: 65%;
+}
+.cost-table01 tr th:nth-of-type(2), .cost-table01 tr th:nth-of-type(3) {
+	width: 17.5%;
+}
+.cost-table01 tr td {
+	padding: 25px 0;
+}
+
+.cost-table01 tr td:nth-of-type(1) {
+	padding-left: 10px;
+}	
+	
+.cost-table01 tr td:nth-of-type(2), .cost-table01 tr td:nth-of-type(3) {
+	text-align: center;
+}	
+	
+.caution {
+	line-height: 1.4;
+	padding-left: 1em;
+	text-indent: -1em;
+	font-size: 14px;
+}	
+	
+.cost-table02 tr th {
+	text-align: center;
+	padding: 25px 0.5em;
+}
+.cost-table02 tr td {
+	padding: 25px 0;
+	text-align: center;
+}
+.cost-table02 tr td:nth-of-type(2) {
+	padding: 25px 10px 25px 10px;
+	text-align: left;
+}		
+	
+	
+#secIncident02 .small-inner .cost-table02 tr th {
+	width: 30%;
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13.5%
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 56.5%
+}	
+	
+
+#secIncident03 .small-inner .cost-table02 tr th {
+	width: 10.8%;
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13%
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 76.2%
+}
+	
+#secIncident04 .small-inner .cost-table02 tr th {
+	width: 20%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 20%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 60%
+}
+
+#secIncident05 .small-inner .cost-table02 tr th {
+	width: 30%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 12.5%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 57.5%
+}
+	
+#secIncident06 .small-inner .cost-table02 tr th {
+	width: 20.7%;
+	background-color: #008844;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 13%;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 67.7%
+}
+
+#ad-main .inner {
+	padding-top: 45px;
+	padding-bottom: 45px;
+	
+}
+#ad-main .inner .ps br{
+	display: block;
+}
+/*info.html-----------------------------------------------------------------------------------------*/	
+.post-btn {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.post-page a:nth-of-type(1) {
+	padding-top: 2px;
+	border: 1px solid #000;
+	color: #000;
+	background-color: #fff;
+}
+
+.post-page a:nth-of-type(10),
+.post-page a:nth-of-type(9),	
+.post-page a:nth-of-type(8),
+.post-page a:nth-of-type(7),
+.post-page a:nth-of-type(6),
+.post-page a:nth-of-type(5),
+.post-page a:nth-of-type(4)
+{
+		display: none;
+}
+	
+}
+
+/*480px以下の記述---------------------------------------------------------------------*/
+@media screen and (max-width:480px) {
+.inner {
+	width: 94%;
+}
+.self-inner {
+	padding: 15px 10px;
+}	
+.small-box {
+	padding: 15px 0px;
+}	
+.self-box .self-inner h3 {
+	font-size: 18px;
+}
+.small-box h3 {
+	font-size: 18px;
+}
+
+#secOffice {
+	position: relative;
+	background-image: url(images/res-top-company.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	
+#secOffice::before {
+	content: "";
+	display: block;
+	padding-top: 46.428571%;
+}
+#secOffice .long-title{
+	position: absolute;
+	top: -28px;
+	left: calc(50% - 105px);
+	width: 210px;
+}
+
+
+#secOffice .long-title .office-heading {
+	padding: 7px 8px 5px 8px;
+	text-align: center;
+	line-height: 1.4;
+	font-weight: 500;
+	font-size: 16px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+#secOffice .name01 {
+	position: absolute;
+	bottom: 10%;
+	left: 50px;
+	display: block;
+}
+
+
+#secOffice .name01 a {
+		width: auto;
+		border-top: 2px solid #E28600;
+		padding: 3px 5px;
+		font-weight: 500;
+		font-size: 14px;
+		color: #E28600;
+		background-color: #fff;
+	}	
+	
+#secOffice .name01 a span {
+		margin-right: 10px;
+		line-height: 1.0;
+		font-weight: bold;
+		font-size: 10px;
+		color: #E28600;
+		background-color: #fff;
+	}	
+	
+#secOffice .name02 {
+	position: absolute;
+	bottom: 10%;
+	right: 50px;
+	display: block;
+}
+
+#secOffice .name02 a {
+		width: auto;
+		border-top: 2px solid #008844;
+		padding: 3px 5px;
+		font-weight: 500;
+		font-size: 14px;
+		color: #008844;
+		background-color: #fff;
+	}	
+	
+	#secOffice .name02 a span {
+		margin-right: 10px;
+		line-height: 1.0;
+		font-weight: bold;
+		font-size: 10px;
+		color: #008844;
+		background-color: #fff;
+	}		
+	
+#secOffice .office-btn {
+	bottom: -60px;
+	left: calc(50% - 66px);
+	padding: 5px 10px;
+}
+	#secNews {
+		margin-top: 110px;
+	}	
+	
+/*about.html----------------------------------------------------------------------------------------------*/
+		
+	
+/*philosophy----------------------------------------------------------*/
+#secPhilosophy {
+	margin-bottom: 50px;
+}
+#secPhilosophy .medium-inner .philosophy-img {
+	min-width: 80px;
+	margin: 0 auto 30px auto;
+}
+#secPhilosophy .medium-inner h2 {
+	font-size: 18px;
+}
+/*outline-----------------------------------------------------------*/
+
+#secOutline .outline-box dt {
+	width: 28%;
+	padding-left: 10px;
+	font-size: 14px
+}
+#secOutline .outline-box dd {
+	width: 72%;
+	text-align: justify;
+	font-size: 14px;
+}
+	
+/*profile-----------------------------------------------------------*/
+/*font-size変更検討*/
+#secProfile {
+	margin-bottom: 60px;
+}
+#secProfile .profile-wrap .profile-left .txt {
+	font-size: 18px;
+}
+#secProfile .profile-wrap .profile-left h2 {
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+#secProfile .profile-wrap .profile-right h2 {
+	margin-bottom: 30px;
+	font-size: 28px;
+}
+#secProfile .profile-wrap .profile-right .txt {
+	font-size: 18px;
+}
+/*encounter-------------------------------------------------------*/
+#secEncounter {
+	margin-bottom: 30px;
+}
+	
+#secEncounter h1 {
+	position: relative;
+	top: 15px;
+	left: calc(50% - 90px);
+	width: 190px;
+	padding: 10px 15px 8px 15px;
+	font-size: 16px;
+
+}		
+#secEncounter .img {
+	margin-bottom: 60px;
+}
+#secEncounter .txt {
+	width: 94%;
+	padding: 0 6.071429%;
+	border-left: 2px solid #008844;
+	border-right: 2px solid #E28600;
+	margin: 0 auto;
+	box-sizing: border-box;
+	line-height: 1.875;
+	font-weight: 500;
+	font-size: 14px;
+}
+.map {
+	margin-bottom: 10px;
+}
+/*service.html--------------------------------------------------------------------------------*/
+	
+.title-box {
+	position: relative;
+	width: 60%;
+	padding: 20px 0 10px 0;
+}
+/*secPersonalとsecCorpolationの共通----------------------------------------------------------------*/
+.service-common {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+.service-common .small-inner .en-heading {
+	margin-bottom: 60px;
+}
+.service-common .small-inner .service-item li {
+	display: block;
+	position: relative;
+	margin-bottom: 70px;
+	padding: 40px 20px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+.service-common .small-inner .service-item li .img {
+	position: absolute;
+	top: -40px;
+	left: calc(50% - 40px);
+	width: 80px;
+	height: 80px;
+}
+.service-common .small-inner .service-item li .content {
+	width: 100%;
+	padding-top: 20px;
+}
+.service-item li .content .service-title {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.service-item li .content .lead {
+	line-height: 1.4;
+}
+.service-item li .content .detail::before {
+	margin-bottom: 28px;/*ボーダー位置の調整*/
+}
+.service-item li .content .txt-link:nth-of-type(2) {
+	margin-left: 20px;
+}
+/*contact.html--------------------------------------------------------------------------------------*/
+
+#secMailform {
+	margin-bottom: 40px;
+}
+.contact-key .key-right .inbox {
+	display: block;
+	width: 94%;
+	padding: 20px 2.857143%;
+}
+#secMailform .short-inner .en-heading {
+	margin-bottom: 30px;
+}
+#secMailform .short-inner .container form .radio label:nth-of-type(3) {
+	margin-left: 0;
+}
+#secMailform .short-inner .container form .submit input {
+	width: 80%;
+	padding: 25px 15px;
+	font-size: 14px;
+}
+#secTel {
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+.square {
+	width: 94%;
+	box-sizing: border-box;
+}
+#secTel .square .container .tel {
+	width: 100%;
+}
+#secTel .square .container .tel-left {
+	margin-bottom: 20px;
+}
+#secTel .square .container .tel a {
+	font-size: 24px;
+}
+#secTel .square .container .tel .txt {
+	font-size: 18px;
+}
+#secTel .square .heading {
+	font-size: 24px;
+}
+.attention br {
+	display: block;
+}
+
+/*cost.html------------------------------------------------------------------------------------------*/
+	
+#cost .title-box .key-nav li {
+	width: calc(100% / 2 - 1px);
+}	
+#cost .title-box .key-nav li:nth-of-type(4) {
+	margin-right: 0;
+}
+	
+#secAdvice .medium-inner .square dl dt {
+	width: 30%;
+}
+#secAdvice .medium-inner .square dl dt .ad-tit {
+	font-size: 16px;
+}
+#secAdvice .medium-inner .square dl dd {
+	width: 70%;
+}
+
+#secAdvice .medium-inner .square dl dd .ad-txt {
+	font-size: 16px;
+}
+	
+#secAdvice .medium-inner .square dl dd .ad-txt span {
+	font-size: 12px;
+}
+	
+#secAdvice .medium-inner .square dl dd .ad-small-txt {
+	font-size: 14px;
+}	
+	
+#secAdvice .medium-inner .txt {
+	line-height: 1.4;
+	font-size: 18px;
+}	
+	
+#secAdvice .medium-inner .txt　br{
+	display: block;
+}	
+	
+	
+#secAdvice .medium-inner .ad-result ul li::before {
+	margin-right: 10px;
+}
+#secAdvice .medium-inner .ad-result ul li .item-box {
+	width: calc(100% - 76px);
+}	
+		
+.cost-table01 tr th:nth-of-type(1) {
+	width: 70%;
+}
+.cost-table01 tr th:nth-of-type(2), .cost-table01 tr th:nth-of-type(3) {
+	width: 15%;
+}	
+.cost-table01 tr th {
+	font-size: 14px;	
+}		
+.cost-table01 tr td {
+	padding: 20px 0;
+	font-size: 14px;
+}
+		
+.cost-table02 tr th {
+	text-align: center;
+	padding: 20px 0.5em;
+	font-size: 14px;
+}
+.cost-table02 tr td {
+	padding: 20px 0;
+	text-align: center;
+	font-size: 14px;
+}
+.cost-table02 tr td:nth-of-type(2) {
+	padding: 20px 0.5em;
+	text-align: left;
+}		
+	
+	
+#secIncident02 .small-inner .cost-table02 tr th {
+	width: 28%;
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 15.5%
+}
+#secIncident02 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 56.5%
+}	
+	
+
+#secIncident03 .small-inner .cost-table02 tr th {
+	width: 15%;
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 15%
+}
+#secIncident03 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 70%
+}
+	
+#secIncident04 .small-inner .cost-table02 tr th {
+	width: 25%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 23%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 52%
+}
+
+#secIncident05 .small-inner .cost-table02 tr th {
+	width: 33%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 16%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 51%;
+}
+	
+#secIncident06 .small-inner .cost-table02 tr th {
+	width: 30%;
+	background-color: #008844;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 16%;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 54%
+}
+
+#ad-main .inner {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	
+}
+#ad-main .inner .ps {
+	font-size: 16px;
+}
+	
+.post-page a:nth-of-type(3),		
+.post-page a:nth-of-type(2),
+.post-page a:nth-of-type(11)
+{
+		display: none;
+}
+.post-page a {
+	width: 28px;
+	height: 28px;
+	padding-top: 3px;
+	margin-right: 5px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #008844;
+	box-sizing: border-box;
+}
+.post-page a:nth-of-type(1) {
+	padding-top: 2px;
+	border: 1px solid #000;
+	color: #000;
+	background-color: #fff;
+}
+/*post.html-----------------------------------------------------------------------------------------*/
+
+.post-all a {
+	padding: 5px 10px;
+	text-align: center;
+	line-height: 1.5;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	background-color: #008844;
+}
+	
+}
+
+/*350px以下の記述---------------------------------------------------------------------*/
+@media screen and (max-width:350px) {
+.inner {
+	width: 94%;
+}
+
+.self-txt br {
+		display: none;
+}
+	
+#secOffice .name01 {
+	left: 30px;
+}	
+#secOffice .name02 {
+	right: 30px;
+}		
+	
+/*やむを得なくフォントサイズ変更*/
+.contact-key .key-right .inbox {
+	display: block;
+	width: 94%;
+	padding: 10px 2.857143%;
+}
+.contact-key .key-right .inbox .key-nav li a {
+	font-size: 12px;
+}
+#secAdvice .medium-inner .txt br{
+	display: none;
+}
+	
+#secIncident03 .small-inner .inline-wrap .heading br {
+	display: block;
+}	
+	
+#secIncident04 .small-inner .cost-table02 tr th {
+	width: 30%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 20%;
+}
+#secIncident04 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 50%
+}	
+#secIncident05 .small-inner .cost-table02 tr th {
+	width: 25%;
+}
+	
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 16%;
+}
+#secIncident05 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 59%;
+}
+	
+#secIncident06 .small-inner .cost-table02 tr th {
+	width: 25%;
+	background-color: #008844;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(1) {
+	width: 16%;
+}
+#secIncident06 .small-inner .cost-table02 tr td:nth-of-type(2) {
+	width: 59%
+}
+
+#ad-main .inner .ps {
+	font-size: 15px;
+}
+	
+}
