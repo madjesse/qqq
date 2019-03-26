@@ -1,1 +1,178 @@
+/*For screen over 1200px by default
+==================================================================================================================================================*/
+
+/*Basic data:
+
+font family: 
+"Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+
+key colors: 
+background blue:  #009fe8
+text black:       #000
+text white:       #fff
+underline orange: #f7931e
+background orange:#f7931e
+background pink:  #fde9d2
+form background:  #e6e6e6
+
+font sizes:
+html: 62.5%
+nav:  1.5rem
+main appealing text: 3rem
+h2    1.5rem
+==================================================================================================================================================
+*/
+
 @charset "utf-8";
+
+/*general settings*/
+html {
+	font-size: 62.5%;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.cf::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.inner {
+	margin: 0 auto;
+}
+.inner-1 {
+	width: 90%;
+}
+.inner-2 {
+	width: 80%;
+}
+h2 {
+	font-size: 2rem;
+	letter-spacing: 0.5rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+.section-txt {
+	font-size: 1.2rem;
+	letter-spacing: 0.2rem;
+}
+/*-----------------------------header--------------------------------*/
+.header {
+	width: 100%;
+	background-color: #fff;
+}
+.header .inner-1 {
+	height: 80px;
+	display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+	position: relative;
+}
+.smartphone-nav { /*menu for smaller screen is not displayed by default*/
+	display: none;
+}
+.logo {
+	width: 74.25px;
+	position: absolute;
+	top: calc(50% - 15.195px);
+}
+.nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav a {
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+}
+.desktop-nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.desktop-nav li {
+	margin-right: 3rem;
+}
+.desktop-nav li:last-child {
+	margin-right: 0;
+}
+
+/*--------------------------main visual------------------------------*/
+.main-visual {
+	width: 100%;
+}
+.main-visual-wrapper {
+	width: 100%;
+	position: relative;
+}
+.main-img { /*the main image part on the right-----------------------*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55%;
+	background-image: url("img/main-img.png");
+}
+.logo-white {
+	position: absolute;
+	width: 20%;
+	top: calc(50% - 49.455px);
+	left: calc(50% - 78.26px)
+}
+.main-appeal { /*the main appealing text with blue bg on the left----*/
+	position: absolute;
+	width: 45%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	padding: 5%;
+	font-size: 3rem;
+	background-color: #009fe8;
+}
+.main-appeal-txt {
+	line-height: 5rem;
+	letter-spacing: 0.8rem;
+}
+.main-visual-wrapper::before {
+	content: "";
+    display: block;
+    width: 0;
+    padding-top: 34.919888%;
+}
+
+/*---------------------about section---------------------------------*/
+.about {
+	width: 100%;
+	background-color: #fff;
+}
+/*about text sub section*/
+.about-txt {
+	width: 40%;
+	margin: 0 auto;
+}
+/*how it works sub section*/

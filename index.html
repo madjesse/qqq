@@ -16,89 +16,95 @@
 	<meta name="author" content="">
 	<link rel="icon" href="" type="">
 	<link rel="apple-touch-icon" href="">
-	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="js/slick/slick.css">
 	<link rel="stylesheet" href="js/slick/slick-theme.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--header consists of 3 parts: h1, desktop navigation bar and smartphone navigation bar which is hidden when screen is wide-->
 	<header class="header">
 <!--	inner-1 wrapper is one of 3 wrappers with various widths and is the outmost one-->
-		<div class="inner-1">
+		<div class="inner inner-1">
 <!--		the QQQ logo-->
 			<h1 class="logo">
-				<a href="index.html"><img src="" alt="QQQの企業ロゴ"></a>
+				<a href="index.html"><img src="img/logo.png" alt="QQQの企業ロゴ"></a>
 			</h1>
 <!--		the	nav group-->
 			<nav class="nav">
 				<ul class="desktop-nav">
-					<li class="nav-item">ABOUT</li>
-					<li class="nav-item">SERVICE</li>
-					<li class="nav-item">COMPANY</li>
-					<li class="nav-item">WORKS</li>
-					<li class="nav-item">CONTACT</li>
+					<li class="nav-item"><a href="#about">ABOUT</a></li>
+					<li class="nav-item"><a href="#service">SERVICE</a></li>
+					<li class="nav-item"><a href="#company">COMPANY</a></li>
+					<li class="nav-item"><a href="#works">WORKS</a></li>
+					<li class="nav-item"><a href="#contact">CONTACT</a></li>
 				</ul>
 				<ul class="smartphone-nav">
-					<li class="nav-item">ABOUT</li>
-					<li class="nav-item">SERVICE</li>
-					<li class="nav-item">COMPANY</li>
-					<li class="nav-item">WORKS</li>
-					<li class="nav-item">CONTACT</li>
+					<li class="nav-item"><a href="#about">ABOUT</a></li>
+					<li class="nav-item"><a href="#service">SERVICE</a></li>
+					<li class="nav-item"><a href="#company">COMPANY</a></li>
+					<li class="nav-item"><a href="#works">WORKS</a></li>
+					<li class="nav-item"><a href="#contact">CONTACT</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
-<!--	main visual section with relative position specified in stylesheet-->
+<!--	-------------------main visual section ------------------------>
 	<section class="main-visual">
+		<div class="main-visual-wrapper">
 <!--	main image on the right-->
-		<div class="main-img"><img src="" alt="QQQ: Question, Quest, Quality"></div>
+			<div class="main-img">
+				<img src="img/main-img.png" alt="main visual image">
+				<img class="logo-white" src="img/logo-white.png" alt="QQQ: Question, Quest, Quality">
+			</div>
 <!--main appealing text on the left-->
-		<div class="main-appeal">
-			<p class="main-appeal-txt">参加者を前のめりにする体験式研修ツールで仕事と人材のつながりをサポートする</p>
-		</div>
-	</section>
-<!--	introduction section-->
-
-	<section class="intro">
-<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
-		<div class="title">
-			<h2 class="section-title">参加者を前のめりにする体験式研修ツール</h2>
-		</div>
-<!--		the div that wraps the introduction text and has display: flex-->
-		<div class="section-txt-wrapper">
-			<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など企業（仕事）と人材をつなげる場面において、参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
-			<p class="section-txt">株式会社キュースリーが提供するのは、そんな研修や説明会をサポートするツールです。</p>
-			<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、参加者の積極性を引き出し満足度を向上させます。企業それぞれのニーズに合わせた研修コンテンツで、人材とのつながりをしっかりサポートします。</p>
+			<div class="main-appeal">
+				<p class="main-appeal-txt">参加者を前のめりにする<br>体験式研修ツールで<br>仕事と人材のつながりを<br>サポートする</p>
+			</div>
 		</div>
 	</section>
 	
-<!--	this is the how it works section-->
-	<section class="how-it-works">
-		<div class="title">
-			<h2 class="section-title">体験式とは</h2>
-			<p class="section-subtitle">HOW IT WORKS</p>
-		</div>
-<!--		this is the second outmost inner wrapper-->
-		<div class="inner-2">
-<!--		the slider achieved using slick.js-->
-			<div class="slider">
-				<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
-				<div class="slide"><img src="img/slide-2.png" alt="スライド画像２"></div>
-				<div class="slide"><img src="img/slide-3.png" alt="スライド画像３"></div>
-				<div class="slide"><img src="img/slide-4.png" alt="スライド画像４"></div>
-				<div class="slide"><img src="img/slide-5.png" alt="スライド画像５"></div>
-				<div class="slide"><img src="img/slide-6.png" alt="スライド画像６"></div>
+<!--	----------------introduction section--------------------------->
+	<section id="about" class="about">
+		<section class="about-txt">
+			<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
+			<div class="title">
+				<h2 class="section-title">参加者を前のめりにする<br>体験式研修ツール</h2>
 			</div>
+<!--		the div that wraps the introduction text-->
 			<div class="section-txt-wrapper">
-				<p class="section-txt">カード・マンガ・Webサービス・ストロー・カギなど様々なツールを使い、テーマに合わせた「体験できる」研修をご用意します。</p>
-				<p class="section-txt">一方的に講義を受けるのではなく自分たちで考え答えを導き出すことができる内容にすることで、積極的な参加と学習の定着を引き出しています。</p>
+				<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など企業（仕事）と人材をつなげる場面において、参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
+				<p class="section-txt">株式会社キュースリーが提供するのは、そんな研修や説明会をサポートするツールです。</p>
+				<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、参加者の積極性を引き出し満足度を向上させます。企業それぞれのニーズに合わせた研修コンテンツで、人材とのつながりをしっかりサポートします。</p>
 			</div>
-		</div>
+		</section>
+		<!--	this is the how it works sub section-->
+		<section class="how-it-works">
+			<div class="title">
+				<h2 class="section-title">体験式とは</h2>
+				<p class="section-subtitle">HOW IT WORKS</p>
+			</div>
+	<!--		this is the second outmost inner wrapper-->
+			<div class="inner inner-2">
+	<!--		the slider achieved using slick.js-->
+				<div class="slider">
+					<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
+					<div class="slide"><img src="img/slide-2.png" alt="スライド画像２"></div>
+					<div class="slide"><img src="img/slide-3.png" alt="スライド画像３"></div>
+					<div class="slide"><img src="img/slide-4.png" alt="スライド画像４"></div>
+					<div class="slide"><img src="img/slide-5.png" alt="スライド画像５"></div>
+					<div class="slide"><img src="img/slide-6.png" alt="スライド画像６"></div>
+				</div>
+				<div class="section-txt-wrapper">
+					<p class="section-txt">カード・マンガ・Webサービス・ストロー・カギなど様々なツールを使い、テーマに合わせた「体験できる」研修をご用意します。</p>
+					<p class="section-txt">一方的に講義を受けるのではなく自分たちで考え答えを導き出すことができる内容にすることで、積極的な参加と学習の定着を引き出しています。</p>
+				</div>
+			</div>
+		</section>
 	</section>
 	
 <!--	this is the service section-->
-	<section class="service">
+	<section id="service" class="service">
 		<div class="title">
 			<h2 class="section-title">サービス</h2>
 			<p class="section-subtitle">SERVICE</p>
@@ -112,7 +118,7 @@
 				<li class="inner-nav-item"><a href="#process">導入の流れ<i class="down-arrow"></i></a></li>
 			</ul>
 		</nav>
-		<div class="inner-2">
+		<div class=" inner inner-2">
 			<section id="examples" class="basic-layout">
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
@@ -284,7 +290,7 @@
 	</section>
 	
 <!--	this is the company section-->
-	<section class="company">
+	<section id="company" class="company">
 		<div class="title">
 			<h2 class="section-title">会社概要</h2>
 			<p class="section-subtitle">COMPANY</p>
@@ -310,7 +316,7 @@
 	</section>
 	
 <!--	this is the works section-->
-	<section class="works">
+	<section id="works" class="works">
 		<div class="title">
 			<h2 class="section-title">採用実績</h2>
 			<p class="section-subtitle">WORKS</p>
@@ -372,7 +378,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="title">
 			<h2 class="section-title">お問い合わせ</h2>
 			<p class="section-subtitle">CONTACT</p>
