@@ -58,9 +58,11 @@ img {
 }
 .inner-1 {
 	width: 90%;
+	margin: 0 auto;
 }
 .inner-2 {
 	width: 80%;
+	margin: 0 auto;
 }
 h2 {
 	font-size: 2rem;
@@ -74,8 +76,14 @@ h4 {
 }
 .section-txt {
 	font-size: 1.2rem;
+	line-height: 2.5rem;
 	letter-spacing: 0.2rem;
 }
+.title {
+	text-align: center;
+	line-height: 3rem;
+}
+
 /*-----------------------------header--------------------------------*/
 .header {
 	width: 100%;
@@ -165,14 +173,51 @@ h4 {
     padding-top: 34.919888%;
 }
 
-/*---------------------about section---------------------------------*/
+/*---------------------about section--------------------------------*/
 .about {
 	width: 100%;
 	background-color: #fff;
 }
 /*about text sub section*/
 .about-txt {
+	width: 100%;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.about-txt-inner-wrapper {
 	width: 40%;
 	margin: 0 auto;
+	text-align: center;
+}
+.about-txt-inner-wrapper .title::after {
+	content: "";
+	display: block;
+	width: 2rem;
+	height: 0.2rem;
+	background-color: #000;
+	margin: 3rem auto;
 }
 /*how it works sub section*/
+.how-it-works {
+	width: 100%;
+	color: #fff;
+	padding: 5rem 0;
+	background-image: url(../img/slider-bg.png);
+}
+.how-it-works .inner-2 {
+	display: flex;
+	justify-content: center;
+}
+.slider,  .how-it-works section-txt-wrapper {
+	width: 48%;
+}
+.slick-dots li {
+	margin: 0 0.1rem;
+}
+.slick-dots li button:before {
+	font-size: 0.8rem;
+	color: #fff;
+}
+.slick-dots li.slick-active button:before {
+	color: #fff;
+}

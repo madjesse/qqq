@@ -64,29 +64,35 @@
 		</div>
 	</section>
 	
-<!--	----------------introduction section--------------------------->
+<!--	---------------------about section--------------------------->
 	<section id="about" class="about">
+<!--this is the introduction text sub section-->
 		<section class="about-txt">
-			<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
-			<div class="title">
-				<h2 class="section-title">参加者を前のめりにする<br>体験式研修ツール</h2>
-			</div>
-<!--		the div that wraps the introduction text-->
-			<div class="section-txt-wrapper">
-				<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など企業（仕事）と人材をつなげる場面において、参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
-				<p class="section-txt">株式会社キュースリーが提供するのは、そんな研修や説明会をサポートするツールです。</p>
-				<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、参加者の積極性を引き出し満足度を向上させます。企業それぞれのニーズに合わせた研修コンテンツで、人材とのつながりをしっかりサポートします。</p>
+			<div class="about-txt-inner-wrapper">
+				<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
+				<div class="title">
+					<h2 class="section-title">参加者を前のめりにする<br>体験式研修ツール</h2>
+				</div>
+				<!--		the div that wraps the introduction text-->
+				<div class="section-txt-wrapper">
+					<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など<br>企業（仕事）と人材をつなげる場面において、<br>参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
+					<p class="section-txt">&nbsp;</p>
+					<p class="section-txt">株式会社キュースリーが提供するのは、<br>そんな研修や説明会をサポートするツールです。</p>
+					<p class="section-txt">&nbsp;</p>
+					<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、<br>参加者の積極性を引き出し満足度を向上させます。<br>企業それぞれのニーズに合わせた研修コンテンツで、<br>人材とのつながりをしっかりサポートします。</p>
+				</div>
 			</div>
 		</section>
-		<!--	this is the how it works sub section-->
+		
+<!--	this is the how it works sub section-->
 		<section class="how-it-works">
 			<div class="title">
 				<h2 class="section-title">体験式とは</h2>
 				<p class="section-subtitle">HOW IT WORKS</p>
 			</div>
-	<!--		this is the second outmost inner wrapper-->
+<!--		inner-2 is the second outmost inner wrapper-->
 			<div class="inner inner-2">
-	<!--		the slider achieved using slick.js-->
+<!--		the slider achieved using slick.js-->
 				<div class="slider">
 					<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
 					<div class="slide"><img src="img/slide-2.png" alt="スライド画像２"></div>
@@ -133,7 +139,7 @@
 					 	<div class="content-box">
 <!--					 	the title part-->
 					 		<div class="content-title-wrapper">
-					 			<img src="img/example-1.png" alt="お金についての研修">
+					 			<img src="" alt="お金についての研修">
 					 			<h4 class="content-title">お金についての研修</h4>
 					 			<p class="content-category">経営 / 財務</p>
 					 		</div>
@@ -409,6 +415,17 @@
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick/slick.min.js"></script>
-	<script src="js/script.js"></script>
+	<script>
+		$(function() {
+			$(".slider").slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				arrows: false,
+				dots: true
+			});
+		});
+	</script>
 </body>
 </html>
