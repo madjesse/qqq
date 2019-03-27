@@ -65,13 +65,13 @@
 	</section>
 	
 <!--	---------------------about section--------------------------->
-	<section id="about" class="about">
+	<section id="about" class="about sections">
 <!--this is the introduction text sub section-->
 		<section class="about-txt">
 			<div class="about-txt-inner-wrapper">
 				<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
 				<div class="title">
-					<h2 class="section-title">参加者を前のめりにする<br>体験式研修ツール</h2>
+					<h2 class="section-title no-border">参加者を前のめりにする<br>体験式研修ツール</h2>
 				</div>
 				<!--		the div that wraps the introduction text-->
 				<div class="section-txt-wrapper">
@@ -103,6 +103,7 @@
 				</div>
 				<div class="section-txt-wrapper">
 					<p class="section-txt">カード・マンガ・Webサービス・ストロー・カギなど様々なツールを使い、テーマに合わせた「体験できる」研修をご用意します。</p>
+					<p class="section-txt">&nbsp;</p>
 					<p class="section-txt">一方的に講義を受けるのではなく自分たちで考え答えを導き出すことができる内容にすることで、積極的な参加と学習の定着を引き出しています。</p>
 				</div>
 			</div>
@@ -110,7 +111,7 @@
 	</section>
 	
 <!--	this is the service section-->
-	<section id="service" class="service">
+	<section id="service" class="service sections">
 		<div class="title">
 			<h2 class="section-title">サービス</h2>
 			<p class="section-subtitle">SERVICE</p>
@@ -118,10 +119,10 @@
 		
 <!--		the 3 buttons linking inner sections with down arrows created with i elements-->
 		<nav class="inner-nav">
-			<ul>
-				<li class="inner-nav-item"><a href="#examples">コンテンツ例<i class="down-arrow"></i></a></li>
-				<li class="inner-nav-item"><a href="#cost">費用<i class="down-arrow"></i></a></li>
-				<li class="inner-nav-item"><a href="#process">導入の流れ<i class="down-arrow"></i></a></li>
+			<ul class="inner-nav-list">
+				<li class="inner-nav-item"><a href="#examples">コンテンツ例</a></li>
+				<li class="inner-nav-item"><a href="#cost">費用</a></li>
+				<li class="inner-nav-item"><a href="#process">導入の流れ</a></li>
 			</ul>
 		</nav>
 		<div class=" inner inner-2">
@@ -129,7 +130,7 @@
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
 					<h3 class="sub-title">コンテンツ例</h3>
-					<p class="sub-description">体験式の研修・説明会コンテンツをそれぞれの「ニーズに合わせて」ご用意しております。</p>
+					<p class="sub-description">体験式の研修・説明会コンテンツを<br>それぞれの「ニーズに合わせて」ご用意しております。</p>
 				</div>
 <!--				this is the wrapper that is white in background-->
 				<div class="content-wrapper">
@@ -137,66 +138,70 @@
 					 <div class="content">
 <!--					 the first box-->
 					 	<div class="content-box">
+					 		<div class="content-box-inner">
 <!--					 	the title part-->
-					 		<div class="content-title-wrapper">
-					 			<img src="" alt="お金についての研修">
-					 			<h4 class="content-title">お金についての研修</h4>
-					 			<p class="content-category">経営 / 財務</p>
-					 		</div>
-<!--					 		the text part-->
-					 		<div class="content-txt-wrapper">
-								<p class="content-txt bold">「ビジネスを通じて企業内外で流れるお金」</p>
-								<p class="content-txt bold">「個人に支払われるお金」</p>
-								<p class="content-txt">など、お金をテーマにした研修です。<br>実際のビジネスを模したカードゲーム等様々なツールを使い、講義ではなく参加者に自分たちで考え気づいてもらう内容になっています。</p>
-					 		</div>
-<!--					 		the examples-->
-					 		<div class="example-topics-wrapper">
-					 			<h4 class="example-topics-title">テーマ例</h4>
-								<div class="example-topics">
-									<p class="example">企業マネジメント</p>
-									<p class="example">お金の流れ</p>
-									<p class="example">損益計算</p>
-									<p class="example">給与明細の仕組み</p>
-									<p class="example">コスト意識</p>
+								<div class="content-title-wrapper">
+									<img src="img/money.png" alt="お金についての研修">
+									<h4 class="content-title">お金についての研修</h4>
+									<p class="content-category">経営 / 財務</p>
+								</div>
+		<!--					 		the text part-->
+								<div class="content-txt-wrapper">
+									<p class="content-txt">「ビジネスを通じて企業内外で流れるお金」</p>
+									<p class="content-txt">「個人に支払われるお金」</p>
+									<p class="content-txt">&nbsp;など、お金をテーマにした研修です。<br>&nbsp;実際のビジネスを模したカードゲーム等様々<br>&nbsp;なツールを使い、講義ではなく参加者に自分<br>&nbsp;たちで考え気づいてもらう内容になっていま<br>す。</p>
+								</div>
+		<!--					 		the examples-->
+								<div class="example-topics-wrapper">
+									<h4 class="example-topics-title">テーマ例</h4>
+									<div class="example-topics">
+										<p class="example content-txt">企業マネジメント</p>
+										<p class="example content-txt">お金の流れ</p>
+										<p class="example content-txt">損益計算</p>
+										<p class="example content-txt">給与明細の仕組み</p>
+										<p class="example content-txt">コスト意識</p>
+									</div>
 								</div>
 					 		</div>
 					 	</div>
 <!--					 	the second box-->
-						 <div class="content-box">
-<!--					 	the title part-->
-							 <div class="content-title-wrapper">
-								 <img src="img/example-1.png" alt="お金についての研修">
-								 <h4 class="content-title">チームビルディング研修</h4>
-								 <p class="content-category">会社の仕事 / 理念</p>
-							 </div>
-<!--							 the text part-->
-							 <div class="content-txt-wrapper">
-								 <p class="content-txt bold">「どんな仕事があるのか？」</p>
-								 <p class="content-txt bold">「どんな顧客にどんな商品を売りたいのか？」</p>
-								 <p class="content-txt bold">「理念を噛み砕くとどういうことなのか？」</p>
-								 <p class="content-txt">など、企業にまつわる様々なことをテーマにした研修です。<br>体験式のため、馴染みの薄い社員同士のチームビルディングとしても機能します。</p>
-							 </div>
+						<div class="content-box">
+							<div class="content-box-inner">
+								<!--					 	the title part-->
+								<div class="content-title-wrapper">
+									<img src="img/training.png" alt="お金についての研修">
+									<h4 class="content-title">チームビルディング研修</h4>
+									<p class="content-category">会社の仕事 / 理念</p>
+								</div>
+	<!--							 the text part-->
+								<div class="content-txt-wrapper">
+									<p class="content-txt bold">「どんな仕事があるのか？」</p>
+									<p class="content-txt bold">「どんな顧客にどんな商品を売りたいのか？」</p>
+									<p class="content-txt bold">「理念を噛み砕くとどういうことなのか？」</p>
+									<p class="content-txt">など、企業にまつわる様々なことをテーマにした研修です。<br>体験式のため、馴染みの薄い社員同士のチームビルディングとしても機能します。</p>
+								</div>
 <!--							 the examples-->
-							 <div class="example-topics-wrapper">
-								 <h4 class="example-topics-title">テーマ例</h4>
-								 <div class="example-topics">
-									 <p class="example">チームビルディング</p>
-									 <p class="example">顧客像</p>
-									 <p class="example">現場のエピソード</p>
-									 <p class="example">新規事業計画</p>
-									 <p class="example">理念の噛み砕き</p>
-								 </div>
-							 </div>
+								<div class="example-topics-wrapper">
+									<h4 class="example-topics-title">テーマ例</h4>
+									<div class="example-topics">
+										<p class="example content-txt">チームビルディング</p>
+										<p class="example content-txt">顧客像</p>
+										<p class="example content-txt">現場のエピソード</p>
+										<p class="example content-txt">新規事業計画</p>
+										<p class="example content-txt">理念の噛み砕き</p>
+									</div>
+								</div>
+							</div>
 						 </div>
-					 </div>
-					 <p class="section-txt">ご上記以外にもニーズに合わせた様々な研修をご用意いたします。<br>ぜひご相談ください。</p>
+					</div>
+					<p class="section-txt extra-description">ご上記以外にもニーズに合わせた様々な研修をご用意いたします。<br>ぜひご相談ください。</p>
 				</div>
 			</section>
 			<section id="cost" class="basic-layout">
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
 					<h3 class="sub-title">費用</h3>
-					<p class="sub-description">コンテンツの費用感です。カスタマイズの幅によって金額は変動いたします。詳しくはお問合せください。</p>
+					<p class="sub-description">コンテンツの費用感です。カスタマイズの幅によって金額は変動いた<br>します。詳しくはお問合せください。</p>
 				</div>
 				<div class="content-wrapper">
 					<div class="cost-detail">
@@ -231,7 +236,7 @@
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
 					<h3 class="sub-title">導入の流れ</h3>
-					<p class="sub-description">研修コンテンツを導入いただく場合の大まかな流れです。ご検討の日程に合わせてご確認ください。</p>
+					<p class="sub-description">研修コンテンツを導入いただく場合の大まかな流れです。<br>ご検討の日程に合わせてご確認ください。</p>
 				</div>
 				<div class="content-wrapper">
 					<div class="process-detail-wrapper">
@@ -296,12 +301,12 @@
 	</section>
 	
 <!--	this is the company section-->
-	<section id="company" class="company">
+	<section id="company" class="company sections">
 		<div class="title">
 			<h2 class="section-title">会社概要</h2>
 			<p class="section-subtitle">COMPANY</p>
 		</div>
-		<table class="company-info">
+		<table class="inner inner-3 company-info">
 			<tr>
 				<th>社名</th>
 				<td>株式会社キュースリー</td>
@@ -322,7 +327,7 @@
 	</section>
 	
 <!--	this is the works section-->
-	<section id="works" class="works">
+	<section id="works" class="works sections">
 		<div class="title">
 			<h2 class="section-title">採用実績</h2>
 			<p class="section-subtitle">WORKS</p>
@@ -384,7 +389,7 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact" class="contact">
+	<section id="contact" class="contact sections">
 		<div class="title">
 			<h2 class="section-title">お問い合わせ</h2>
 			<p class="section-subtitle">CONTACT</p>
