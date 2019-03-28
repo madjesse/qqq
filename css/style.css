@@ -331,11 +331,13 @@ h4 {
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+.service-accordion {
+	display: none;
+}
 
 /* general styles for the 3 sub-sections with similar layouts */
 .basic-layout {
 	width: 100%;
-	background-color: #fff;
 	margin-bottom: 2rem;
 }
 .basic-layout:last-child {
@@ -371,6 +373,7 @@ h4 {
 }
 .content-wrapper {
 	padding: 5rem;
+	background-color: #fff;
 }
 
 /*the 1st sub-section: contents*/
@@ -565,9 +568,10 @@ h4 {
 	background: url(../img/repeated-bg-m.png);
 	background-size: cover;
 }
-.works .basic-layout {
+.works-wrapper {
 	width: 70%;
 	margin: 0 auto;
+	background-color: #fff;
 }
 .works .sub-title {
 	font-size: 1.6rem;
@@ -910,6 +914,19 @@ h4 {
 	}
 /*	hide ordinary nav bar*/
 	.desktop-nav {
+		display: none;
+	}
+/*	modify the service section so that current inner nav, title div and contents get hidden and buttons that are originally hidden get shown*/
+	.inner-nav {
+		display: none;
+	}
+	.service-accordion {
+		display: block;
+	}
+	.service .sub-title-wrapper {
+		display: none;
+	}
+	.content-wrapper {
 		display: none;
 	}
 }
