@@ -39,6 +39,13 @@
 					<li class="nav-item"><a href="#works">WORKS</a></li>
 					<li class="nav-item"><a href="#contact">CONTACT</a></li>
 				</ul>
+				<div class="menu-btn-wrapper">
+					<div class="menu-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
 				<ul class="smartphone-nav">
 					<li class="nav-item"><a href="#about">ABOUT</a></li>
 					<li class="nav-item"><a href="#service">SERVICE</a></li>
@@ -58,7 +65,7 @@
 				<img class="logo-white" src="img/logo-white.png" alt="QQQ: Question, Quest, Quality">
 			</div>
 <!--main appealing text on the left-->
-			<div class="main-appeal flex-row">
+			<div class="main-appeal flex-column">
 				<p class="main-appeal-txt">参加者を前のめりにする<br>体験式研修ツールで<br>仕事と人材のつながりを<br>サポートする</p>
 			</div>
 		</div>
@@ -75,11 +82,11 @@
 				</div>
 				<!--		the div that wraps the introduction text-->
 				<div class="section-txt-wrapper">
-					<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など<br>企業（仕事）と人材をつなげる場面において、<br>参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
+					<p class="section-txt">企業の説明会や内定者研修、新入社員研修や社内研修など企業（仕事）と人材をつなげる場面において、参加者に積極的に、主体的に参加してもらうのは難しいものです。</p>
 					<p class="section-txt">&nbsp;</p>
-					<p class="section-txt">株式会社キュースリーが提供するのは、<br>そんな研修や説明会をサポートするツールです。</p>
+					<p class="section-txt">株式会社キュースリーが提供するのは、そんな研修や説明会をサポートするツールです。</p>
 					<p class="section-txt">&nbsp;</p>
-					<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、<br>参加者の積極性を引き出し満足度を向上させます。<br>企業それぞれのニーズに合わせた研修コンテンツで、<br>人材とのつながりをしっかりサポートします。</p>
+					<p class="section-txt">研修・説明会にゲーム要素を取り入れ体験式にすることで、参加者の積極性を引き出し満足度を向上させます。企業それぞれのニーズに合わせた研修コンテンツで、人材とのつながりをしっかりサポートします。</p>
 				</div>
 			</div>
 		</section>
@@ -149,7 +156,7 @@
 								<div class="content-txt-wrapper">
 									<p class="content-txt">「ビジネスを通じて企業内外で流れるお金」</p>
 									<p class="content-txt">「個人に支払われるお金」</p>
-									<p class="content-txt">&nbsp;など、お金をテーマにした研修です。<br>&nbsp;実際のビジネスを模したカードゲーム等様々<br>&nbsp;なツールを使い、講義ではなく参加者に自分<br>&nbsp;たちで考え気づいてもらう内容になっていま<br>す。</p>
+									<p class="content-txt">&nbsp;など、お金をテーマにした研修です。<br>&nbsp;実際のビジネスを模したカードゲーム等様々なツールを使い、講義ではなく参加者に自分たちで考え気づいてもらう内容になっています。</p>
 								</div>
 		<!--					 		the examples-->
 								<div class="example-topics-wrapper flex-column">
@@ -450,6 +457,7 @@
 	<script src="js/slick/slick.min.js"></script>
 	<script>
 		$(function() {
+//			slider settings-------------------------------------------------
 			$(".slider").slick({
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -457,6 +465,24 @@
 				autoplaySpeed: 2000,
 				arrows: false,
 				dots: true
+			});
+			
+//			scroll effects--------------------------------------------------
+			$(".nav a, .inner-nav a").click(function(e) {
+// 			make sure this.hash has a value before overriding default behavior
+    			if (this.hash !== "") {
+					// prevent default anchor click behavior
+      				event.preventDefault();
+					// Store hash
+      				var hash = this.hash;
+					// Using jQuery's animate() method to add smooth page scroll
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function() {
+						// Add hash (#) to URL when done scrolling (default click behavior)
+        				window.location.hash = hash;
+					});
+				}
 			});
 		});
 	</script>

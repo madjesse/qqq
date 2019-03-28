@@ -1,4 +1,4 @@
-/*For screen over 1200px by default
+/*For screen larger than 1280px by default
 ==================================================================================================================================================*/
 
 /*Basic data:
@@ -130,6 +130,13 @@ h4 {
 .smartphone-nav { /*menu for smaller screen is not displayed by default*/
 	display: none;
 }
+.menu-btn-wrapper {
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	
+	display: none;
+}
 .logo {
 	width: 74.25px;
 	position: absolute;
@@ -137,6 +144,7 @@ h4 {
 }
 .nav {
 	width: 100%;
+	position: relative;
 }
 .nav a {
 	font-size: 1.5rem;
@@ -175,8 +183,8 @@ h4 {
 .logo-white {
 	position: absolute;
 	width: 20%;
-	top: calc(50% - 49.455px);
-	left: calc(50% - 78.26px)
+	top: calc(50% - 20% / 2);
+	left: calc(50% - 20% / 2);
 }
 .main-appeal { /*the main appealing text with blue bg on the left----*/
 	position: absolute;
@@ -185,7 +193,6 @@ h4 {
 	top: 0;
 	left: 0;
 	color: #fff;
-	padding: 11%;
 	font-size: 2.5rem;
 	background-color: #009fe8;
 }
@@ -204,8 +211,6 @@ h4 {
 /*---------------------about section--------------------------------*/
 .about {
 	width: 100%;
-	padding-top: 5rem;
-	padding-bottom: 0;
 	background-color: #fff;
 }
 .about-txt-inner-wrapper .title {
@@ -221,7 +226,7 @@ h4 {
 }
 .about-txt {
 	width: 100%;
-	padding-bottom: 5rem;
+	padding: 5rem 0;
 }
 .about-txt-inner-wrapper {
 	width: 40%;
@@ -246,11 +251,12 @@ h4 {
 }
 .how-it-works .inner-2 {
 	flex-wrap: nowrap;
+	align-items: flex-start;
 }
 .how-it-works .section-title {
 	border-bottom-color: #fff;
 }
-.slider,  .how-it-works section-txt-wrapper {
+.slider,  .how-it-works .section-txt-wrapper {
 	width: 48%;
 }
 .slider {
@@ -371,6 +377,8 @@ h4 {
 .content {
 	width: 100%;
 	margin-bottom: 2rem;
+	justify-content: space-between;
+	align-items: stretch;
 }
 .content-box {
 	border: 2px solid #f7931e;
@@ -382,7 +390,9 @@ h4 {
 }
 .content-box-inner {
 	width: 70%;
+	height: 100%;
 	margin: 0 auto;
+	justify-content: space-between;
 }
 .content-title-wrapper {
 	width: 100%;
@@ -479,7 +489,7 @@ h4 {
 /*the 3rd sub-section: process*/
 .process-detail-wrapper {
 	width: 100%;
-	justify-content: flex-start;
+	justify-content: space-between;
 	counter-reset: sorting;
 }
 .process-detail {
@@ -568,7 +578,8 @@ h4 {
 	font-size: 1.5rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	padding: 3rem 0;
+	padding: 3rem;
+	justify-content: space-between;
 }
 .work-list {
 	width: 45%;
@@ -591,6 +602,7 @@ h4 {
 }
 .bold {
 	font-weight: 600;
+	margin-bottom: 0.5rem;
 }
 
 /*------------------------contact section------------------------------------*/
@@ -661,4 +673,253 @@ h4 {
 .footer small {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
+}
+
+/*For screen below 1279px
+============================================================================================================================================================*/
+@media screen and (max-width: 1279px) {
+	/* reduce the font size of .example*/
+	.example {
+		font-size: 1rem;
+	}
+}
+/*For screen below 1199px
+============================================================================================================================================================*/
+@media screen and (max-width: 1199px) {
+/*	modify .section-txt font*/
+	.section-txt {
+		font-size: 1.2rem;
+		line-height: 2rem;
+		letter-spacing: 0.1rem; 
+	}
+}
+/*For screen below 1024px
+============================================================================================================================================================*/
+@media screen and (max-width: 1024px) {
+/*	modify .sections padding*/
+	.sections {
+		padding: 3rem 0;
+	}
+	.about {
+		padding-bottom: 0;
+	}
+	.how-it-works {
+		padding: 3rem 0;
+	}
+	.about-txt {
+		padding: 3rem 0;
+	}
+/*	modify .section-txt font*/
+	.section-txt {
+    	letter-spacing: 0;
+	}
+/*	modify appealing text*/
+	.main-appeal-txt {
+		font-size: 2rem;
+		line-height: 3rem;
+		letter-spacing: 0.2rem;
+	}
+/*	modify .inner-nav font*/
+	.inner-nav-item a {
+		font-size: 1.2rem;
+		letter-spacing: 0.1rem;
+	}
+/*	overwrite .content and .content-box styles*/
+	.content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.content-wrapper {
+		padding: 3rem;
+	}
+	.content-box {
+		width: 100%;
+	}
+	.content-box:nth-child(1) {
+		margin-right: 0;
+		margin-bottom: 2%;
+	}
+	.process-detail-title {
+		font-size: 1.5rem;
+		letter-spacing: 0.2rem;
+	}
+	.process-detail-txt {
+		line-height: 1.5rem;
+		padding: 1.5rem;
+	}
+/*	modify .company-info*/
+	.company-info {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+/*	modify .work-list related styles*/
+	.work-list-wrapper {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.work-list-item::before {
+		background-size: 1.2rem auto;
+		width: 1.2rem;
+		height: calc(1.2rem * 42 / 38);
+	}
+/*	modify form related styles*/
+	.form-item label {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.form-item:nth-child(3) {
+		margin-bottom: 2rem;
+	}
+}
+/*For screen below 959px
+============================================================================================================================================================*/
+@media screen and (max-width: 959px) {
+	/*	modify headings*/
+	h2 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+	}
+	h2, h3, h4 {
+		letter-spacing: 0.2rem;
+	}
+	.section-title {
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.section-subtitle {
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
+	}
+	.no-border {
+		line-height: 2rem;
+	}
+	.about-txt-inner-wrapper .title::after {
+		margin: 2rem auto;
+	}
+	.sub-description {
+		font-size: 1rem;
+    	line-height: 1.5rem;
+    	letter-spacing: 0;
+	}
+/*	modify nav bar*/
+	.nav a {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+/*	modify inner nav bar*/
+	.inner-nav-item a {
+    	font-size: 1rem;
+    	letter-spacing: 0;
+		padding: 0.5rem;
+	}
+	.inner-nav-item a::after {
+		width: 0.5rem;
+		height: 0.5rem;
+		right: 0.8rem;
+		top: calc(50% - 0.5rem * 1.5 / 2);
+		border-width: 1px;
+	}
+/*	modify service section's table text*/
+	.cost-detail table {
+		width: 90%;
+		font-size: 1rem;
+		letter-spacing: 0;
+	}
+/*	modify service section's process*/
+	.process-detail-title {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.process-detail-txt {
+		font-size: 1rem;
+		line-height: 1.2rem;
+		padding: 1rem;
+	}
+/*	modify company related styles*/
+	.company-info th {
+		width: 15%;
+	}
+/*	modify works related styles*/
+	.work-list {
+		width: 50%;
+	}
+	.work-list:last-child {
+		width: 45%;
+	}
+	.work-list-wrapper {
+		font-size: 1rem;
+	}
+	.work-list-item::before {
+		background-size: 1rem auto;
+    	width: 1rem;
+    	height: calc(1rem * 42 / 38);
+	}
+}
+/*For screen below 768px (smartphone)
+============================================================================================================================================================*/
+@media screen and (max-width: 768px) {
+/*	modify overall inner wrapper*/
+	.inner-1, .inner-2, .inner-3 {
+		width: 90%;
+	}
+/*	modify main visual*/
+	.main-visual-wrapper {
+		position: static;
+	}
+	.main-img {
+		position: relative;
+		width: 100%;
+	}
+	.main-appeal {
+		position: static;
+		width: 100%;
+		padding: 2rem 0;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	.main-appeal-txt {
+		width: 95%;
+	}
+	.main-visual-wrapper::before {
+		padding-top: 0;
+	}
+/*	modify about section*/
+	.about-txt-inner-wrapper {
+		width: 90%;
+	}
+	.section-txt-wrapper {
+		text-align: ;
+	}
+	.how-it-works .inner-2 {
+		flex-direction: column;
+	}
+	.slider {
+		order: 2;
+	}
+	.how-it-works .section-txt-wrapper {
+		margin-bottom: 1rem;
+	}
+	.slider, .how-it-works .section-txt-wrapper {
+		width: 100%;
+	}
+/*	hide ordinary nav bar*/
+	.desktop-nav {
+		display: none;
+	}
+}
+/*For screen below 480px
+============================================================================================================================================================*/
+@media screen and (max-width: 480px) {
+	
+}
+/*For screen below 350px
+============================================================================================================================================================*/
+@media screen and (max-width: 350px) {
+	
 }
