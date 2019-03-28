@@ -39,6 +39,9 @@ body {
 	margin: 0 auto;
 	font-size: 1rem;
 }
+ul {
+	list-style: none;
+}
 a {
 	display: block;
 	text-decoration: none;
@@ -85,10 +88,6 @@ h4 {
 	letter-spacing: 0.2rem;
 }
 .title {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
 	margin-bottom: 3rem;
 }
 .section-subtitle {
@@ -104,6 +103,19 @@ h4 {
 .sections {
 	padding: 5rem 0;
 }
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.flex-row {
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
 
 /*-----------------------------header--------------------------------*/
 .header {
@@ -112,10 +124,8 @@ h4 {
 }
 .header .inner-1 {
 	height: 80px;
-	display: flex;
-    align-items: center;
-    flex-wrap: wrap;
 	position: relative;
+	justify-content: flex-start
 }
 .smartphone-nav { /*menu for smaller screen is not displayed by default*/
 	display: none;
@@ -127,20 +137,18 @@ h4 {
 }
 .nav {
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .nav a {
 	font-size: 1.5rem;
 	font-weight: bold;
 	letter-spacing: 0.1rem;
+	transition: color 0.2s;
+}
+.nav a:hover {
+	color: #f7931e;
 }
 .desktop-nav {
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .desktop-nav li {
 	margin-right: 3rem;
@@ -176,8 +184,6 @@ h4 {
 	height: 100%;
 	top: 0;
 	left: 0;
-	display: flex;
-	align-items: center;
 	color: #fff;
 	padding: 11%;
 	font-size: 2.5rem;
@@ -239,8 +245,7 @@ h4 {
 	background-image: url(../img/slider-bg.png);
 }
 .how-it-works .inner-2 {
-	display: flex;
-	justify-content: center;
+	flex-wrap: nowrap;
 }
 .how-it-works .section-title {
 	border-bottom-color: #fff;
@@ -279,30 +284,33 @@ h4 {
 }
 .inner-nav-list {
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .inner-nav-item {
 	width: 15%;
 	margin-right: 0.5rem;
-	border: 2px solid #000;
-	background-color: #fff;
 }
 .inner-nav-item:last-child {
 	margin-right: 0;
 }
 .inner-nav-item a {
 	width: 100%;
-	display: flex;
+	border: 2px solid #000;
+	background-color: #fff;
 	position: relative;
-	align-items: center;
-	justify-content: center;
 	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 3rem;
 	letter-spacing: 0.2rem;
 	padding: 1rem;
+	transition: all 0.2s;
+}
+.inner-nav-item a:hover {
+	background-color: #e6e6e6;
+	color: #f7931e;
+	border-color: #f7931e;
+}
+.inner-nav-item a:hover::after {
+	border-color: #f7931e;
 }
 .inner-nav-item a::after {
 	content: "";
@@ -336,9 +344,6 @@ h4 {
 .sub-title {
 	width: 30%;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: 600;
@@ -365,9 +370,6 @@ h4 {
 /*the 1st sub-section: contents*/
 .content {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	margin-bottom: 2rem;
 }
 .content-box {
@@ -381,17 +383,9 @@ h4 {
 .content-box-inner {
 	width: 70%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 .content-title-wrapper {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	color: #f7931e;
 	margin-bottom: 3rem;
 }
@@ -414,10 +408,6 @@ h4 {
 }
 .example-topics-wrapper {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 .content-title-wrapper img {
 	width: 6rem;
@@ -433,17 +423,11 @@ h4 {
 }
 .example-topics {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	justify-content: flex-start;
 }
 .example {
 	width: 49.5%;
 	background-color: #fde9d2;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	padding: 1rem;
 	margin-bottom: 1%;
 }
@@ -495,9 +479,6 @@ h4 {
 /*the 3rd sub-section: process*/
 .process-detail-wrapper {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	justify-content: flex-start;
 	counter-reset: sorting;
 }
@@ -508,9 +489,6 @@ h4 {
 }
 .process-detail-title-wrapper {
 	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
 	justify-content: flex-start;
 }
 .process-detail-sub-title {
@@ -576,4 +554,111 @@ h4 {
 	width: 100%;
 	background: url(../img/repeated-bg-m.png);
 	background-size: cover;
+}
+.works .basic-layout {
+	width: 70%;
+	margin: 0 auto;
+}
+.works .sub-title {
+	font-size: 1.6rem;
+	letter-spacing: 0.4rem;
+}
+.work-list-wrapper {
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	padding: 3rem 0;
+}
+.work-list {
+	width: 45%;
+}
+.work-txt {
+	display: inline-block;
+}
+.work-list-item {
+	margin-bottom: 1rem;
+}
+.work-list-item::before {
+	content: "";
+	background-image: url(../img/q-icon.png);
+	background-size: 1.5rem auto;
+	display: inline-block;
+	width: 1.5rem;
+	height: calc(1.5rem * 42 / 38);
+	vertical-align: top;
+	margin-right: 0.5rem;
+}
+.bold {
+	font-weight: 600;
+}
+
+/*------------------------contact section------------------------------------*/
+.contact {
+	width: 100%;
+	background-color: #e6e6e6;
+}
+.contact-wrapper {
+	width: 45%;
+}
+.contact-wrapper .section-txt {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.contact form {
+	width: 100%;
+}
+.form-item {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+.form-item:nth-child(3) {
+	margin-bottom: 5rem;
+}
+.form-item input, .form-item textarea {
+	width: 100%;
+}
+.form-item input {
+	height: 3rem;
+}
+.form-item label {
+	font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+}
+.submit-btn {
+	width: 30%;
+}
+.submit-btn button {
+	width: 100%;
+	position: relative;
+	background-color: #009fe8;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 1rem;
+	letter-spacing: 0.2rem;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+.submit-btn button:hover {
+	background-color: #f7931e;
+}
+.right-arrow {
+	position: absolute;
+	right: 1rem;
+}
+
+/*---------------------footer------------------------------------------------*/
+.footer {
+	width: 100%;
+	padding: 3rem;
+	background-image: url(../img/repeated-bg-s.png);
+	background-size: cover;
+	color: #fff;
+}
+.footer small {
+	font-weight: 500;
+	letter-spacing: 0.2rem;
 }

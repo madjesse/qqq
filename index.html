@@ -25,14 +25,14 @@
 <!--header consists of 3 parts: h1, desktop navigation bar and smartphone navigation bar which is hidden when screen is wide-->
 	<header class="header">
 <!--	inner-1 wrapper is one of 3 wrappers with various widths and is the outmost one-->
-		<div class="inner inner-1">
+		<div class="inner inner-1 flex-row">
 <!--		the QQQ logo-->
 			<h1 class="logo">
 				<a href="index.html"><img src="img/logo.png" alt="QQQの企業ロゴ"></a>
 			</h1>
 <!--		the	nav group-->
-			<nav class="nav">
-				<ul class="desktop-nav">
+			<nav class="nav flex-row">
+				<ul class="desktop-nav flex-row">
 					<li class="nav-item"><a href="#about">ABOUT</a></li>
 					<li class="nav-item"><a href="#service">SERVICE</a></li>
 					<li class="nav-item"><a href="#company">COMPANY</a></li>
@@ -58,7 +58,7 @@
 				<img class="logo-white" src="img/logo-white.png" alt="QQQ: Question, Quest, Quality">
 			</div>
 <!--main appealing text on the left-->
-			<div class="main-appeal">
+			<div class="main-appeal flex-row">
 				<p class="main-appeal-txt">参加者を前のめりにする<br>体験式研修ツールで<br>仕事と人材のつながりを<br>サポートする</p>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 		<section class="about-txt">
 			<div class="about-txt-inner-wrapper">
 				<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
-				<div class="title">
+				<div class="title flex-column">
 					<h2 class="section-title no-border">参加者を前のめりにする<br>体験式研修ツール</h2>
 				</div>
 				<!--		the div that wraps the introduction text-->
@@ -86,12 +86,12 @@
 		
 <!--	this is the how it works sub section-->
 		<section class="how-it-works">
-			<div class="title">
+			<div class="title flex-column">
 				<h2 class="section-title">体験式とは</h2>
 				<p class="section-subtitle">HOW IT WORKS</p>
 			</div>
 <!--		inner-2 is the second outmost inner wrapper-->
-			<div class="inner inner-2">
+			<div class="inner inner-2 flex-row">
 <!--		the slider achieved using slick.js-->
 				<div class="slider">
 					<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
@@ -112,35 +112,35 @@
 	
 <!--	this is the service section-->
 	<section id="service" class="service sections">
-		<div class="title">
+		<div class="title flex-column">
 			<h2 class="section-title">サービス</h2>
 			<p class="section-subtitle">SERVICE</p>
 		</div>
 		
 <!--		the 3 buttons linking inner sections with down arrows created with i elements-->
 		<nav class="inner-nav">
-			<ul class="inner-nav-list">
-				<li class="inner-nav-item"><a href="#examples">コンテンツ例</a></li>
-				<li class="inner-nav-item"><a href="#cost">費用</a></li>
-				<li class="inner-nav-item"><a href="#process">導入の流れ</a></li>
+			<ul class="inner-nav-list flex-row">
+				<li class="inner-nav-item"><a class="flex-row" href="#examples">コンテンツ例</a></li>
+				<li class="inner-nav-item"><a class="flex-row" href="#cost">費用</a></li>
+				<li class="inner-nav-item"><a class="flex-row" href="#process">導入の流れ</a></li>
 			</ul>
 		</nav>
 		<div class=" inner inner-2">
 			<section id="examples" class="basic-layout">
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
-					<h3 class="sub-title">コンテンツ例</h3>
+					<h3 class="sub-title flex-row">コンテンツ例</h3>
 					<p class="sub-description">体験式の研修・説明会コンテンツを<br>それぞれの「ニーズに合わせて」ご用意しております。</p>
 				</div>
 <!--				this is the wrapper that is white in background-->
 				<div class="content-wrapper">
 <!--				 the 2 orange-bordered boxes-->
-					 <div class="content">
+					 <div class="content flex-row">
 <!--					 the first box-->
 					 	<div class="content-box">
-					 		<div class="content-box-inner">
+					 		<div class="content-box-inner flex-column">
 <!--					 	the title part-->
-								<div class="content-title-wrapper">
+								<div class="content-title-wrapper flex-column">
 									<img src="img/money.png" alt="お金についての研修">
 									<h4 class="content-title">お金についての研修</h4>
 									<p class="content-category">経営 / 財務</p>
@@ -152,23 +152,23 @@
 									<p class="content-txt">&nbsp;など、お金をテーマにした研修です。<br>&nbsp;実際のビジネスを模したカードゲーム等様々<br>&nbsp;なツールを使い、講義ではなく参加者に自分<br>&nbsp;たちで考え気づいてもらう内容になっていま<br>す。</p>
 								</div>
 		<!--					 		the examples-->
-								<div class="example-topics-wrapper">
+								<div class="example-topics-wrapper flex-column">
 									<h4 class="example-topics-title">テーマ例</h4>
-									<div class="example-topics">
-										<p class="example content-txt">企業マネジメント</p>
-										<p class="example content-txt">お金の流れ</p>
-										<p class="example content-txt">損益計算</p>
-										<p class="example content-txt">給与明細の仕組み</p>
-										<p class="example content-txt">コスト意識</p>
+									<div class="example-topics flex-row">
+										<p class="example content-txt flex-row">企業マネジメント</p>
+										<p class="example content-txt flex-row">お金の流れ</p>
+										<p class="example content-txt flex-row">損益計算</p>
+										<p class="example content-txt flex-row">給与明細の仕組み</p>
+										<p class="example content-txt flex-row">コスト意識</p>
 									</div>
 								</div>
 					 		</div>
 					 	</div>
 <!--					 	the second box-->
 						<div class="content-box">
-							<div class="content-box-inner">
+							<div class="content-box-inner flex-column">
 								<!--					 	the title part-->
-								<div class="content-title-wrapper">
+								<div class="content-title-wrapper flex-column">
 									<img src="img/training.png" alt="お金についての研修">
 									<h4 class="content-title">チームビルディング研修</h4>
 									<p class="content-category">会社の仕事 / 理念</p>
@@ -181,14 +181,14 @@
 									<p class="content-txt">など、企業にまつわる様々なことをテーマにした研修です。<br>体験式のため、馴染みの薄い社員同士のチームビルディングとしても機能します。</p>
 								</div>
 <!--							 the examples-->
-								<div class="example-topics-wrapper">
+								<div class="example-topics-wrapper flex-column">
 									<h4 class="example-topics-title">テーマ例</h4>
-									<div class="example-topics">
-										<p class="example content-txt">チームビルディング</p>
-										<p class="example content-txt">顧客像</p>
-										<p class="example content-txt">現場のエピソード</p>
-										<p class="example content-txt">新規事業計画</p>
-										<p class="example content-txt">理念の噛み砕き</p>
+									<div class="example-topics flex-row">
+										<p class="example content-txt flex-row">チームビルディング</p>
+										<p class="example content-txt flex-row">顧客像</p>
+										<p class="example content-txt flex-row">現場のエピソード</p>
+										<p class="example content-txt flex-row">新規事業計画</p>
+										<p class="example content-txt flex-row">理念の噛み砕き</p>
 									</div>
 								</div>
 							</div>
@@ -200,7 +200,7 @@
 			<section id="cost" class="basic-layout">
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
-					<h3 class="sub-title">費用</h3>
+					<h3 class="sub-title flex-row">費用</h3>
 					<p class="sub-description">コンテンツの費用感です。カスタマイズの幅によって金額は変動いた<br>します。詳しくはお問合せください。</p>
 				</div>
 				<div class="content-wrapper">
@@ -235,14 +235,14 @@
 			<section id="process" class="basic-layout">
 <!--			the title part with the blue title and grey description-->
 				<div class="sub-title-wrapper">
-					<h3 class="sub-title">導入の流れ</h3>
+					<h3 class="sub-title flex-row">導入の流れ</h3>
 					<p class="sub-description">研修コンテンツを導入いただく場合の大まかな流れです。<br>ご検討の日程に合わせてご確認ください。</p>
 				</div>
 				<div class="content-wrapper">
-					<div class="process-detail-wrapper">
+					<div class="process-detail-wrapper flex-row">
 <!--					01-->
 						<div class="process-detail">
-							<div class="process-detail-title-wrapper">
+							<div class="process-detail-title-wrapper flex-row">
 								<span class="order"></span>
 								<div class="process-detail-title-txt">
 									<h4 class="process-detail-title">お問い合わせ</h4>
@@ -253,7 +253,7 @@
 						</div>
 <!--						02-->
 						<div class="process-detail">
-							<div class="process-detail-title-wrapper">
+							<div class="process-detail-title-wrapper flex-row">
 								<span class="order"></span>
 								<div class="process-detail-title-txt">
 									<h4 class="process-detail-title">お打合せ・コンテンツ決定</h4>
@@ -264,7 +264,7 @@
 						</div>
 <!--						03-->
 						<div class="process-detail">
-							<div class="process-detail-title-wrapper">
+							<div class="process-detail-title-wrapper flex-row">
 								<span class="order"></span>
 								<div class="process-detail-title-txt">
 									<h4 class="process-detail-title">コンテンツ制作・テスト</h4>
@@ -275,7 +275,7 @@
 						</div>
 <!--						04-->
 						<div class="process-detail">
-							<div class="process-detail-title-wrapper">
+							<div class="process-detail-title-wrapper flex-row">
 								<span class="order"></span>
 								<div class="process-detail-title-txt">
 									<h4 class="process-detail-title">本番当日</h4>
@@ -285,7 +285,7 @@
 						</div>
 <!--						05-->
 						<div class="process-detail">
-							<div class="process-detail-title-wrapper">
+							<div class="process-detail-title-wrapper flex-row">
 								<span class="order"></span>
 								<div class="process-detail-title-txt">
 									<h4 class="process-detail-title">事後報告</h4>
@@ -302,7 +302,7 @@
 	
 <!--	this is the company section-->
 	<section id="company" class="company sections">
-		<div class="title">
+		<div class="title flex-column">
 			<h2 class="section-title">会社概要</h2>
 			<p class="section-subtitle">COMPANY</p>
 		</div>
@@ -328,94 +328,122 @@
 	
 <!--	this is the works section-->
 	<section id="works" class="works sections">
-		<div class="title">
+		<div class="title flex-column">
 			<h2 class="section-title">採用実績</h2>
 			<p class="section-subtitle">WORKS</p>
 		</div>
 		<div class="basic-layout">
 			<div class="sub-title-wrapper">
-				<h3 class="sub-title">主な採用実績</h3>
+				<h3 class="sub-title flex-row">主な採用実績</h3>
 			</div>
 <!--			the works are put into 2 seperate lists-->
-			<div class="work-list-wrapper">
+			<div class="work-list-wrapper flex-row">
 				<ul class="work-list">
 					<li class="work-list-item">
-						<p class="bold">サツドラホールディングス株式会社</p>
-						<p>内定者研修</p>
+						<div class="work-txt">
+							<p class="bold">サツドラホールディングス株式会社</p>
+							<p>内定者研修</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">生活協同組合コープさっぽろ</p>
-						<p>内定者研修・単独説明会</p>
+						<div class="work-txt">
+							<p class="bold">生活協同組合コープさっぽろ</p>
+							<p>内定者研修・単独説明会</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">公益財団法人　さっぽろ青少年女性活動協会</p>
-						<p>内定者研修</p>
+						<div class="work-txt">
+							<p class="bold">公益財団法人　さっぽろ青少年女性活動協会</p>
+							<p>内定者研修</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">株式会社 DMM.com OVERRIDE</p>
-						<p>新入社員研修</p>
+						<div class="work-txt">
+							<p class="bold">株式会社 DMM.com OVERRIDE</p>
+							<p>新入社員研修</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">株式会社 NK インターナショナル</p>
-						<p>単独説明会</p>
+						<div class="work-txt">
+							<p class="bold">株式会社 NK インターナショナル</p>
+							<p>単独説明会</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">スミタス株式会社</p>
-						<p>単独説明会</p>
+						<div class="work-txt">
+							<p class="bold">スミタス株式会社</p>
+							<p>単独説明会</p>
+						</div>
 					</li>
 				</ul>
 				<ul class="work-list">
 					<li class="work-list-item">
-						<p class="bold">株式会社太陽グループ</p>
-						<p>インターンシップ</p>
+						<div class="work-txt">
+							<p class="bold">株式会社太陽グループ</p>
+							<p>インターンシップ</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">株式会社 Gear8</p>
-						<p>社員研修</p>
+						<div class="work-txt">
+							<p class="bold">株式会社 Gear8</p>
+							<p>社員研修</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">小樽商科大学</p>
-						<p>オープンキャンパス</p>
+						<div class="work-txt">
+							<p class="bold">小樽商科大学</p>
+							<p>オープンキャンパス</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">北翔大学</p>
-						<p>新入生懇親会</p>
+						<div class="work-txt">
+							<p class="bold">小樽商科大学</p>
+							<p>オープンキャンパス</p>
+						</div>
 					</li>
 					<li class="work-list-item">
-						<p class="bold">札幌学院大学</p>
-						<p>職員研修</p>
+						<div class="work-txt">
+							<p class="bold">北翔大学</p>
+							<p>新入生懇親会</p>
+						</div>
 					</li>
-				</ul>
+					<li class="work-list-item">
+						<div class="work-txt">
+							<p class="bold">札幌学院大学</p>
+							<p>職員研修</p>
+						</div>
+					</li>
+				</ul>	
 			</div>
 		</div>
 	</section>
-	<section id="contact" class="contact sections">
-		<div class="title">
+	<section id="contact" class="contact sections flex-column">
+		<div class="title flex-column">
 			<h2 class="section-title">お問い合わせ</h2>
 			<p class="section-subtitle">CONTACT</p>
 		</div>
-		<div class="contact-wrapper">
+		<div class="contact-wrapper flex-column">
 			<p class="section-txt">研修のご依頼やご相談など、お気軽に下記お問い合わせください。<br>下記のお問い合わせフォームに入力して送信ボタンをクリックしてください。</p>
-			<form action="#">
-				<div class="form-item">
+			<form action="#" class="flex-column">
+				<div class="form-item flex-column">
 					<label for="name">お名前</label>
 					<input type="text" id="name" name="name">
 				</div>
-				<div class="form-item">
+				<div class="form-item flex-column">
 					<label for="mail">メールアドレス</label>
 					<input type="text" id="mail" name="mail">
 				</div>
-				<div class="form-item">
+				<div class="form-item flex-column">
 					<label for="content">お問い合わせ内容</label>
 					<textarea name="content" id="content" cols="30" rows="10"></textarea>
 				</div>
-				<div class="submit-btn">
+				<div class="submit-btn flex-column">
 					<button type="submit">送信する<i class="right-arrow">&#8594;</i></button>
 				</div>
 			</form>
 		</div>
 	</section>
-	<footer class="footer">
+	<footer class="footer flex-row">
 		<p><small>copyright &copy; QQQ inc. All Right Reserved.</small></p>
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
