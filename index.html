@@ -40,11 +40,9 @@
 					<li class="nav-item"><a href="#contact">CONTACT</a></li>
 				</ul>
 				<div class="menu-btn-wrapper">
-					<div class="menu-btn">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 				<ul class="smartphone-nav">
 					<li class="nav-item"><a href="#about">ABOUT</a></li>
@@ -459,36 +457,6 @@
 	</footer>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick/slick.min.js"></script>
-	<script>
-		$(function() {
-//			slider settings-------------------------------------------------
-			$(".slider").slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 2000,
-				arrows: false,
-				dots: true
-			});
-			
-//			scroll effects--------------------------------------------------
-			$(".nav a, .inner-nav a").click(function(e) {
-// 			make sure this.hash has a value before overriding default behavior
-    			if (this.hash !== "") {
-					// prevent default anchor click behavior
-      				event.preventDefault();
-					// Store hash
-      				var hash = this.hash;
-					// Using jQuery's animate() method to add smooth page scroll
-					$('html, body').animate({
-						scrollTop: $(hash).offset().top
-					}, 800, function() {
-						// Add hash (#) to URL when done scrolling (default click behavior)
-        				window.location.hash = hash;
-					});
-				}
-			});
-		});
-	</script>
+	<script src="js/script.js"></script>
 </body>
 </html>

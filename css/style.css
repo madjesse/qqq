@@ -1,4 +1,4 @@
-/*For screen larger than 1280px by default
+/*For screen over 1280px by default
 ==================================================================================================================================================*/
 
 /*Basic data:
@@ -88,7 +88,7 @@ h4 {
 	letter-spacing: 0.2rem;
 }
 .title {
-	margin-bottom: 3rem;
+	margin-bottom: 2.7rem;
 }
 .section-subtitle {
 	font-size: 1.5rem;
@@ -96,7 +96,7 @@ h4 {
 	letter-spacing: 0.3rem;
 }
 .section-title {
-	padding: 0 3rem 1rem;
+	padding: 0 2.7rem 1rem;
 	border-bottom: 1px solid #000;
 	margin-bottom: 1rem;
 }
@@ -120,22 +120,80 @@ h4 {
 /*-----------------------------header--------------------------------*/
 .header {
 	width: 100%;
+	z-index: 1;
 	background-color: #fff;
 }
 .header .inner-1 {
 	height: 80px;
 	position: relative;
-	justify-content: flex-start
+	justify-content: flex-start;
 }
 .smartphone-nav { /*menu for smaller screen is not displayed by default*/
+	width: 100%;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 80px;
+	z-index: 1;
 	display: none;
 }
+.smartphone-nav .nav-item {
+	width: 100%;
+}
+.smartphone-nav .nav-item a {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: #009fe8;
+	text-align: center;
+	padding: 1.35rem;
+}
+.smartphone-nav .nav-item:first-child a {
+	padding-top: 2.7rem;
+}
+.smartphone-nav .nav-item:last-child a {
+	padding-bottom: 2.7rem;
+}
+/*the hamburger menu button*/
 .menu-btn-wrapper {
-	width: 3rem;
-	height: 3rem;
+	width: 3.6rem;
+	height: 3.6rem;
 	position: absolute;
-	
+	top: calc(50% - 1.25rem);
+	right: 0;
 	display: none;
+}
+.menu-btn-wrapper span {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.3rem;
+	background-color: #009fe8;
+	transition: 0.5s ease;
+}
+.menu-btn-wrapper span:nth-child(2) {
+	top: 1.2rem;
+}
+.menu-btn-wrapper span:nth-child(3) {
+	top: 2.4rem;
+}
+.menu-btn-wrapper .open:nth-child(1) {
+	-webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+	top: 1.2rem;
+}
+.menu-btn-wrapper .open:nth-child(2) {
+	width: 0;
+	left: 50%;
+}
+.menu-btn-wrapper .open:nth-child(3) {
+	-webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+	top: 1.2rem;
 }
 .logo {
 	width: 74.25px;
@@ -144,6 +202,7 @@ h4 {
 }
 .nav {
 	width: 100%;
+	height: 100%;
 	position: relative;
 }
 .nav a {
@@ -239,7 +298,7 @@ h4 {
 	width: 2rem;
 	height: 0.2rem;
 	background-color: #000;
-	margin: 3rem auto;
+	margin: 2.7rem auto;
 }
 
 /*how it works sub section*/
@@ -332,13 +391,35 @@ h4 {
 	transform: rotate(45deg);
 }
 .service-accordion {
+	width: 100%;
+	border: 2px solid #000;
+	background-color: #fff;
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	outline: 0;
+	position: relative;
 	display: none;
+}
+.service-accordion::after {
+	content: "";
+	position: absolute;
+	right: 1.5rem;
+	top: calc(50% - 1rem * 1.5 / 2);
+	width: 1rem;
+	height: 1rem;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 /* general styles for the 3 sub-sections with similar layouts */
 .basic-layout {
 	width: 100%;
-	margin-bottom: 2rem;
+	margin-bottom: 2.7rem;
 }
 .basic-layout:last-child {
 	margin-bottom: 0;
@@ -379,14 +460,14 @@ h4 {
 /*the 1st sub-section: contents*/
 .content {
 	width: 100%;
-	margin-bottom: 2rem;
+	margin-bottom: 2.7rem;
 	justify-content: space-between;
 	align-items: stretch;
 }
 .content-box {
 	border: 2px solid #f7931e;
 	width: 48%;
-	padding: 3rem 0;
+	padding: 2.7rem 0;
 }
 .content-box:nth-child(1) {
 	margin-right: 4%;
@@ -400,7 +481,7 @@ h4 {
 .content-title-wrapper {
 	width: 100%;
 	color: #f7931e;
-	margin-bottom: 3rem;
+	margin-bottom: 2.7rem;
 }
 .content-title {
 	margin-bottom: 0.8rem;
@@ -417,7 +498,7 @@ h4 {
 }
 .content-txt-wrapper {
 	width: 100%;
-	margin-bottom: 3rem;
+	margin-bottom: 2.7rem;
 }
 .example-topics-wrapper {
 	width: 100%;
@@ -432,11 +513,14 @@ h4 {
 	width: 8rem;
 	height: 0.2rem;
 	background-color: #f7931e;
-	margin: 0.5rem 0 3rem;
+	margin: 0.5rem 0 2.7rem;
 }
 .example-topics {
 	width: 100%;
 	justify-content: flex-start;
+}
+.example-topics-title {
+	text-align: center;
 }
 .example {
 	width: 49.5%;
@@ -453,7 +537,7 @@ h4 {
 
 /*the 2nd sub-section: cost*/
 .cost-detail-title {
-	margin-bottom: 2rem;
+	margin-bottom: 1.35rem;
 }
 .cost-detail-title::before {
 	content: "";
@@ -472,7 +556,7 @@ h4 {
 	letter-spacing: 0.2rem;
 }
 .cost-detail:nth-child(1) table {
-	margin-bottom: 3rem;
+	margin-bottom: 2.7rem;
 }
 .cost-detail table th, .cost-detail table td {
 	padding: 1rem;
@@ -582,7 +666,7 @@ h4 {
 	font-size: 1.5rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	padding: 3rem;
+	padding: 2.7rem;
 	justify-content: space-between;
 }
 .work-list {
@@ -619,17 +703,17 @@ h4 {
 }
 .contact-wrapper .section-txt {
 	text-align: center;
-	margin-bottom: 3rem;
+	margin-bottom: 2.7rem;
 }
 .contact form {
 	width: 100%;
 }
 .form-item {
 	width: 100%;
-	margin-bottom: 2rem;
+	margin-bottom: 2.7rem;
 }
 .form-item:nth-child(3) {
-	margin-bottom: 5rem;
+	margin-bottom: 5.4rem;
 }
 .form-item input, .form-item textarea {
 	width: 100%;
@@ -669,7 +753,7 @@ h4 {
 /*---------------------footer------------------------------------------------*/
 .footer {
 	width: 100%;
-	padding: 3rem;
+	padding: 2.7rem;
 	background-image: url(../img/repeated-bg-s.png);
 	background-size: cover;
 	color: #fff;
@@ -681,7 +765,7 @@ h4 {
 
 /*For screen below 1279px
 ============================================================================================================================================================*/
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
 	/* reduce the font size of .example*/
 	.example {
 		font-size: 1rem;
@@ -702,16 +786,16 @@ h4 {
 @media screen and (max-width: 1024px) {
 /*	modify .sections padding*/
 	.sections {
-		padding: 3rem 0;
+		padding: 2.7rem 0;
 	}
 	.about {
 		padding-bottom: 0;
 	}
 	.how-it-works {
-		padding: 3rem 0;
+		padding: 2.7rem 0;
 	}
 	.about-txt {
-		padding: 3rem 0;
+		padding: 2.7rem 0;
 	}
 /*	modify .section-txt font*/
 	.section-txt {
@@ -735,14 +819,14 @@ h4 {
 		align-items: center;
 	}
 	.content-wrapper {
-		padding: 3rem;
+		padding: 2.7rem;
 	}
 	.content-box {
 		width: 100%;
 	}
 	.content-box:nth-child(1) {
 		margin-right: 0;
-		margin-bottom: 2%;
+		margin-bottom: 2.7rem;
 	}
 	.process-detail-title {
 		font-size: 1.5rem;
@@ -773,12 +857,12 @@ h4 {
 		letter-spacing: 0;
 	}
 	.form-item:nth-child(3) {
-		margin-bottom: 2rem;
+		margin-bottom: 2.7rem;
 	}
 }
 /*For screen below 959px
 ============================================================================================================================================================*/
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 960px) {
 	/*	modify headings*/
 	h2 {
 		font-size: 1.6rem;
@@ -795,6 +879,10 @@ h4 {
 	.section-title {
 		padding-bottom: 0.5rem;
 		margin-bottom: 0.5rem;
+	}
+	.no-border {
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 	.section-subtitle {
 		font-size: 1.2rem;
@@ -831,7 +919,7 @@ h4 {
 	}
 /*	modify service section's table text*/
 	.cost-detail table {
-		width: 90%;
+		width: 100%;
 		font-size: 1rem;
 		letter-spacing: 0;
 	}
@@ -872,10 +960,17 @@ h4 {
 	.inner-1, .inner-2, .inner-3 {
 		width: 90%;
 	}
-/*	modify main visual*/
-	.main-visual-wrapper {
-		position: static;
+	.sections {
+		padding: 5.4rem 0;
 	}
+	.title {
+		margin-bottom: 5.4rem;
+	}
+/*	modify header nav*/
+	.menu-btn-wrapper {
+		display: block;
+	}
+/*	modify main visual*/
 	.main-img {
 		position: relative;
 		width: 100%;
@@ -883,7 +978,7 @@ h4 {
 	.main-appeal {
 		position: static;
 		width: 100%;
-		padding: 2rem 0;
+		padding: 2.7rem 0;
 		flex-direction: row;
 		justify-content: flex-end;
 	}
@@ -894,11 +989,23 @@ h4 {
 		padding-top: 0;
 	}
 /*	modify about section*/
+	.about {
+		padding-bottom: 0;
+	}
+	.no-border {
+		letter-spacing: 0.4rem;
+	}
+	.about-txt {
+		padding: 0 0 5.4rem;
+	}
 	.about-txt-inner-wrapper {
 		width: 90%;
 	}
 	.section-txt-wrapper {
 		text-align: ;
+	}
+	.how-it-works {
+		padding: 5.4rem 0;
 	}
 	.how-it-works .inner-2 {
 		flex-direction: column;
@@ -915,28 +1022,118 @@ h4 {
 /*	hide ordinary nav bar*/
 	.desktop-nav {
 		display: none;
-	}
+	}	
 /*	modify the service section so that current inner nav, title div and contents get hidden and buttons that are originally hidden get shown*/
+/*	hide the inner nav*/
 	.inner-nav {
 		display: none;
 	}
+/*	hide the sub-title*/
+	.sub-title-wrapper {
+		display: none;
+	}
+/*	hide the content*/
+	.content-wrapper {
+		display: none;
+	}
+	.content-title-wrapper img {
+		display: none;
+	}
+	.content-box-inner {
+		width: 90%;
+	}
+	.process-detail-wrapper {
+		flex-direction: column;
+	}
+	.process-detail {
+		width: 100%;
+		margin-bottom: 1.35rem;
+	}
+	.process-detail-txt {
+		height: auto;
+	}
+/*	show the accordion buttons*/
 	.service-accordion {
 		display: block;
 	}
-	.service .sub-title-wrapper {
-		display: none;
+	.basic-layout {
+		margin-bottom: 2.7rem;
 	}
-	.content-wrapper {
-		display: none;
+/*	modify the company section*/
+	.company-info th {
+		width: 30%;
+	}
+/*	modify the works section*/
+/*	change the title from 2 lines to a single line*/
+	.work-list-wrapper {
+		flex-direction: column;
+	}
+	.work-list {
+		width: 100%;
+	}
+	.work-list:last-child {
+		width: 100%;
+	}
+	.work-list-item {
+		margin-bottom: 0.5rem;
+	}
+	.work-list-item p {
+		display: inline-block;
+	}
+/*	modify the contact section*/
+	.contact-wrapper {
+		width: 90%;
+	}
+	.contact-wrapper .section-txt {
+		margin-bottom: 5.4rem;
+	}
+	.form-item {
+		margin-bottom: 1.35rem;
 	}
 }
 /*For screen below 480px
 ============================================================================================================================================================*/
 @media screen and (max-width: 480px) {
-	
+/*	modify the cost sub-section of the service section*/
+	.cost-detail table td {
+		padding: 0 1rem 0 0;
+		line-height: 4rem;
+		vertical-align: middle;
+	}
+	.company-info th {
+		padding: 0 0 0 1rem;
+		line-height: 5.6rem;
+		vertical-align: middle;
+	}
+	.company-info td {
+		padding: 0 0 0 1rem;
+		vertical-align: middle;
+	}
+/*	modify the works section*/
+	.work-list-item::before {
+		display: none;
+	}
+	.work-list-wrapper {
+		padding: 1.35rem;
+	}
+/*	modify the contact section*/
+	.submit-btn {
+		width: 50%;
+	}
 }
 /*For screen below 350px
 ============================================================================================================================================================*/
-@media screen and (max-width: 350px) {
-	
+@media screen and (max-width: 360px) {
+/*	modify the service section*/
+	.example {
+		padding: 0.5rem;
+	}
+/*	modify the works*/
+	.work-list-wrapper {
+		padding: 0.5rem;
+	}
+/*	modify footer*/
+	.footer small {
+		letter-spacing: 0;
+	}
 }
