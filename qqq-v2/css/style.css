@@ -1,0 +1,1157 @@
+/*For screen over 1280px by default
+==================================================================================================================================================*/
+
+/*Basic data:
+
+font family: 
+"Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+
+key colors: 
+background blue:  #009fe8
+text black:       #000
+text white:       #fff
+underline orange: #f7931e
+background orange:#f7931e
+background pink:  #fde9d2
+form background:  #e6e6e6
+form border:      #bebebe
+
+font sizes:
+html: 62.5%
+nav:  1.5rem
+main appealing text: 3rem
+h2    1.5rem
+==================================================================================================================================================
+*/
+
+@charset "utf-8";
+
+/*----------------------general settings----------------------------*/
+html {
+	font-size: 62.5%;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1rem;
+}
+ul {
+	list-style: none;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.cf::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.inner {
+	margin: 0 auto;
+}
+
+/*the largest inner which aligns with the outmost guideline*/
+.inner-1 { /*for screen larger than 960px*/
+	width: 1000px;
+}
+
+/*the 2nd largest inner which aligns with the 2nd outmost guideline*/
+.inner-2 { /*for screen larger than 960px*/
+	width: 900px;
+}
+
+/*the smallest inner that aligns with the text content of the about section*/
+.inner-3 { /*for screen larger than 960px*/
+	width: 700px;
+}
+
+h2, h3, h4 {
+	letter-spacing: 0.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.6rem;
+}
+.section-txt {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 3rem;
+	letter-spacing: 0.2rem;
+}
+.title {
+	margin-bottom: 2.7rem;
+}
+.section-subtitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.3rem;
+}
+.section-title {
+	padding: 0 2.7rem 1rem;
+	border-bottom: 1px solid #000;
+	margin-bottom: 1rem;
+}
+.sections {
+	padding: 5rem 0;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.flex-row {
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+/*-----------------------------header--------------------------------*/
+.header {
+	width: 100%;
+	z-index: 1;
+	background-color: #fff;
+}
+.header .inner-1 {
+	height: 80px;
+	position: relative;
+	justify-content: flex-start;
+}
+.smartphone-nav { /*menu for smaller screen is not displayed by default*/
+	width: 100%;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 80px;
+	z-index: 1;
+	display: none;
+}
+.smartphone-nav .nav-item {
+	width: 100%;
+}
+.smartphone-nav .nav-item a {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background-color: #009fe8;
+	text-align: center;
+	padding: 1.35rem;
+}
+.smartphone-nav .nav-item:first-child a {
+	padding-top: 2.7rem;
+}
+.smartphone-nav .nav-item:last-child a {
+	padding-bottom: 2.7rem;
+}
+/*the hamburger menu button*/
+.menu-btn-wrapper {
+	width: 3.6rem;
+	height: 3.6rem;
+	position: absolute;
+	top: calc(50% - 1.25rem);
+	right: 10%;
+	display: none;
+}
+.menu-btn-wrapper span {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.3rem;
+	background-color: #009fe8;
+	transition: 0.5s ease;
+}
+.menu-btn-wrapper span:nth-child(2) {
+	top: 1.2rem;
+}
+.menu-btn-wrapper span:nth-child(3) {
+	top: 2.4rem;
+}
+.menu-btn-wrapper .open:nth-child(1) {
+	-webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+	top: 1.2rem;
+}
+.menu-btn-wrapper .open:nth-child(2) {
+	width: 0;
+	left: 50%;
+}
+.menu-btn-wrapper .open:nth-child(3) {
+	-webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+	top: 1.2rem;
+}
+.logo {
+	width: 74.25px;
+	position: absolute;
+	top: calc(50% - 15.195px);
+}
+.nav {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.nav a {
+	font-size: 1.5rem;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	transition: color 0.2s;
+}
+.nav a:hover {
+	color: #f7931e;
+}
+.desktop-nav {
+	width: 100%;
+}
+.desktop-nav li {
+	margin-right: 3rem;
+}
+.desktop-nav li:last-child {
+	margin-right: 0;
+}
+
+/*--------------------------main visual------------------------------*/
+.main-visual {
+	width: 100%;
+}
+.main-visual-wrapper {
+/*	width: 100%;*/
+	position: relative;
+}
+
+/*the main image part on the right-----------------------*/
+/*this is the style for screen over 960px*/
+.main-img { 
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55%;
+	background-image: url("img/main-img.png");
+}
+.logo-white {
+	position: absolute;
+	width: 20%;
+	top: calc(50% - 20% / 2);
+	left: calc(50% - 20% / 2);
+}
+
+/*the main appealing text with blue bg on the left----*/
+/*this is the style for screen over 960px*/
+.main-appeal { 
+	position: absolute;
+	width: 45%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	color: #fff;
+	font-size: 2.5rem;
+	background-color: #009fe8;
+}
+.main-appeal-txt {
+	font-weight: 500;
+	line-height: 4rem;
+	letter-spacing: 0.4rem;
+}
+.main-visual-wrapper::before {
+	content: "";
+    display: block;
+    width: 0;
+    padding-top: 34.919888%;
+}
+
+/*---------------------about section--------------------------------*/
+.about {
+	width: 100%;
+	background-color: #fff;
+}
+.about-txt-inner-wrapper .title {
+	margin-bottom: 0;
+}
+
+/*about text sub section*/
+.no-border {
+	border: none;
+	line-height: 3rem;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.about-txt {
+	width: 100%;
+	padding: 5rem 0;
+}
+.about-txt-inner-wrapper {
+/*
+	width: 50%;
+	margin: 0 auto;
+*/
+	text-align: center;
+}
+.about-txt-inner-wrapper .title::after {
+	content: "";
+	display: block;
+	width: 2rem;
+	height: 0.2rem;
+	background-color: #000;
+	margin: 2.7rem auto;
+}
+
+/*how it works sub section*/
+.how-it-works {
+/*	width: 100%;*/
+	color: #fff;
+	padding: 5rem 0;
+	background-image: url(../img/slider-bg.png);
+}
+.how-it-works .inner-2 {
+	flex-wrap: nowrap;
+	align-items: flex-start;
+}
+.how-it-works .section-title {
+	border-bottom-color: #fff;
+}
+.slider,  .how-it-works .section-txt-wrapper {
+	width: 48%;
+}
+.slider {
+	margin-right: 4%;
+}
+
+/*overwrite slick-theme.css*/
+.slick-dots li {
+	margin: 0 0.1rem;
+}
+.slick-dots li button:before {
+	font-size: 0.8rem;
+	color: #fff;
+	opacity: 0.8;
+}
+.slick-dots li.slick-active button:before {
+	color: #009fe8;
+}
+
+/*-----------------------------service---------------------------------------*/
+.service {
+	width: 100%;
+	background: url(../img/repeated-bg-l.png);
+	background-size: cover;
+}
+
+/*the nav buttons*/
+.inner-nav {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+.inner-nav-list {
+	width: 100%;
+}
+.inner-nav-item {
+	width: 15%;
+	margin-right: 0.5rem;
+}
+.inner-nav-item:last-child {
+	margin-right: 0;
+}
+.inner-nav-item a {
+	width: 100%;
+	border: 2px solid #000;
+	background-color: #fff;
+	position: relative;
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 3rem;
+	letter-spacing: 0.2rem;
+	padding: 1rem;
+	transition: all 0.2s;
+}
+.inner-nav-item a:hover {
+	color: #f7931e;
+	border-color: #f7931e;
+}
+.inner-nav-item a:hover::after {
+	border-color: #f7931e;
+}
+.inner-nav-item a::after {
+	content: "";
+	position: absolute;
+	right: 1.2rem;
+	top: calc(50% - 0.8rem * 1.5 / 2);
+	width: 0.8rem;
+	height: 0.8rem;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.service-accordion {
+	width: 100%;
+	border: 2px solid #000;
+	background-color: #fff;
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	outline: 0;
+	position: relative;
+	display: none;
+}
+.service-accordion::after {
+	content: "";
+	position: absolute;
+	right: 1.5rem;
+	top: calc(50% - 1rem * 1.5 / 2);
+	width: 1rem;
+	height: 1rem;
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* general styles for the 3 sub-sections with similar layouts */
+.basic-layout {
+	width: 100%;
+	margin-bottom: 2.7rem;
+}
+.basic-layout:last-child {
+	margin-bottom: 0;
+}
+.sub-title-wrapper {
+	width: 100%;
+	height: 6rem;
+	display: flex;
+	
+}
+.sub-title {
+	width: 30%;
+	height: 100%;
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	background-color: #009fe8;
+}
+.sub-description {
+	width: 70%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 1.5rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
+	background-color: #e6e6e6;
+}
+.content-wrapper {
+	padding: 5rem;
+	background-color: #fff;
+}
+
+/*the 1st sub-section: contents*/
+.content {
+	width: 100%;
+	margin-bottom: 2.7rem;
+	justify-content: space-between;
+	align-items: stretch;
+}
+.content-box {
+	border: 2px solid #f7931e;
+	width: 48%;
+	padding: 2.7rem 0;
+}
+.content-box:nth-child(1) {
+	margin-right: 4%;
+}
+.content-box-inner {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.content-title-wrapper {
+	width: 100%;
+	color: #f7931e;
+	margin-bottom: 2.7rem;
+}
+.content-title {
+	margin-bottom: 0.8rem;
+}
+.content-category {
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+}
+.content-txt {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 600;
+}
+.content-txt-wrapper {
+	width: 100%;
+	margin-bottom: 2.7rem;
+}
+.example-topics-wrapper {
+	width: 100%;
+}
+.content-title-wrapper img {
+	width: 6rem;
+	margin-bottom: 2rem;
+}
+.example-topics-title::after {
+	content: "";
+	display: block;
+	width: 8rem;
+	height: 0.2rem;
+	background-color: #f7931e;
+	margin: 0.5rem 0 2.7rem;
+}
+.example-topics {
+	width: 100%;
+	justify-content: flex-start;
+}
+.example-topics-title {
+	text-align: center;
+}
+.example {
+	width: 49.5%;
+	background-color: #fde9d2;
+	padding: 1rem;
+	margin-bottom: 1%;
+}
+.example:nth-child(2n+1) {
+	margin-right: 1%;
+}
+.extra-description {
+	text-align: center;
+}
+
+/*the 2nd sub-section: cost*/
+.cost-detail-title {
+	margin-bottom: 1.35rem;
+}
+.cost-detail-title::before {
+	content: "";
+	background-image: url(../img/q-icon.png);
+	background-size: 1.5rem auto;
+	display: inline-block;
+	width: 1.5rem;
+	height: calc(1.5rem * 42 / 38);
+	vertical-align: -20%;
+	margin-right: 1rem;
+}
+.cost-detail table {
+	width: 70%;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+}
+.cost-detail:nth-child(1) table {
+	margin-bottom: 2.7rem;
+}
+.cost-detail table th, .cost-detail table td {
+	padding: 1rem;
+	border-collapse: collapse;
+	border: 1px solid #bebebe;
+}
+.cost-detail table th {
+	width: 60%;
+	text-align: left;
+	background-color: #e6e6e6;
+}
+.cost-detail table td {
+	width: 40%;
+	text-align: right;
+}
+
+/*the 3rd sub-section: process*/
+.process-detail-wrapper {
+	width: 100%;
+	justify-content: space-between;
+	counter-reset: sorting;
+}
+.process-detail {
+	width: 49.5%;
+	margin-bottom: 1%;
+	border: 1px solid #bebebe;
+}
+.process-detail-title-wrapper {
+	width: 100%;
+	justify-content: flex-start;
+}
+.process-detail-sub-title {
+	font-weight: 600;
+	margin-top: 0.6rem;
+}
+.process-detail:nth-child(2n+1) {
+	margin-right: 1%;
+}
+.process-detail-txt {
+	height: 12rem;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 600;
+	background-color: #e6e6e6;
+	padding: 2rem;
+}
+.order {
+	font-size: 2.5rem;
+	line-height: 5rem;
+	font-weight: 900;
+	color: #fff;
+	text-align: center;
+	margin-right: 1rem;
+}
+.order::before {
+	content: "0"counter(sorting);
+	counter-increment: sorting;
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	background-color: #f7931e;
+}
+
+/*-----------------------------company section--------------------------*/
+.company .title {
+	margin-bottom: 5rem;
+}
+.company-info {
+	font-size: 1.6rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+}
+.company-info tr {
+	width: 100%;
+	text-align: left;
+}
+.company-info th, .company-info td {
+	padding: 1.5rem;
+}
+.company-info th {
+	width: 40%;
+	border-bottom: 2px solid #009fe8;
+}
+.company-info td {
+	width: 60%;
+	font-weight: 500;
+	border-bottom: 2px dotted #f7931e;
+}
+
+/*---------------------------works section-----------------------------------*/
+.works {
+	width: 100%;
+	background: url(../img/repeated-bg-m.png);
+	background-size: cover;
+}
+.works-wrapper {
+	width: 70%;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.works .sub-title {
+	font-size: 1.6rem;
+	letter-spacing: 0.4rem;
+}
+.work-list-wrapper {
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	padding: 2.7rem;
+	justify-content: space-between;
+}
+.work-list {
+	width: 45%;
+}
+.work-txt {
+	display: inline-block;
+}
+.work-list-item {
+	margin-bottom: 1rem;
+}
+.work-list-item::before {
+	content: "";
+	background-image: url(../img/q-icon.png);
+	background-size: 1.5rem auto;
+	display: inline-block;
+	width: 1.5rem;
+	height: calc(1.5rem * 42 / 38);
+	vertical-align: top;
+	margin-right: 0.5rem;
+}
+.bold {
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+/*------------------------contact section------------------------------------*/
+.contact {
+	width: 100%;
+	background-color: #e6e6e6;
+}
+.contact-wrapper {
+	width: 45%;
+}
+.contact-wrapper .section-txt {
+	text-align: center;
+	margin-bottom: 2.7rem;
+}
+.contact form {
+	width: 100%;
+}
+.form-item {
+	width: 100%;
+	margin-bottom: 2.7rem;
+}
+.form-item:nth-child(3) {
+	margin-bottom: 5.4rem;
+}
+.form-item input, .form-item textarea {
+	width: 100%;
+}
+.form-item input {
+	height: 3rem;
+}
+.form-item label {
+	font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+}
+.submit-btn {
+	width: 30%;
+}
+.submit-btn button {
+	width: 100%;
+	position: relative;
+	background-color: #009fe8;
+	border: none;
+	outline: none;
+	color: #fff;
+	padding: 1rem;
+	letter-spacing: 0.2rem;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+.submit-btn button:hover {
+	background-color: #f7931e;
+}
+.right-arrow {
+	position: absolute;
+	right: 1rem;
+}
+
+/*---------------------footer------------------------------------------------*/
+.footer {
+	width: 100%;
+	padding: 2.7rem;
+	background-image: url(../img/repeated-bg-s.png);
+	background-size: cover;
+	color: #fff;
+}
+.footer small {
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+}
+
+/*For screen below 1279px
+============================================================================================================================================================*/
+@media screen and (max-width: 1280px) {
+	/* reduce the font size of .example*/
+	.example {
+		font-size: 1rem;
+	}
+}
+/*For screen below 1199px
+============================================================================================================================================================*/
+@media screen and (max-width: 1199px) {
+/*	modify .section-txt font*/
+	.section-txt {
+		font-size: 1.2rem;
+		line-height: 2rem;
+		letter-spacing: 0.1rem; 
+	}
+}
+/*For screen below 1024px
+============================================================================================================================================================*/
+@media screen and (max-width: 1024px) {
+/*	modify .sections padding*/
+	.sections {
+		padding: 2.7rem 0;
+	}
+	.about {
+		padding-bottom: 0;
+	}
+	.how-it-works {
+		padding: 2.7rem 0;
+	}
+	.about-txt {
+		padding: 2.7rem 0;
+	}
+/*	modify .section-txt font*/
+	.section-txt {
+    	letter-spacing: 0;
+	}
+/*	modify appealing text*/
+	.main-appeal-txt {
+		font-size: 2rem;
+		line-height: 3rem;
+		letter-spacing: 0.2rem;
+	}
+/*	modify .inner-nav font*/
+	.inner-nav-item a {
+		font-size: 1.2rem;
+		letter-spacing: 0.1rem;
+	}
+/*	overwrite .content and .content-box styles*/
+	.content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.content-wrapper {
+		padding: 2.7rem;
+	}
+	.content-box {
+		width: 100%;
+	}
+	.content-box:nth-child(1) {
+		margin-right: 0;
+		margin-bottom: 2.7rem;
+	}
+	.process-detail-title {
+		font-size: 1.5rem;
+		letter-spacing: 0.2rem;
+	}
+	.process-detail-txt {
+		line-height: 1.5rem;
+		padding: 1.5rem;
+	}
+/*	modify .company-info*/
+	.company-info {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+/*	modify .work-list related styles*/
+	.work-list-wrapper {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.work-list-item::before {
+		background-size: 1.2rem auto;
+		width: 1.2rem;
+		height: calc(1.2rem * 42 / 38);
+	}
+/*	modify form related styles*/
+	.form-item label {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.form-item:nth-child(3) {
+		margin-bottom: 2.7rem;
+	}
+}
+/*For screen below 959px
+============================================================================================================================================================*/
+@media screen and (max-width: 960px) {
+	/*	modify inner widths*/
+	.inner-1 {
+		width: 720px;
+	}
+	/*	modify headings*/
+	h2 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+	}
+	h4 {
+		font-size: 1.2rem;
+	}
+	h2, h3, h4 {
+		letter-spacing: 0.2rem;
+	}
+	.section-title {
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.no-border {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	.section-subtitle {
+		font-size: 1.2rem;
+		letter-spacing: 0.2rem;
+	}
+	.no-border {
+		line-height: 2rem;
+	}
+	.about-txt-inner-wrapper .title::after {
+		margin: 2rem auto;
+	}
+	.sub-description {
+		font-size: 1rem;
+    	line-height: 1.5rem;
+    	letter-spacing: 0;
+	}
+/*	modify nav bar*/
+	.nav a {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+/*	modify inner nav bar*/
+	.inner-nav-item a {
+    	font-size: 1rem;
+    	letter-spacing: 0;
+		padding: 0.5rem;
+	}
+	.inner-nav-item a::after {
+		width: 0.5rem;
+		height: 0.5rem;
+		right: 0.8rem;
+		top: calc(50% - 0.5rem * 1.5 / 2);
+		border-width: 1px;
+	}
+/*	modify service section's table text*/
+	.cost-detail table {
+		width: 100%;
+		font-size: 1rem;
+		letter-spacing: 0;
+	}
+/*	modify service section's process*/
+	.process-detail-title {
+		font-size: 1.2rem;
+		letter-spacing: 0;
+	}
+	.process-detail-txt {
+		font-size: 1rem;
+		line-height: 1.2rem;
+		padding: 1rem;
+	}
+/*	modify company related styles*/
+	.company-info th {
+		width: 15%;
+	}
+/*	modify works related styles*/
+	.work-list {
+		width: 50%;
+	}
+	.work-list:last-child {
+		width: 45%;
+	}
+	.work-list-wrapper {
+		font-size: 1rem;
+	}
+	.work-list-item::before {
+		background-size: 1rem auto;
+    	width: 1rem;
+    	height: calc(1rem * 42 / 38);
+	}
+}
+/*For screen below 768px (smartphone)
+============================================================================================================================================================*/
+@media screen and (max-width: 768px) {
+/*	modify overall inner wrapper*/
+	.inner-1, .inner-2, .inner-3 {
+		width: 90%;
+	}
+	.sections {
+		padding: 5.4rem 0;
+	}
+	.title {
+		margin-bottom: 5.4rem;
+	}
+/*	modify header nav*/
+	.menu-btn-wrapper {
+		display: block;
+	}
+/*	modify main visual*/
+	.main-img {
+		position: relative;
+		width: 100%;
+	}
+	.main-appeal {
+		position: static;
+		width: 100%;
+		padding: 2.7rem 0;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	.main-appeal-txt {
+		width: 95%;
+	}
+	.main-visual-wrapper::before {
+		padding-top: 0;
+	}
+/*	modify about section*/
+	.about {
+		padding-bottom: 0;
+	}
+	.no-border {
+		letter-spacing: 0.4rem;
+	}
+	.about-txt {
+		padding: 0 0 5.4rem;
+	}
+	.about-txt-inner-wrapper {
+		width: 90%;
+	}
+	.section-txt-wrapper {
+		text-align: ;
+	}
+	.how-it-works {
+		padding: 5.4rem 0;
+	}
+	.how-it-works .inner-2 {
+		flex-direction: column;
+	}
+	.slider {
+		order: 2;
+	}
+	.how-it-works .section-txt-wrapper {
+		margin-bottom: 1rem;
+	}
+	.slider, .how-it-works .section-txt-wrapper {
+		width: 100%;
+	}
+/*	hide ordinary nav bar*/
+	.desktop-nav {
+		display: none;
+	}	
+/*	modify the service section so that current inner nav, title div and contents get hidden and buttons that are originally hidden get shown*/
+/*	hide the inner nav*/
+	.inner-nav {
+		display: none;
+	}
+/*	hide the sub-title*/
+	.sub-title-wrapper {
+		display: none;
+	}
+/*	hide the content*/
+	.content-wrapper {
+		display: none;
+	}
+	.content-title-wrapper img {
+		display: none;
+	}
+	.content-box-inner {
+		width: 90%;
+	}
+	.process-detail-wrapper {
+		flex-direction: column;
+	}
+	.process-detail {
+		width: 100%;
+		margin-bottom: 1.35rem;
+	}
+	.process-detail-txt {
+		height: auto;
+	}
+/*	show the accordion buttons*/
+	.service-accordion {
+		display: block;
+	}
+	.basic-layout {
+		margin-bottom: 2.7rem;
+	}
+/*	modify the company section*/
+	.company-info th {
+		width: 30%;
+	}
+/*	modify the works section*/
+/*	change the title from 2 lines to a single line*/
+	.work-list-wrapper {
+		flex-direction: column;
+	}
+	.work-list {
+		width: 100%;
+	}
+	.work-list:last-child {
+		width: 100%;
+	}
+	.work-list-item {
+		margin-bottom: 0.5rem;
+	}
+	.work-list-item p {
+		display: inline-block;
+	}
+/*	modify the contact section*/
+	.contact-wrapper {
+		width: 90%;
+	}
+	.contact-wrapper .section-txt {
+		margin-bottom: 5.4rem;
+	}
+	.form-item {
+		margin-bottom: 1.35rem;
+	}
+}
+/*For screen below 480px
+============================================================================================================================================================*/
+@media screen and (max-width: 480px) {
+/*	modify the cost sub-section of the service section*/
+	.cost-detail table td {
+		padding: 0 1rem 0 0;
+		line-height: 4rem;
+		vertical-align: middle;
+	}
+	.company-info th {
+		padding: 0 0 0 1rem;
+		line-height: 5.6rem;
+		vertical-align: middle;
+	}
+	.company-info td {
+		padding: 0 0 0 1rem;
+		vertical-align: middle;
+	}
+/*	modify the works section*/
+	.work-list-item::before {
+		display: none;
+	}
+	.work-list-wrapper {
+		padding: 1.35rem;
+	}
+/*	modify the contact section*/
+	.submit-btn {
+		width: 50%;
+	}
+}
+/*For screen below 350px
+============================================================================================================================================================*/
+@media screen and (max-width: 360px) {
+/*	modify the service section*/
+	.example {
+		padding: 0.5rem;
+	}
+/*	modify the works*/
+	.work-list-wrapper {
+		padding: 0.5rem;
+	}
+/*	modify footer*/
+	.footer small {
+		letter-spacing: 0;
+	}
+}
