@@ -73,7 +73,7 @@ img {
 
 /*the smallest inner that aligns with the text content of the about section*/
 .inner-3 { /*for screen larger than 960px*/
-	width: 700px;
+	width: 800px;
 }
 
 h2, h3, h4 {
@@ -206,6 +206,7 @@ h4 {
 	width: 74.25px;
 	position: absolute;
 	top: calc(50% - 15.195px);
+	z-index: 1;
 }
 .nav {
 	width: 100%;
@@ -284,6 +285,7 @@ h4 {
 .about {
 	width: 100%;
 	background-color: #fff;
+	padding-bottom: 0;
 }
 .about-txt-inner-wrapper .title {
 	margin-bottom: 0;
@@ -297,14 +299,10 @@ h4 {
 	padding-bottom: 0;
 }
 .about-txt {
-	width: 100%;
 	padding: 5rem 0;
 }
 .about-txt-inner-wrapper {
-/*
-	width: 50%;
-	margin: 0 auto;
-*/
+	width: 100%;
 	text-align: center;
 }
 .about-txt-inner-wrapper .title::after {
@@ -366,8 +364,8 @@ h4 {
 	width: 100%;
 }
 .inner-nav-item {
-	width: 15%;
-	margin-right: 0.5rem;
+	width: 25%;
+	margin-right: 0.5%;
 }
 .inner-nav-item:last-child {
 	margin-right: 0;
@@ -667,7 +665,7 @@ h4 {
 	background-size: cover;
 }
 .works-wrapper {
-	width: 70%;
+	width: 100%;
 	margin: 0 auto;
 	background-color: #fff;
 }
@@ -713,7 +711,7 @@ h4 {
 	background-color: #e6e6e6;
 }
 .contact-wrapper {
-	width: 45%;
+	width: 100%;
 }
 .contact-wrapper .section-txt {
 	text-align: center;
