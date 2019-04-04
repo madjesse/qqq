@@ -61,6 +61,7 @@ $(function() {
 	var $buttons = $(".service-accordion");
 	$buttons.click(function() {
 		$(this).next().slideToggle(500);
+		$(this).toggleClass("up");
 	});
 	
 });

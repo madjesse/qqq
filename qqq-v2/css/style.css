@@ -434,6 +434,12 @@ h4 {
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+.up::after {
+	top: calc(50% - 0.5rem);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}
 
 /* general styles for the 3 sub-sections with similar layouts */
 .basic-layout {
@@ -569,6 +575,7 @@ h4 {
 .cost-detail table {
 	width: 80%;
 	font-size: 1.5rem;
+	line-height: 3rem;
 	font-weight: 600;
 }
 .cost-detail:nth-child(1) table {
@@ -587,6 +594,7 @@ h4 {
 .cost-detail table td {
 	width: 40%;
 	text-align: right;
+	vertical-align: middle;
 }
 
 /*the 3rd sub-section: process*/
@@ -652,6 +660,7 @@ h4 {
 .company-info th {
 	width: 30%;
 	border-bottom: 2px solid #009fe8;
+	vertical-align: middle;
 }
 .company-info td {
 	width: 70%;
@@ -995,14 +1004,12 @@ h4 {
 	.about-txt-inner-wrapper .title::after {
 		margin: 5.4rem auto;
 	}
-	.no-border {
-		letter-spacing: 0.4rem;
-	}
 	.about-txt {
 		padding: 0 0 5.4rem;
 	}
 	.about-txt-inner-wrapper {
 		width: 90%;
+		margin: 0 auto;
 	}
 	.section-txt-wrapper {
 		text-align: ;
@@ -1035,15 +1042,17 @@ h4 {
 	.sub-title-wrapper {
 		display: none;
 	}
-/*	hide the content*/
 	.content-wrapper {
-		display: none;
+		padding: 2.7rem;
 	}
 	.content-title-wrapper img {
 		display: none;
 	}
 	.content-box-inner {
 		width: 90%;
+	}
+	.example {
+		padding: 1.5rem;
 	}
 	.process-detail-wrapper {
 		flex-direction: column;
@@ -1062,26 +1071,23 @@ h4 {
 	.basic-layout {
 		margin-bottom: 2.7rem;
 	}
+	
 /*	modify the company section*/
 	.company-info th {
 		width: 30%;
 		padding: 0 0 0 1rem;
 		line-height: 5.6rem;
-		vertical-align: middle;
 	}
+	
 /*	modify the works section*/
 /*	change the title from 2 lines to a single line*/
 	.work-list-wrapper {
 		flex-direction: column;
+		font-size: 1.4rem;
+		padding: 2.7rem;
 	}
-	.work-list {
+	.works .work-list {
 		width: 100%;
-	}
-	.work-list:last-child {
-		width: 100%;
-	}
-	.work-list-item {
-		margin-bottom: 0.5rem;
 	}
 	.work-list-item p {
 		display: inline-block;
@@ -1089,6 +1095,7 @@ h4 {
 /*	modify the contact section*/
 	.contact-wrapper {
 		width: 90%;
+		margin: 0 auto;
 	}
 	.contact-wrapper .section-txt {
 		margin-bottom: 5.4rem;
@@ -1096,19 +1103,54 @@ h4 {
 	.form-item {
 		margin-bottom: 1.35rem;
 	}
+	.submit-btn {
+		width: 50%;
+	}
 }
 /*For screen below 480px
 ============================================================================================================================================================*/
 @media screen and (max-width: 480px) {
+/*	general*/
+	h2 {
+		font-size: 1.8rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+	h4 {
+		font-size: 1.5rem;
+	}
+	h2, h3, h4 {
+		letter-spacing: 0;
+	}
+	.section-txt {
+		font-size: 1.4rem;
+	}
+/*	main visual*/
+	.main-appeal-txt {
+		letter-spacing: 0;
+	}
 /*	modify the cost sub-section of the service section*/
+	.example {
+		font-size: 1.2rem;
+		padding: 1.5rem 0.5rem;
+	}
+	.cost-detail table {
+		font-size: 1.2rem;
+		line-height: 2rem;
+	}
 	.cost-detail table td {
 		padding: 0 1rem 0 0;
-		line-height: 4rem;
-		vertical-align: middle;
+	}
+	.process-detail-title {
+		font-size: 1.5rem;
+	}
+	.company-info {
+		font-size: 1.2rem;
 	}
 	.company-info th {
 		padding: 0 0 0 1rem;
-		line-height: 5.6rem;
+		line-height: 6rem;
 		vertical-align: middle;
 	}
 	.company-info td {
@@ -1120,23 +1162,49 @@ h4 {
 		display: none;
 	}
 	.work-list-wrapper {
-		padding: 1.35rem;
+		padding: 2.7rem;
+	}
+	.work-list-item p {
+		display: block;
 	}
 /*	modify the contact section*/
 	.submit-btn {
 		width: 50%;
 	}
 }
-/*For screen below 350px
+/*For screen below 360px
 ============================================================================================================================================================*/
 @media screen and (max-width: 360px) {
 /*	modify the service section*/
-	.example {
-		padding: 0.5rem;
+	.example-topics {
+		flex-direction: column;
 	}
-/*	modify the works*/
+	.example {
+		width: 90%;
+		margin-right: 0;
+		margin-bottom: 0.5rem;
+	}
+	.order {
+		font-size: 1.5rem;
+		line-height: 4rem;
+	}
+	.order::before {
+		width: 4rem;
+		height: 4rem;
+	}
+	.process-detail-title {
+		font-size: 1.4rem;
+	}
+	.process-detail-sub-title {
+		margin-top: 0.2rem;
+	}
+/*	works section*/
 	.work-list-wrapper {
-		padding: 0.5rem;
+		font-size: 1.2rem;
+	}
+/*	contact section*/
+	.submit-btn {
+		width: 100%;
 	}
 /*	modify footer*/
 	.footer small {
