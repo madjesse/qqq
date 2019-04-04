@@ -76,17 +76,20 @@ img {
 	width: 800px;
 }
 
-h2, h3, h4 {
+h2, h3 {
 	letter-spacing: 0.5rem;
 }
+h4 {
+	letter-spacing: 0.2rem;
+}
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 h3 {
-	font-size: 2rem;
+	font-size: 2.3rem;
 }
 h4 {
-	font-size: 1.6rem;
+	font-size: 2rem;
 }
 .section-txt {
 	font-size: 1.5rem;
@@ -95,7 +98,7 @@ h4 {
 	letter-spacing: 0.2rem;
 }
 .title {
-	margin-bottom: 2.7rem;
+	margin-bottom: 8rem;
 }
 .section-subtitle {
 	font-size: 1.5rem;
@@ -103,12 +106,12 @@ h4 {
 	letter-spacing: 0.3rem;
 }
 .section-title {
-	padding: 0 2.7rem 1rem;
+	padding: 0 2.7rem 1.5rem;
 	border-bottom: 1px solid #000;
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 .sections {
-	padding: 5rem 0;
+	padding: 10rem 0;
 }
 .flex-column {
 	display: flex;
@@ -167,7 +170,7 @@ h4 {
 	height: 3.6rem;
 	position: absolute;
 	top: calc(50% - 1.25rem);
-	right: 10%;
+	right: 0;
 	display: none;
 }
 .menu-btn-wrapper span {
@@ -287,6 +290,9 @@ h4 {
 	background-color: #fff;
 	padding-bottom: 0;
 }
+.about-txt {
+	padding: 0 0 10rem;
+}
 .about-txt-inner-wrapper .title {
 	margin-bottom: 0;
 }
@@ -294,12 +300,9 @@ h4 {
 /*about text sub section*/
 .no-border {
 	border: none;
-	line-height: 3rem;
+	line-height: 4rem;
 	margin-bottom: 0;
 	padding-bottom: 0;
-}
-.about-txt {
-	padding: 5rem 0;
 }
 .about-txt-inner-wrapper {
 	width: 100%;
@@ -311,14 +314,14 @@ h4 {
 	width: 2rem;
 	height: 0.2rem;
 	background-color: #000;
-	margin: 2.7rem auto;
+	margin: 5rem auto 8rem;
 }
 
 /*how it works sub section*/
 .how-it-works {
 /*	width: 100%;*/
 	color: #fff;
-	padding: 5rem 0;
+	padding: 8rem 0;
 	background-image: url(../img/slider-bg.png);
 }
 .how-it-works .inner-2 {
@@ -330,6 +333,10 @@ h4 {
 }
 .slider,  .how-it-works .section-txt-wrapper {
 	width: 48%;
+}
+.how-it-works .section-txt-wrapper {
+	position: relative;
+	top: -1rem;
 }
 .slider {
 	margin-right: 4%;
@@ -351,21 +358,21 @@ h4 {
 /*-----------------------------service---------------------------------------*/
 .service {
 	width: 100%;
-	background: url(../img/repeated-bg-l.png);
-	background-size: cover;
+	background: url(../img/bg_ptn01.png) repeat;
+	background-size: 150px;
 }
 
 /*the nav buttons*/
 .inner-nav {
 	width: 100%;
-	margin-bottom: 3rem;
+	margin-bottom: 5.4rem;
 }
 .inner-nav-list {
 	width: 100%;
 }
 .inner-nav-item {
 	width: 25%;
-	margin-right: 0.5%;
+	margin-right: 1%;
 }
 .inner-nav-item:last-child {
 	margin-right: 0;
@@ -431,14 +438,14 @@ h4 {
 /* general styles for the 3 sub-sections with similar layouts */
 .basic-layout {
 	width: 100%;
-	margin-bottom: 2.7rem;
+	margin-bottom: 5.4rem;
 }
 .basic-layout:last-child {
 	margin-bottom: 0;
 }
 .sub-title-wrapper {
 	width: 100%;
-	height: 6rem;
+	height: 8rem;
 	display: flex;
 	
 }
@@ -446,7 +453,6 @@ h4 {
 	width: 30%;
 	height: 100%;
 	color: #fff;
-	font-size: 1.5rem;
 	font-weight: 600;
 	letter-spacing: 0.2rem;
 	background-color: #009fe8;
@@ -457,15 +463,15 @@ h4 {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding-left: 1.5rem;
-	font-size: 1.2rem;
+	padding: 0 1.5rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 	line-height: 2rem;
 	letter-spacing: 0.2rem;
 	background-color: #e6e6e6;
 }
 .content-wrapper {
-	padding: 5rem;
+	padding: 5.4rem;
 	background-color: #fff;
 }
 
@@ -485,7 +491,7 @@ h4 {
 	margin-right: 4%;
 }
 .content-box-inner {
-	width: 70%;
+	width: 80%;
 	height: 100%;
 	margin: 0 auto;
 	justify-content: space-between;
@@ -503,10 +509,8 @@ h4 {
 	font-weight: 600;
 	letter-spacing: 0.2rem;
 }
-.content-txt {
-	font-size: 1.2rem;
-	line-height: 2rem;
-	font-weight: 600;
+.examples .section-txt {
+	letter-spacing: 0;
 }
 .content-txt-wrapper {
 	width: 100%;
@@ -536,8 +540,9 @@ h4 {
 }
 .example {
 	width: 49.5%;
+	font-size: 1.2rem;
 	background-color: #fde9d2;
-	padding: 1rem;
+	padding: 2rem;
 	margin-bottom: 1%;
 }
 .example:nth-child(2n+1) {
@@ -549,7 +554,7 @@ h4 {
 
 /*the 2nd sub-section: cost*/
 .cost-detail-title {
-	margin-bottom: 1.35rem;
+	margin-bottom: 2.7rem;
 }
 .cost-detail-title::before {
 	content: "";
@@ -562,16 +567,15 @@ h4 {
 	margin-right: 1rem;
 }
 .cost-detail table {
-	width: 70%;
-	font-size: 1.2rem;
+	width: 80%;
+	font-size: 1.5rem;
 	font-weight: 600;
-	letter-spacing: 0.2rem;
 }
 .cost-detail:nth-child(1) table {
-	margin-bottom: 2.7rem;
+	margin-bottom: 5.4rem;
 }
 .cost-detail table th, .cost-detail table td {
-	padding: 1rem;
+	padding: 1.5rem;
 	border-collapse: collapse;
 	border: 1px solid #bebebe;
 }
@@ -592,50 +596,47 @@ h4 {
 	counter-reset: sorting;
 }
 .process-detail {
-	width: 49.5%;
-	margin-bottom: 1%;
+	width: 49%;
+	margin-bottom: 2%;
 	border: 1px solid #bebebe;
+}
+.process-detail:nth-child(2n+1) {
+	margin-right: 2%;
 }
 .process-detail-title-wrapper {
 	width: 100%;
 	justify-content: flex-start;
 }
 .process-detail-sub-title {
+	font-size: 1.2rem;
 	font-weight: 600;
 	margin-top: 0.6rem;
 }
-.process-detail:nth-child(2n+1) {
-	margin-right: 1%;
-}
 .process-detail-txt {
-	height: 12rem;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	font-weight: 600;
+	height: 20rem;
+	font-size: 1.5rem;
+	line-height: 3rem;
 	background-color: #e6e6e6;
-	padding: 2rem;
+	padding: 2.5rem;
 }
 .order {
-	font-size: 2.5rem;
-	line-height: 5rem;
+	font-size: 3rem;
+	line-height: 8rem;
 	font-weight: 900;
 	color: #fff;
 	text-align: center;
-	margin-right: 1rem;
+	margin-right: 2rem;
 }
 .order::before {
 	content: "0"counter(sorting);
 	counter-increment: sorting;
 	display: inline-block;
-	width: 5rem;
-	height: 5rem;
+	width: 8rem;
+	height: 8rem;
 	background-color: #f7931e;
 }
 
 /*-----------------------------company section--------------------------*/
-.company .title {
-	margin-bottom: 5rem;
-}
 .company-info {
 	font-size: 1.6rem;
 	font-weight: 600;
@@ -646,14 +647,14 @@ h4 {
 	text-align: left;
 }
 .company-info th, .company-info td {
-	padding: 1.5rem;
+	padding: 2.7rem;
 }
 .company-info th {
-	width: 40%;
+	width: 30%;
 	border-bottom: 2px solid #009fe8;
 }
 .company-info td {
-	width: 60%;
+	width: 70%;
 	font-weight: 500;
 	border-bottom: 2px dotted #f7931e;
 }
@@ -669,26 +670,22 @@ h4 {
 	margin: 0 auto;
 	background-color: #fff;
 }
-.works .sub-title {
-	font-size: 1.6rem;
-	letter-spacing: 0.4rem;
-}
 .work-list-wrapper {
 	width: 100%;
 	font-size: 1.5rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	padding: 2.7rem;
+	padding: 5.4rem;
 	justify-content: space-between;
 }
 .work-list {
-	width: 45%;
+	width: 50%;
 }
 .work-txt {
 	display: inline-block;
 }
 .work-list-item {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 .work-list-item::before {
 	content: "";
@@ -731,13 +728,14 @@ h4 {
 	width: 100%;
 }
 .form-item input {
-	height: 3rem;
+	height: 5rem;
 }
 .form-item label {
 	font-size: 1.5rem;
     font-weight: 600;
     line-height: 3rem;
     letter-spacing: 0.2rem;
+	margin-bottom: 1.5rem;
 }
 .submit-btn {
 	width: 30%;
@@ -749,7 +747,8 @@ h4 {
 	border: none;
 	outline: none;
 	color: #fff;
-	padding: 1rem;
+	font-size: 1.5rem;
+	padding: 1.5rem;
 	letter-spacing: 0.2rem;
 	transition: background-color 0.2s;
 	cursor: pointer;
@@ -771,67 +770,42 @@ h4 {
 	color: #fff;
 }
 .footer small {
+	font-size: 1.2rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 }
 
+/*media queries========================================================================================================================================================================================================*/
+
 /*For screen below 1279px
-============================================================================================================================================================*/
+====================================================================*/
 @media screen and (max-width: 1280px) {
-	/* reduce the font size of .example*/
-	.example {
-		font-size: 1rem;
-	}
 }
 /*For screen below 1199px
 ============================================================================================================================================================*/
-@media screen and (max-width: 1199px) {
-/*	modify .section-txt font*/
-	.section-txt {
-		font-size: 1.2rem;
-		line-height: 2rem;
-		letter-spacing: 0.1rem; 
-	}
+@media screen and (max-width: 1199px) {	
 }
 /*For screen below 1024px
 ============================================================================================================================================================*/
 @media screen and (max-width: 1024px) {
-/*	modify .sections padding*/
-	.sections {
-		padding: 2.7rem 0;
+	.inner-1 {
+		width: 950px;
 	}
-	.about {
-		padding-bottom: 0;
+	.inner-2 {
+		width: 850px;
 	}
-	.how-it-works {
-		padding: 2.7rem 0;
-	}
-	.about-txt {
-		padding: 2.7rem 0;
+	.inner-3 {
+		width: 750px;
 	}
 /*	modify .section-txt font*/
 	.section-txt {
     	letter-spacing: 0;
-	}
-/*	modify appealing text*/
-	.main-appeal-txt {
-		font-size: 2rem;
-		line-height: 3rem;
-		letter-spacing: 0.2rem;
-	}
-/*	modify .inner-nav font*/
-	.inner-nav-item a {
-		font-size: 1.2rem;
-		letter-spacing: 0.1rem;
 	}
 /*	overwrite .content and .content-box styles*/
 	.content {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
-	.content-wrapper {
-		padding: 2.7rem;
 	}
 	.content-box {
 		width: 100%;
@@ -840,22 +814,22 @@ h4 {
 		margin-right: 0;
 		margin-bottom: 2.7rem;
 	}
-	.process-detail-title {
+	.example {
 		font-size: 1.5rem;
-		letter-spacing: 0.2rem;
+	}
+	.process-detail-title {
+		letter-spacing: 0;
 	}
 	.process-detail-txt {
-		line-height: 1.5rem;
-		padding: 1.5rem;
+		line-height: 2.5rem;
+		padding: 2rem;
 	}
 /*	modify .company-info*/
 	.company-info {
-		font-size: 1.2rem;
 		letter-spacing: 0;
 	}
 /*	modify .work-list related styles*/
 	.work-list-wrapper {
-		font-size: 1.2rem;
 		letter-spacing: 0;
 	}
 	.work-list-item::before {
@@ -863,56 +837,64 @@ h4 {
 		width: 1.2rem;
 		height: calc(1.2rem * 42 / 38);
 	}
-/*	modify form related styles*/
-	.form-item label {
-		font-size: 1.2rem;
-		letter-spacing: 0;
-	}
-	.form-item:nth-child(3) {
-		margin-bottom: 2.7rem;
-	}
 }
-/*For screen below 959px
+/*For screen below 960px
 ============================================================================================================================================================*/
 @media screen and (max-width: 960px) {
 	/*	modify inner widths*/
 	.inner-1 {
 		width: 720px;
 	}
+	.inner-2 {
+		width: 670px;
+	}
+	.inner-3 {
+		width: 620px;
+	}
 	/*	modify headings*/
 	h2 {
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 	h3 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	h4 {
-		font-size: 1.2rem;
+		font-size: 1.8rem;
 	}
 	h2, h3, h4 {
 		letter-spacing: 0.2rem;
+	}
+	.section-txt {
+		font-weight: 500;
+		line-height: 2rem;
 	}
 	.section-title {
 		padding-bottom: 0.5rem;
 		margin-bottom: 0.5rem;
 	}
+/*	main visual----------------------*/
+	.main-appeal {
+		font-size: 2rem;
+		padding: 2rem;
+	}
+	.main-appeal-txt {
+		line-height: 3rem;
+		letter-spacing: 0.2rem;
+	}
+/*	about section--------------------*/
 	.no-border {
 		padding-bottom: 0;
 		margin-bottom: 0;
 	}
 	.section-subtitle {
 		font-size: 1.2rem;
+		line-height: 2rem;
 		letter-spacing: 0.2rem;
 	}
-	.no-border {
-		line-height: 2rem;
-	}
 	.about-txt-inner-wrapper .title::after {
-		margin: 2rem auto;
+		margin: 4rem auto 5rem;
 	}
 	.sub-description {
-		font-size: 1rem;
-    	line-height: 1.5rem;
     	letter-spacing: 0;
 	}
 /*	modify nav bar*/
@@ -922,7 +904,6 @@ h4 {
 	}
 /*	modify inner nav bar*/
 	.inner-nav-item a {
-    	font-size: 1rem;
     	letter-spacing: 0;
 		padding: 0.5rem;
 	}
@@ -931,37 +912,37 @@ h4 {
 		height: 0.5rem;
 		right: 0.8rem;
 		top: calc(50% - 0.5rem * 1.5 / 2);
-		border-width: 1px;
 	}
 /*	modify service section's table text*/
 	.cost-detail table {
 		width: 100%;
-		font-size: 1rem;
 		letter-spacing: 0;
 	}
 /*	modify service section's process*/
 	.process-detail-title {
-		font-size: 1.2rem;
+		font-size: 1.6rem;
 		letter-spacing: 0;
 	}
 	.process-detail-txt {
-		font-size: 1rem;
-		line-height: 1.2rem;
+		font-size: 1.2rem;
+		line-height: 2rem;
 		padding: 1rem;
 	}
-/*	modify company related styles*/
-	.company-info th {
-		width: 15%;
+	.order {
+		font-size: 2.5rem;
+		line-height: 6rem;
+		margin-right: 1rem;
+	}
+	.order::before {
+		width: 6rem;
+		height: 6rem;
 	}
 /*	modify works related styles*/
-	.work-list {
-		width: 50%;
+	.work-list:first-child {
+		width: 60%;
 	}
 	.work-list:last-child {
-		width: 45%;
-	}
-	.work-list-wrapper {
-		font-size: 1rem;
+		width: 40%;
 	}
 	.work-list-item::before {
 		background-size: 1rem auto;
@@ -986,6 +967,9 @@ h4 {
 	.menu-btn-wrapper {
 		display: block;
 	}
+	.nav a {
+		font-size: 1.5rem;
+	}
 /*	modify main visual*/
 	.main-img {
 		position: relative;
@@ -1007,6 +991,9 @@ h4 {
 /*	modify about section*/
 	.about {
 		padding-bottom: 0;
+	}
+	.about-txt-inner-wrapper .title::after {
+		margin: 5.4rem auto;
 	}
 	.no-border {
 		letter-spacing: 0.4rem;
@@ -1078,6 +1065,9 @@ h4 {
 /*	modify the company section*/
 	.company-info th {
 		width: 30%;
+		padding: 0 0 0 1rem;
+		line-height: 5.6rem;
+		vertical-align: middle;
 	}
 /*	modify the works section*/
 /*	change the title from 2 lines to a single line*/
