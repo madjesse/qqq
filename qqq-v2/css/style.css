@@ -2,11 +2,47 @@
 ==================================================================================================================================================*/
 
 /*Basic data:
+------------------------------------
+inner:
 
+inner-1: 1000px
+inner-2: 800px
+inner-3: 580px for contact form
+
+for screen smaller than 768px:
+inner-1: 90%
+------------------------------------
 font family: 
-"Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
 
+"Yu Gothic", "YuGothic", "游ゴシック体", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS PGothic", "ＭＳ Ｐゴシック", "Meiryo", "メイリオ", "Osaka", sans-serif;
+-------------------------------------
+font sizes:
+
+html: 62.5%
+h2: 1.8rem
+h3: 1.6rem
+h4: 1.5rem
+.nav: 1.5rem
+.section-txt: 1.5rem
+.section-subtitle: 1.2rem
+
+main appeal: 2.5rem
+---------------------------------------
+font weight:
+
+h2~h4: 600
+main appeal: normal
+.section-txt: normal
+
+letter spacing:
+
+h2, h3: 0.4rem
+h4: 0.2rem
+
+main appeal: 0.4rem
+----------------------------------------
 key colors: 
+
 background blue:  #009fe8
 text black:       #000
 text white:       #fff
@@ -15,12 +51,6 @@ background orange:#f7931e
 background pink:  #fde9d2
 form background:  #e6e6e6
 form border:      #bebebe
-
-font sizes:
-html: 62.5%
-nav:  1.5rem
-main appealing text: 3rem
-h2    1.5rem
 ==================================================================================================================================================
 */
 
@@ -52,11 +82,6 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-.cf::after {
-	content: "";
-	display: block;
-	clear: both;
-}
 .inner {
 	margin: 0 auto;
 }
@@ -68,32 +93,30 @@ img {
 
 /*the 2nd largest inner which aligns with the 2nd outmost guideline*/
 .inner-2 { /*for screen larger than 960px*/
-	width: 900px;
-}
-
-/*the smallest inner that aligns with the text content of the about section*/
-.inner-3 { /*for screen larger than 960px*/
 	width: 800px;
 }
-
+/*for contact form*/
+.inner-3 {
+	width: 580px;
+}
 h2, h3 {
-	letter-spacing: 0.5rem;
+	letter-spacing: 0.4rem;
 }
 h4 {
 	letter-spacing: 0.2rem;
 }
 h2 {
-	font-size: 2.5rem;
+	font-size: 1.8rem;
 }
 h3 {
-	font-size: 2.3rem;
+	font-size: 1.6rem;
 }
 h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 .section-txt {
 	font-size: 1.5rem;
-	font-weight: 600;
+	font-weight: normal;
 	line-height: 3rem;
 	letter-spacing: 0.2rem;
 }
@@ -101,14 +124,14 @@ h4 {
 	margin-bottom: 8rem;
 }
 .section-subtitle {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 600;
 	letter-spacing: 0.3rem;
 }
 .section-title {
-	padding: 0 2.7rem 2rem;
+	padding: 0 2.7rem 1rem;
 	border-bottom: 1px solid #000;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 .sections {
 	padding: 10rem 0;
@@ -240,10 +263,9 @@ h4 {
 	width: 100%;
 }
 .main-visual-wrapper {
-/*	width: 100%;*/
+	width: 100%;
 	position: relative;
 }
-
 /*the main image part on the right-----------------------*/
 /*this is the style for screen over 960px*/
 .main-img { 
@@ -259,9 +281,7 @@ h4 {
 	top: calc(50% - 20% / 2);
 	left: calc(50% - 20% / 2);
 }
-
 /*the main appealing text with blue bg on the left----*/
-/*this is the style for screen over 960px*/
 .main-appeal { 
 	position: absolute;
 	width: 45%;
@@ -270,12 +290,10 @@ h4 {
 	left: 0;
 	color: #fff;
 	font-size: 2.5rem;
-	background-color: #009fe8;
-}
-.main-appeal-txt {
-	font-weight: 500;
+	font-weight: normal;
 	line-height: 4rem;
 	letter-spacing: 0.4rem;
+	background-color: #009fe8;
 }
 .main-visual-wrapper::before {
 	content: "";
@@ -300,7 +318,8 @@ h4 {
 /*about text sub section*/
 .no-border {
 	border: none;
-	line-height: 4rem;
+	font-weight: normal;
+	line-height: 2rem;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -319,10 +338,11 @@ h4 {
 
 /*how it works sub section*/
 .how-it-works {
-/*	width: 100%;*/
+	width: 100%;
 	color: #fff;
 	padding: 8rem 0;
 	background-image: url(../img/slider-bg.png);
+	background-size: cover;	
 }
 .how-it-works .inner-2 {
 	flex-wrap: nowrap;
@@ -671,8 +691,8 @@ h4 {
 /*---------------------------works section-----------------------------------*/
 .works {
 	width: 100%;
-	background: url(../img/repeated-bg-m.png);
-	background-size: cover;
+	background: url(../img/bg_ptn01.png) repeat;
+	background-size: 150px;
 }
 .works-wrapper {
 	width: 100%;
@@ -722,9 +742,6 @@ h4 {
 .contact-wrapper .section-txt {
 	text-align: center;
 	margin-bottom: 2.7rem;
-}
-.contact form {
-	width: 100%;
 }
 .form-item {
 	width: 100%;
@@ -803,9 +820,6 @@ h4 {
 	.inner-2 {
 		width: 850px;
 	}
-	.inner-3 {
-		width: 750px;
-	}
 /*	modify .section-txt font*/
 	.section-txt {
     	letter-spacing: 0;
@@ -856,9 +870,6 @@ h4 {
 	}
 	.inner-2 {
 		width: 670px;
-	}
-	.inner-3 {
-		width: 620px;
 	}
 	/*	modify headings*/
 	h2 {
@@ -972,7 +983,7 @@ h4 {
 	.menu-btn-wrapper {
 		display: block;
 	}
-	.nav a {
+	.smartphone-nav {
 		font-size: 1.5rem;
 	}
 /*	modify main visual*/
@@ -1002,10 +1013,6 @@ h4 {
 	}
 	.about-txt {
 		padding: 0 0 5.4rem;
-	}
-	.about-txt-inner-wrapper {
-		width: 90%;
-		margin: 0 auto;
 	}
 	.section-txt-wrapper {
 		text-align: ;

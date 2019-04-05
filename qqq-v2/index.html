@@ -44,19 +44,19 @@
 					<span></span>
 					<span></span>
 				</div>
-				<ul class="smartphone-nav">
-					<li class="nav-item"><a href="#about">ABOUT</a></li>
-					<li class="nav-item"><a href="#service">SERVICE</a></li>
-					<li class="nav-item"><a href="#company">COMPANY</a></li>
-					<li class="nav-item"><a href="#works">WORKS</a></li>
-					<li class="nav-item"><a href="#contact">CONTACT</a></li>
-				</ul>
 			</nav>
 		</div>
+		<ul class="smartphone-nav">
+			<li class="nav-item"><a href="#about">ABOUT</a></li>
+			<li class="nav-item"><a href="#service">SERVICE</a></li>
+			<li class="nav-item"><a href="#company">COMPANY</a></li>
+			<li class="nav-item"><a href="#works">WORKS</a></li>
+			<li class="nav-item"><a href="#contact">CONTACT</a></li>
+		</ul>
 	</header>
 <!--	-------------------main visual section ------------------------>
 	<section class="main-visual">
-		<div class="main-visual-wrapper inner inner-1">
+		<div class="main-visual-wrapper">
 <!--	main image on the right-->
 			<div class="main-img">
 				<img src="img/main-img.png" alt="main visual image">
@@ -72,7 +72,7 @@
 <!--	---------------------about section--------------------------->
 	<section id="about" class="about sections">
 <!--this is the introduction text sub section-->
-		<section class="about-txt inner inner-3">
+		<section class="about-txt inner inner-1">
 			<div class="about-txt-inner-wrapper">
 				<!--	the title div with ::after pseudo class specified in stylesheet to create the underline-->
 				<div class="title flex-column">
@@ -90,26 +90,27 @@
 		</section>
 		
 <!--	this is the how it works sub section-->
-		<section class="how-it-works inner inner-1">
-			<div class="title flex-column">
-				<h2 class="section-title">体験式とは</h2>
-				<p class="section-subtitle">HOW IT WORKS</p>
-			</div>
-<!--		inner-2 is the second outmost inner wrapper-->
-			<div class="inner inner-2 flex-row">
-<!--		the slider achieved using slick.js-->
-				<div class="slider">
-					<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
-					<div class="slide"><img src="img/slide-2.png" alt="スライド画像２"></div>
-					<div class="slide"><img src="img/slide-3.png" alt="スライド画像３"></div>
-					<div class="slide"><img src="img/slide-4.png" alt="スライド画像４"></div>
-					<div class="slide"><img src="img/slide-5.png" alt="スライド画像５"></div>
-					<div class="slide"><img src="img/slide-6.png" alt="スライド画像６"></div>
+		<section class="how-it-works">
+			<div class="inner inner-1">
+				<div class="title flex-column">
+					<h2 class="section-title">体験式とは</h2>
+					<p class="section-subtitle">HOW IT WORKS</p>
 				</div>
-				<div class="section-txt-wrapper">
-					<p class="section-txt">カード・マンガ・Webサービス・ストロー・カギなど様々なツールを使い、テーマに合わせた「体験できる」研修をご用意します。</p>
-					<p class="section-txt">&nbsp;</p>
-					<p class="section-txt">一方的に講義を受けるのではなく自分たちで考え答えを導き出すことができる内容にすることで、積極的な参加と学習の定着を引き出しています。</p>
+				<div class="flex-row">
+					<!--		the slider achieved using slick.js-->
+					<div class="slider">
+						<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
+						<div class="slide"><img src="img/slide-2.png" alt="スライド画像２"></div>
+						<div class="slide"><img src="img/slide-3.png" alt="スライド画像３"></div>
+						<div class="slide"><img src="img/slide-4.png" alt="スライド画像４"></div>
+						<div class="slide"><img src="img/slide-5.png" alt="スライド画像５"></div>
+						<div class="slide"><img src="img/slide-6.png" alt="スライド画像６"></div>
+					</div>
+					<div class="section-txt-wrapper">
+						<p class="section-txt">カード・マンガ・Webサービス・ストロー・カギなど様々なツールを使い、テーマに合わせた「体験できる」研修をご用意します。</p>
+						<p class="section-txt">&nbsp;</p>
+						<p class="section-txt">一方的に講義を受けるのではなく自分たちで考え答えを導き出すことができる内容にすることで、積極的な参加と学習の定着を引き出しています。</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -117,7 +118,7 @@
 	
 <!--	-----------------------service section----------------------->
 	<section id="service" class="service sections">
-		<div class="inner inner-2">
+		<div class="inner inner-1">
 			<div class="title flex-column">
 				<h2 class="section-title">サービス</h2>
 				<p class="section-subtitle">SERVICE</p>
@@ -339,7 +340,7 @@
 	
 <!--	-------------------works section----------------------------->
 	<section id="works" class="works sections">
-		<div class="inner inner-2">
+		<div class="inner inner-1">
 			<div class="title flex-column">
 				<h2 class="section-title">採用実績</h2>
 				<p class="section-subtitle">WORKS</p>
@@ -433,14 +434,14 @@
 	
 <!--	-------------------contact section--------------------------->
 	<section id="contact" class="contact sections flex-column">
-		<div class="inner inner-3">
+		<div class="inner inner-1">
 			<div class="title flex-column">
 				<h2 class="section-title">お問い合わせ</h2>
 				<p class="section-subtitle">CONTACT</p>
 			</div>
 			<div class="contact-wrapper flex-column">
 				<p class="section-txt">研修のご依頼やご相談など、お気軽に下記お問い合わせください。<br>下記のお問い合わせフォームに入力して送信ボタンをクリックしてください。</p>
-				<form action="#" class="flex-column">
+				<form action="#" class="inner inner-3 flex-column">
 					<div class="form-item flex-column">
 						<label for="name">お名前</label>
 						<input type="text" id="name" name="name">
