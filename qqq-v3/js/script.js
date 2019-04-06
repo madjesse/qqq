@@ -8,9 +8,20 @@ $(function() {
 		arrows: false,
 		dots: true
 	});
+	
+//	position logo in alignment with main appeal text
+//	get the logo element
+	var $logo = $('.logo');
+//	get the main appeal text
+	var $appealTxt = $('.main-appeal-txt');
+//	get appeal text's left position
+	var leftOffset = $appealTxt.offset().left;
+	console.log(leftOffset);
+//	position logo
+	$logo.css('left', (leftOffset + 'px'));
 
 //	scroll effects--------------------------------------------------
-	$(".nav a, .inner-nav a").click(function(e) {
+	$(".nav a, .inner-nav a, .smartphone-nav a").click(function(e) {
 // 			make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
 			// prevent default anchor click behavior
@@ -45,14 +56,20 @@ $(function() {
 			});
 		}
 	});
-//	hide the smartphone nav and reset the menu button when window size is over the threshold
+//	When window size is changed
 	$(window).resize(function() {
+//		if window size is over 768, hide the smartphone nav and reset the menu button
 		if($(window).width() >= 768) {
 			$(".smartphone-nav").css("display", "none");
 			$(".menu-btn-wrapper").children().each(function() {
 				$(this).removeClass("open");
 			});
 		}
+		//	get appeal text's left position
+		var leftOffset = $appealTxt.offset().left;
+		console.log(leftOffset);
+		//	position logo
+		$logo.css('left', (leftOffset + 'px'));
 		
 	});
 	

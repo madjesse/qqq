@@ -24,12 +24,12 @@
 <body>
 <!--header consists of 3 parts: h1, desktop navigation bar and smartphone navigation bar which is hidden when screen is wide-->
 	<header class="header">
+		<!--		the QQQ logo-->
+		<h1 class="logo">
+			<a href="index.html"><img src="img/logo.png" alt="QQQの企業ロゴ"></a>
+		</h1>
 <!--	inner-1 wrapper is one of 3 wrappers with various widths and is the outmost one-->
 		<div class="inner inner-1 flex-row">
-<!--		the QQQ logo-->
-			<h1 class="logo">
-				<a href="index.html"><img src="img/logo.png" alt="QQQの企業ロゴ"></a>
-			</h1>
 <!--		the	nav group-->
 			<nav class="nav flex-row">
 				<ul class="desktop-nav flex-row">
@@ -96,7 +96,7 @@
 					<h2 class="section-title">体験式とは</h2>
 					<p class="section-subtitle">HOW IT WORKS</p>
 				</div>
-				<div class="flex-row">
+				<div class="slider-txt-wrapper flex-row">
 					<!--		the slider achieved using slick.js-->
 					<div class="slider">
 						<div class="slide"><img src="img/slide-1.png" alt="スライド画像１"></div>
@@ -146,27 +146,31 @@
 							<!--					 the first box-->
 							<div class="content-box">
 								<div class="content-box-inner flex-column">
-									<!--					 	the title part-->
-									<div class="content-title-wrapper flex-column">
-										<img src="img/money.png" alt="お金についての研修">
-										<h4 class="content-title">お金についての研修</h4>
-										<p class="content-category">経営 / 財務</p>
+									<div class="content-box-inner-1 flex-column">
+										<!--					 	the title part-->
+										<div class="content-title-wrapper flex-column">
+											<img src="img/money.png" alt="お金についての研修">
+											<h4 class="content-title">お金についての研修</h4>
+											<p class="content-category">経営 / 財務</p>
+										</div>
+										<!--					 		the text part-->
+										<div class="content-txt-wrapper">
+											<p class="section-txt offset">「ビジネスを通じて企業内外で流れるお金」</p>
+											<p class="section-txt offset">「個人に支払われるお金」</p>
+											<p class="section-txt">など、お金をテーマにした研修です。<br>実際のビジネスを模したカードゲーム等様々なツールを使い、講義ではなく参加者に自分たちで考え気づいてもらう内容になっています。</p>
+										</div>
 									</div>
-									<!--					 		the text part-->
-									<div class="content-txt-wrapper">
-										<p class="section-txt">「ビジネスを通じて企業内外で流れるお金」</p>
-										<p class="section-txt">「個人に支払われるお金」</p>
-										<p class="section-txt">&nbsp;など、お金をテーマにした研修です。<br>&nbsp;実際のビジネスを模したカードゲーム等様々なツールを使い、講義ではなく参加者に自分たちで考え気づいてもらう内容になっています。</p>
-									</div>
-									<!--					 		the examples-->
-									<div class="example-topics-wrapper flex-column">
-										<h4 class="example-topics-title">テーマ例</h4>
-										<div class="example-topics flex-row">
-											<p class="example content-txt flex-row">企業マネジメント</p>
-											<p class="example content-txt flex-row">お金の流れ</p>
-											<p class="example content-txt flex-row">損益計算</p>
-											<p class="example content-txt flex-row">給与明細の仕組み</p>
-											<p class="example content-txt flex-row">コスト意識</p>
+									<div class="content-box-inner-2">
+										<!--					 		the examples-->
+										<div class="example-topics-wrapper flex-column">
+											<h4 class="example-topics-title">テーマ例</h4>
+											<div class="example-topics flex-row">
+												<p class="example content-txt flex-row">企業マネジメント</p>
+												<p class="example content-txt flex-row">お金の流れ</p>
+												<p class="example content-txt flex-row">損益計算</p>
+												<p class="example content-txt flex-row">給与明細の仕組み</p>
+												<p class="example content-txt flex-row">コスト意識</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -174,28 +178,32 @@
 							<!--					 	the second box-->
 							<div class="content-box">
 								<div class="content-box-inner flex-column">
-									<!--					 	the title part-->
-									<div class="content-title-wrapper flex-column">
-										<img src="img/training.png" alt="お金についての研修">
-										<h4 class="content-title">チームビルディング研修</h4>
-										<p class="content-category">会社の仕事 / 理念</p>
+									<div class="content-box-inner-1 flex-column">
+										<!--					 	the title part-->
+										<div class="content-title-wrapper flex-column">
+											<img src="img/training.png" alt="お金についての研修">
+											<h4 class="content-title">チームビルディング研修</h4>
+											<p class="content-category">会社の仕事 / 理念</p>
+										</div>
+										<!--							 the text part-->
+										<div class="content-txt-wrapper">
+											<p class="section-txt offset">「どんな仕事があるのか？」</p>
+											<p class="section-txt offset">「どんな顧客にどんな商品を売りたいのか？」</p>
+											<p class="section-txt offset">「理念を噛み砕くとどういうことなのか？」</p>
+											<p class="section-txt">など、企業にまつわる様々なことをテーマにした研修です。<br>体験式のため、馴染みの薄い社員同士のチームビルディングとしても機能します。</p>
+										</div>
 									</div>
-									<!--							 the text part-->
-									<div class="content-txt-wrapper">
-										<p class="section-txt">「どんな仕事があるのか？」</p>
-										<p class="section-txt">「どんな顧客にどんな商品を売りたいのか？」</p>
-										<p class="section-txt">「理念を噛み砕くとどういうことなのか？」</p>
-										<p class="section-txt">など、企業にまつわる様々なことをテーマにした研修です。<br>体験式のため、馴染みの薄い社員同士のチームビルディングとしても機能します。</p>
-									</div>
-									<!--							 the examples-->
-									<div class="example-topics-wrapper flex-column">
-										<h4 class="example-topics-title">テーマ例</h4>
-										<div class="example-topics flex-row">
-											<p class="example content-txt flex-row">チームビルディング</p>
-											<p class="example content-txt flex-row">顧客像</p>
-											<p class="example content-txt flex-row">現場のエピソード</p>
-											<p class="example content-txt flex-row">新規事業計画</p>
-											<p class="example content-txt flex-row">理念の噛み砕き</p>
+									<div class="content-box-inner-2">
+										<!--							 the examples-->
+										<div class="example-topics-wrapper flex-column">
+											<h4 class="example-topics-title">テーマ例</h4>
+											<div class="example-topics flex-row">
+												<p class="example content-txt flex-row">チームビルディング</p>
+												<p class="example content-txt flex-row">顧客像</p>
+												<p class="example content-txt flex-row">現場のエピソード</p>
+												<p class="example content-txt flex-row">新規事業計画</p>
+												<p class="example content-txt flex-row">理念の噛み砕き</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -213,7 +221,7 @@
 					<button class="service-accordion">費用</button>
 					<div class="content-wrapper">
 						<div class="cost-detail">
-							<h4 class="cost-detail-title">基本料金</h4>
+							<h4 class="cost-detail-title flex-row">基本料金</h4>
 							<table>
 								<tr>
 									<th>半日研修（２〜４時間）</th>
@@ -226,7 +234,7 @@
 							</table>
 						</div>
 						<div class="cost-detail">
-							<h4 class="cost-detail-title">オプション料金</h4>
+							<h4 class="cost-detail-title flex-row">オプション料金</h4>
 							<table>
 								<tr>
 									<th>運営スタッフ派遣（講師＋運営補助）</th>

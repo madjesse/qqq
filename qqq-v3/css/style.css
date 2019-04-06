@@ -51,6 +51,8 @@ background orange:#f7931e
 background pink:  #fde9d2
 form background:  #e6e6e6
 form border:      #bebebe
+input bg on focus:#efefef
+input border: #b3b3b3
 ==================================================================================================================================================
 */
 
@@ -87,12 +89,12 @@ img {
 }
 
 /*the largest inner which aligns with the outmost guideline*/
-.inner-1 { /*for screen larger than 960px*/
+.inner-1 {
 	width: 1000px;
 }
 
-/*the 2nd largest inner which aligns with the 2nd outmost guideline*/
-.inner-2 { /*for screen larger than 960px*/
+/*for company section*/
+.inner-2 {
 	width: 800px;
 }
 /*for contact form*/
@@ -105,20 +107,18 @@ h2, h3 {
 h4 {
 	letter-spacing: 0.2rem;
 }
-h2 {
+h2, h3, h4 {
 	font-size: 1.8rem;
-}
-h3 {
-	font-size: 1.6rem;
-}
-h4 {
-	font-size: 1.5rem;
 }
 .section-txt {
 	font-size: 1.5rem;
 	font-weight: normal;
 	line-height: 3rem;
 	letter-spacing: 0.2rem;
+}
+.offset {
+	position: relative;
+	left: -0.75rem;
 }
 .title {
 	margin-bottom: 8rem;
@@ -155,6 +155,7 @@ h4 {
 	width: 100%;
 	z-index: 1;
 	background-color: #fff;
+	position: relative;
 }
 .header .inner-1 {
 	height: 80px;
@@ -319,7 +320,7 @@ h4 {
 .no-border {
 	border: none;
 	font-weight: normal;
-	line-height: 2rem;
+	line-height: 2.5rem;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -333,7 +334,7 @@ h4 {
 	width: 2rem;
 	height: 0.2rem;
 	background-color: #000;
-	margin: 5rem auto 8rem;
+	margin: 4rem auto 5rem;
 }
 
 /*how it works sub section*/
@@ -552,7 +553,7 @@ h4 {
 .example-topics-title::after {
 	content: "";
 	display: block;
-	width: 8rem;
+	width: 6.8rem;
 	height: 0.2rem;
 	background-color: #f7931e;
 	margin: 0.5rem 0 2.7rem;
@@ -566,9 +567,9 @@ h4 {
 }
 .example {
 	width: 49.5%;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	background-color: #fde9d2;
-	padding: 2rem;
+	padding: 1.5rem 1rem;
 	margin-bottom: 1%;
 }
 .example:nth-child(2n+1) {
@@ -580,16 +581,16 @@ h4 {
 
 /*the 2nd sub-section: cost*/
 .cost-detail-title {
+	justify-content: flex-start;
 	margin-bottom: 2.7rem;
 }
 .cost-detail-title::before {
 	content: "";
 	background-image: url(../img/q-icon.png);
 	background-size: 1.5rem auto;
-	display: inline-block;
+	display: block;
 	width: 1.5rem;
 	height: calc(1.5rem * 42 / 38);
-	vertical-align: -20%;
 	margin-right: 1rem;
 }
 .cost-detail table {
@@ -620,11 +621,15 @@ h4 {
 /*the 3rd sub-section: process*/
 .process-detail-wrapper {
 	width: 100%;
+	height: auto;
 	justify-content: space-between;
+	align-items: stretch;
 	counter-reset: sorting;
 }
 .process-detail {
 	width: 49%;
+	height: auto;
+	background-color: #e6e6e6;
 	margin-bottom: 2%;
 	border: 1px solid #bebebe;
 }
@@ -633,6 +638,7 @@ h4 {
 }
 .process-detail-title-wrapper {
 	width: 100%;
+	background-color: #fff;
 	justify-content: flex-start;
 }
 .process-detail-sub-title {
@@ -641,10 +647,8 @@ h4 {
 	margin-top: 0.6rem;
 }
 .process-detail-txt {
-	height: 20rem;
 	font-size: 1.5rem;
 	line-height: 3rem;
-	background-color: #e6e6e6;
 	padding: 2.5rem;
 }
 .order {
@@ -684,7 +688,8 @@ h4 {
 }
 .company-info td {
 	width: 70%;
-	font-weight: 500;
+	font-weight: normal;
+	line-height: 2rem;
 	border-bottom: 2px dotted #f7931e;
 }
 
@@ -752,9 +757,20 @@ h4 {
 }
 .form-item input, .form-item textarea {
 	width: 100%;
+	font-size: 2rem;
+	box-shadow: none;
+	border: 1px solid #b3b3b3;
+	padding-left: 0.5rem;
+}
+.form-item input:focus, .form-item textarea:focus {
+	outline: none;
+	background-color: #efefef;
+}
+.form-item textarea {
+	height: 24rem;
 }
 .form-item input {
-	height: 5rem;
+	height: 3.6rem;
 }
 .form-item label {
 	font-size: 1.5rem;
@@ -820,119 +836,55 @@ h4 {
 	.inner-2 {
 		width: 850px;
 	}
-/*	modify .section-txt font*/
-	.section-txt {
-    	letter-spacing: 0;
-	}
-/*	overwrite .content and .content-box styles*/
-	.content {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.content-box {
-		width: 100%;
-	}
-	.content-box:nth-child(1) {
-		margin-right: 0;
-		margin-bottom: 2.7rem;
-	}
-	.example {
-		font-size: 1.5rem;
-	}
-	.process-detail-title {
-		letter-spacing: 0;
-	}
-	.process-detail-txt {
-		line-height: 2.5rem;
-		padding: 2rem;
-	}
-/*	modify .company-info*/
-	.company-info {
-		letter-spacing: 0;
-	}
-/*	modify .work-list related styles*/
-	.work-list-wrapper {
-		letter-spacing: 0;
-	}
-	.work-list-item::before {
-		background-size: 1.2rem auto;
-		width: 1.2rem;
-		height: calc(1.2rem * 42 / 38);
-	}
 }
 /*For screen below 960px
 ============================================================================================================================================================*/
 @media screen and (max-width: 960px) {
-	/*	modify inner widths*/
+	/*the largest inner which aligns with the outmost guideline*/
 	.inner-1 {
 		width: 720px;
 	}
+	/*for company section*/
 	.inner-2 {
-		width: 670px;
+		width: 700px;
 	}
 	/*	modify headings*/
-	h2 {
-		font-size: 2rem;
-	}
-	h3 {
-		font-size: 2rem;
-	}
-	h4 {
-		font-size: 1.8rem;
-	}
 	h2, h3, h4 {
 		letter-spacing: 0.2rem;
 	}
 	.section-txt {
-		font-weight: 500;
 		line-height: 2rem;
 	}
 /*	main visual----------------------*/
 	.main-appeal {
 		font-size: 2rem;
-		padding: 2rem;
 	}
 	.main-appeal-txt {
 		line-height: 3rem;
 		letter-spacing: 0.2rem;
-	}
-/*	about section--------------------*/
-	.no-border {
-		padding-bottom: 0;
-		margin-bottom: 0;
-	}
-	.section-subtitle {
-		font-size: 1.2rem;
-		line-height: 2rem;
-		letter-spacing: 0.2rem;
-	}
-	.about-txt-inner-wrapper .title::after {
-		margin: 4rem auto 5rem;
-	}
-	.sub-description {
-    	letter-spacing: 0;
 	}
 /*	modify nav bar*/
 	.nav a {
 		font-size: 1.2rem;
 		letter-spacing: 0;
 	}
-/*	modify inner nav bar*/
-	.inner-nav-item a {
-    	letter-spacing: 0;
-		padding: 0.5rem;
+/*	modify service section's content subsetion*/
+	.content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
-	.inner-nav-item a::after {
-		width: 0.5rem;
-		height: 0.5rem;
-		right: 0.8rem;
-		top: calc(50% - 0.5rem * 1.5 / 2);
+	.content .content-box {
+		margin-right: 0;
+		width: 100%;
+	}
+	.content-box:first-child {
+		margin-bottom: 2.7rem;
 	}
 /*	modify service section's table text*/
 	.cost-detail table {
 		width: 100%;
-		letter-spacing: 0;
+		line-height: 2rem;
 	}
 /*	modify service section's process*/
 	.process-detail-title {
@@ -941,8 +893,7 @@ h4 {
 	}
 	.process-detail-txt {
 		font-size: 1.2rem;
-		line-height: 2rem;
-		padding: 1rem;
+		line-height: 2.5rem;
 	}
 	.order {
 		font-size: 2.5rem;
@@ -1023,6 +974,10 @@ h4 {
 	.how-it-works .inner-2 {
 		flex-direction: column;
 	}
+	.slider-txt-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
 	.slider {
 		order: 2;
 	}
@@ -1048,14 +1003,14 @@ h4 {
 	.content-wrapper {
 		padding: 2.7rem;
 	}
-	.content-title-wrapper img {
-		display: none;
+	.process .content-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+/*		background-color: transparent;*/
 	}
 	.content-box-inner {
 		width: 90%;
-	}
-	.example {
-		padding: 1.5rem;
 	}
 	.process-detail-wrapper {
 		flex-direction: column;
@@ -1063,6 +1018,9 @@ h4 {
 	.process-detail {
 		width: 100%;
 		margin-bottom: 1.35rem;
+	}
+	.process-detail:last-child {
+		margin-bottom: 0;
 	}
 	.process-detail-txt {
 		height: auto;
@@ -1076,17 +1034,20 @@ h4 {
 	}
 	
 /*	modify the company section*/
+	.company-info {
+		width: 100%;
+	}
 	.company-info th {
 		width: 30%;
 		padding: 0 0 0 1rem;
 		line-height: 5.6rem;
 	}
-	
 /*	modify the works section*/
 /*	change the title from 2 lines to a single line*/
 	.work-list-wrapper {
 		flex-direction: column;
 		font-size: 1.4rem;
+		letter-spacing: 0;
 		padding: 2.7rem;
 	}
 	.works .work-list {
@@ -1095,10 +1056,15 @@ h4 {
 	.work-list-item p {
 		display: inline-block;
 	}
+	.work-list-item::before {
+		display: none;
+	}
 /*	modify the contact section*/
 	.contact-wrapper {
-		width: 90%;
-		margin: 0 auto;
+		width: 100%;
+	}
+	.contact-wrapper form {
+		width: 100%;
 	}
 	.contact-wrapper .section-txt {
 		margin-bottom: 5.4rem;
@@ -1114,39 +1080,33 @@ h4 {
 ============================================================================================================================================================*/
 @media screen and (max-width: 480px) {
 /*	general*/
-	h2 {
-		font-size: 1.8rem;
-	}
-	h3 {
-		font-size: 1.8rem;
-	}
-	h4 {
-		font-size: 1.5rem;
-	}
 	h2, h3, h4 {
 		letter-spacing: 0;
 	}
 	.section-txt {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
+		letter-spacing: 0;
 	}
 /*	main visual*/
 	.main-appeal-txt {
 		letter-spacing: 0;
 	}
 /*	modify the cost sub-section of the service section*/
+	.content-wrapper {
+		padding: 2.7rem 1.5rem;
+	}
 	.example {
 		font-size: 1.2rem;
 		padding: 1.5rem 0.5rem;
 	}
 	.cost-detail table {
 		font-size: 1.2rem;
-		line-height: 2rem;
 	}
 	.cost-detail table td {
 		padding: 0 1rem 0 0;
 	}
-	.process-detail-title {
-		font-size: 1.5rem;
+	.process-detail-txt {
+		padding: 1.5rem;
 	}
 	.company-info {
 		font-size: 1.2rem;
@@ -1161,11 +1121,8 @@ h4 {
 		vertical-align: middle;
 	}
 /*	modify the works section*/
-	.work-list-item::before {
-		display: none;
-	}
 	.work-list-wrapper {
-		padding: 2.7rem;
+		padding: 1.5rem;
 	}
 	.work-list-item p {
 		display: block;
@@ -1174,18 +1131,46 @@ h4 {
 	.submit-btn {
 		width: 50%;
 	}
+/*	modify footer*/
+	.footer small {
+		letter-spacing: 0;
+	}
 }
-/*For screen below 360px
+/*For screen between 320 ~ 360px
 ============================================================================================================================================================*/
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 320px) and (max-width: 360px) {
+/*	general*/
+	h2, h3, h4 {
+		font-size: 1.6rem;
+	}
+/*	main appeal*/
+	.main-appeal {
+		font-size: 1.8rem;
+	}
 /*	modify the service section*/
+	.examples .content-wrapper {
+		padding: 1.5rem 0;
+	}
+	.content-box {
+		border-width: 3px;
+	}
+	.content-box-inner {
+		align-items: stretch;
+	}
 	.example-topics {
 		flex-direction: column;
+		align-items: stretch;
 	}
-	.example {
-		width: 90%;
+	.example-topics .example {
 		margin-right: 0;
 		margin-bottom: 0.5rem;
+	}
+	.example {
+		width: 100%;
+	}
+	.extra-description {
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
 	}
 	.order {
 		font-size: 1.5rem;
